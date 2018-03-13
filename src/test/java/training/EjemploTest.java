@@ -1,0 +1,61 @@
+package training;
+
+import static org.testng.Assert.assertFalse;
+
+import javax.swing.SingleSelectionModel;
+
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+public class EjemploTest {
+	
+    @Test
+	public void prueba() {
+	System.out.println("test");
+    }
+    @BeforeMethod
+    public void pruebabt() {
+	System.out.println("Metodo Before test");
+		}		
+    @AfterMethod
+	public void pruebaat() {
+	System.out.println("Metodo After test");			
+	}
+    @BeforeClass
+    public void pruebabc() {
+	System.out.println("Metodo Before class");
+			
+}
+    @AfterClass
+    public void pruebaac() {
+	System.out.println("Metodo After class");		
+}
+    @Test
+    public void pruebast() {
+	System.out.println("Segundo test");
+    }
+    @DataProvider(name="Authentication")
+    public Object[][] provider(){
+    	return new Object [][] {{ "testuser_1", "Test@123","Juan" },{ "testuser_1", "Test@123","Pedro"}};
+    	    	
+    }
+    @Test (dataProvider="Authentication")
+    public void test(String sUsername, String sPassword,String sNombre) {
+    	System.out.println(sUsername);
+    	System.out.println(sPassword);
+    	System.out.println(sNombre);
+    	Assert.assertEquals(sPassword, sUsername,"Usuario y contraseña");
+    	Assert.assertEquals(sUsername, sUsername,"Usuario repetido");
+    	
+    }
+    
+    
+    
+}
