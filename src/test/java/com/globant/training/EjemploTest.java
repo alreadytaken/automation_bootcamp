@@ -1,5 +1,7 @@
 package com.globant.training;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -11,6 +13,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class EjemploTest {
+	private static final Logger LOG = LogManager.getLogger(EjemploTest.class);
 	@Test(dataProvider = "Authentication")
 	public void clase (String sUsername, String sPassword, String nNombre){
 		String user = "Fulano";
@@ -23,9 +26,10 @@ public class EjemploTest {
 		
 		
 	}
+	
 	@Test
 	public void otraClase (){
-		System.out.println("test otra clase");
+		LOG.info("holaaaaa");
 	}
 	@BeforeMethod
 	public void hola (){
