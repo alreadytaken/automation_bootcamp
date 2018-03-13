@@ -2,7 +2,7 @@
 # Created by https://www.gitignore.io/api/java,maven,eclipse
 
 ### Eclipse ###
-
+test-output/
 .metadata
 bin/
 tmp/
