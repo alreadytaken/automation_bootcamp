@@ -1,24 +1,27 @@
 package training;
 
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
 public class EjemploTest {
 	
-	
+	private static final Logger LOG = LogManager.getLogger(EjemploTest.class);
 	//	public EjemploTest() {}
 	
 	@Test
 	public void metodoUno() {
 		
-		System.out.println("Test Uno");
+		LOG.info("Test Uno");
 	
 	}
 
 	@Test
 	public void metodoDos() {
-		
-		System.out.println("Test Dos");
+		LOG.info("Hola");
+	
 	
 	}
 
