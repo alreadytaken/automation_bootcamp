@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="2" ignored="0" total="4" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="86" started-at="2018-03-14T00:07:00Z" finished-at="2018-03-14T00:07:00Z">
+  <suite name="Default suite" duration-ms="70" started-at="2018-03-14T21:03:26Z" finished-at="2018-03-14T21:03:26Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="86" started-at="2018-03-14T00:07:00Z" finished-at="2018-03-14T00:07:00Z">
+    <test name="Default test" duration-ms="70" started-at="2018-03-14T21:03:26Z" finished-at="2018-03-14T21:03:26Z">
       <class name="training.ExampleTest">
-        <test-method status="PASS" signature="beforeC()[pri:0, instance:training.ExampleTest@7f010382]" name="beforeC" is-config="true" duration-ms="18" started-at="2018-03-14T00:07:00Z" finished-at="2018-03-14T00:07:00Z">
+        <test-method status="PASS" signature="beforeC()[pri:0, instance:training.ExampleTest@7f010382]" name="beforeC" is-config="true" duration-ms="13" started-at="2018-03-14T21:03:26Z" finished-at="2018-03-14T21:03:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeC -->
-        <test-method status="PASS" signature="before()[pri:0, instance:training.ExampleTest@7f010382]" name="before" is-config="true" duration-ms="0" started-at="2018-03-14T00:07:00Z" finished-at="2018-03-14T00:07:00Z">
+        <test-method status="PASS" signature="before()[pri:0, instance:training.ExampleTest@7f010382]" name="before" is-config="true" duration-ms="0" started-at="2018-03-14T21:03:26Z" finished-at="2018-03-14T21:03:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- before -->
-        <test-method status="FAIL" signature="metodo()[pri:0, instance:training.ExampleTest@7f010382]" name="metodo" duration-ms="12" started-at="2018-03-14T00:07:00Z" finished-at="2018-03-14T00:07:00Z">
+        <test-method status="FAIL" signature="metodo()[pri:0, instance:training.ExampleTest@7f010382]" name="metodo" duration-ms="12" started-at="2018-03-14T21:03:26Z" finished-at="2018-03-14T21:03:26Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[null]]>
@@ -56,23 +56,27 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- metodo -->
-        <test-method status="PASS" signature="after()[pri:0, instance:training.ExampleTest@7f010382]" name="after" is-config="true" duration-ms="1" started-at="2018-03-14T00:07:00Z" finished-at="2018-03-14T00:07:00Z">
+        <test-method status="PASS" signature="after()[pri:0, instance:training.ExampleTest@7f010382]" name="after" is-config="true" duration-ms="0" started-at="2018-03-14T21:03:26Z" finished-at="2018-03-14T21:03:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- after -->
-        <test-method status="PASS" signature="before()[pri:0, instance:training.ExampleTest@7f010382]" name="before" is-config="true" duration-ms="4" started-at="2018-03-14T00:07:00Z" finished-at="2018-03-14T00:07:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- before -->
-        <test-method status="PASS" signature="metodo2()[pri:0, instance:training.ExampleTest@7f010382]" name="metodo2" duration-ms="4" started-at="2018-03-14T00:07:00Z" finished-at="2018-03-14T00:07:00Z">
+        <test-method status="PASS" signature="metodo2()[pri:0, instance:training.ExampleTest@7f010382]" name="metodo2" duration-ms="2" started-at="2018-03-14T21:03:26Z" finished-at="2018-03-14T21:03:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- metodo2 -->
-        <test-method status="PASS" signature="after()[pri:0, instance:training.ExampleTest@7f010382]" name="after" is-config="true" duration-ms="1" started-at="2018-03-14T00:07:00Z" finished-at="2018-03-14T00:07:00Z">
+        <test-method status="PASS" signature="before()[pri:0, instance:training.ExampleTest@7f010382]" name="before" is-config="true" duration-ms="0" started-at="2018-03-14T21:03:26Z" finished-at="2018-03-14T21:03:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method status="PASS" signature="after()[pri:0, instance:training.ExampleTest@7f010382]" name="after" is-config="true" duration-ms="0" started-at="2018-03-14T21:03:26Z" finished-at="2018-03-14T21:03:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- after -->
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:training.ExampleTest@7f010382]" name="test" duration-ms="1" started-at="2018-03-14T00:07:00Z" data-provider="Authentication" finished-at="2018-03-14T00:07:00Z">
+        <test-method status="PASS" signature="before()[pri:0, instance:training.ExampleTest@7f010382]" name="before" is-config="true" duration-ms="1" started-at="2018-03-14T21:03:26Z" finished-at="2018-03-14T21:03:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:training.ExampleTest@7f010382]" name="test" duration-ms="1" started-at="2018-03-14T21:03:26Z" data-provider="Authentication" finished-at="2018-03-14T21:03:26Z">
           <params>
             <param index="0">
               <value>
@@ -93,15 +97,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="before()[pri:0, instance:training.ExampleTest@7f010382]" name="before" is-config="true" duration-ms="0" started-at="2018-03-14T00:07:00Z" finished-at="2018-03-14T00:07:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- before -->
-        <test-method status="PASS" signature="after()[pri:0, instance:training.ExampleTest@7f010382]" name="after" is-config="true" duration-ms="0" started-at="2018-03-14T00:07:00Z" finished-at="2018-03-14T00:07:00Z">
+        <test-method status="PASS" signature="after()[pri:0, instance:training.ExampleTest@7f010382]" name="after" is-config="true" duration-ms="0" started-at="2018-03-14T21:03:26Z" finished-at="2018-03-14T21:03:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- after -->
-        <test-method status="FAIL" signature="test(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:training.ExampleTest@7f010382]" name="test" duration-ms="2" started-at="2018-03-14T00:07:00Z" data-provider="Authentication" finished-at="2018-03-14T00:07:00Z">
+        <test-method status="FAIL" signature="test(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:training.ExampleTest@7f010382]" name="test" duration-ms="2" started-at="2018-03-14T21:03:26Z" data-provider="Authentication" finished-at="2018-03-14T21:03:26Z">
           <params>
             <param index="0">
               <value>
@@ -162,18 +162,18 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="before()[pri:0, instance:training.ExampleTest@7f010382]" name="before" is-config="true" duration-ms="0" started-at="2018-03-14T00:07:00Z" finished-at="2018-03-14T00:07:00Z">
+        <test-method status="PASS" signature="before()[pri:0, instance:training.ExampleTest@7f010382]" name="before" is-config="true" duration-ms="0" started-at="2018-03-14T21:03:26Z" finished-at="2018-03-14T21:03:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- before -->
-        <test-method status="PASS" signature="after()[pri:0, instance:training.ExampleTest@7f010382]" name="after" is-config="true" duration-ms="0" started-at="2018-03-14T00:07:00Z" finished-at="2018-03-14T00:07:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- after -->
-        <test-method status="PASS" signature="afterC()[pri:0, instance:training.ExampleTest@7f010382]" name="afterC" is-config="true" duration-ms="0" started-at="2018-03-14T00:07:00Z" finished-at="2018-03-14T00:07:00Z">
+        <test-method status="PASS" signature="afterC()[pri:0, instance:training.ExampleTest@7f010382]" name="afterC" is-config="true" duration-ms="0" started-at="2018-03-14T21:03:26Z" finished-at="2018-03-14T21:03:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterC -->
+        <test-method status="PASS" signature="after()[pri:0, instance:training.ExampleTest@7f010382]" name="after" is-config="true" duration-ms="0" started-at="2018-03-14T21:03:26Z" finished-at="2018-03-14T21:03:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
       </class> <!-- training.ExampleTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
