@@ -22,9 +22,7 @@ public class EjemploTest {
 		Assert.assertEquals(sUsername, user, "Usuario incorrecto");
 		Assert.assertEquals(sPassword, pass, "Contraseña incorrecta");
 		Assert.assertEquals(nNombre, nombre, "Nombre incorrecto");
-		
-		
-		
+			
 	}
 	
 	@Test
