@@ -31,6 +31,7 @@ public class EjemploTest {
     @Test
 	public void prueba() {
 	LOG.info("test");
+	driver.get("http://www.newtours.demoaut.com");
 	driver.findElement(By.name("userName"));
 	driver.findElement(By.name("password"));
 	driver.findElement(By.name("login"));
@@ -38,7 +39,7 @@ public class EjemploTest {
     @BeforeMethod
     public void pruebabt() {
 	LOG.info("Abre navegador");
-	driver=new FirefoxDriver();
+	driver=new ChromeDriver();
 		
 		}		
     @AfterMethod
@@ -49,7 +50,7 @@ public class EjemploTest {
     @BeforeClass
     public void pruebabc() {
 	LOG.info("Instalando el driver");
-	WebDriverManager.firefoxdriver().setup();
+	WebDriverManager.chromedriver().setup();
 	
 			
 }
