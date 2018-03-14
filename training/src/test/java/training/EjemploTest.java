@@ -83,3 +83,39 @@ public class EjemploTest {
 	
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+       ------- APUNTES DEL MIÉRCOLES 14  ----------
+       
+       1. Trabajando con Git
+       Para hacer un commit en base a un archivo trabajado, se debe:
+       
+       git add nombreArchivo
+       git commit -m "description"
+       
+		2. WebDriver
+		Comunicación código-browser
+*/
