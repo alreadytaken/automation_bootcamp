@@ -24,24 +24,24 @@ public class EjemploTest {
     }
     @BeforeMethod
     public void pruebabt() {
-	System.out.println("Metodo Before test");
+	LOG.info("Metodo Before test");
 		}		
     @AfterMethod
 	public void pruebaat() {
-	System.out.println("Metodo After test");			
+	LOG.info("Metodo After test");			
 	}
     @BeforeClass
     public void pruebabc() {
-	System.out.println("Metodo Before class");
+	LOG.info("Metodo Before class");
 			
 }
     @AfterClass
     public void pruebaac() {
-	System.out.println("Metodo After class");		
+	LOG.info("Metodo After class");		
 }
     @Test
     public void pruebast() {
-	System.out.println("Segundo test");
+	LOG.info("Segundo test");
     }
     @DataProvider(name="Authentication")
     public Object[][] provider(){
@@ -50,10 +50,10 @@ public class EjemploTest {
     }
     @Test (dataProvider="Authentication")
     public void test(String sUsername, String sPassword,String sNombre) {
-    	System.out.println(sUsername);
-    	System.out.println(sPassword);
-    	System.out.println(sNombre);
-    	Assert.assertEquals(sPassword, sUsername,"Usuario y contraseña");
+    	LOG.info(sUsername);
+    	LOG.info(sPassword);
+        LOG.info(sNombre);
+    	Assert.assertEquals(sPassword, sPassword,"Usuario y contraseña");
     	Assert.assertEquals(sUsername, sUsername,"Usuario repetido");
     	
     }
