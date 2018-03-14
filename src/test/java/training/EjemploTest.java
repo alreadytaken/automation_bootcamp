@@ -3,6 +3,10 @@ package training;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -13,7 +17,13 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class EjemploTest {
+	
+	
+	
+	private WebDriver driver;
 	
 	
 	private static final Logger LOG=LogManager.getLogger(EjemploTest.class);
@@ -21,18 +31,26 @@ public class EjemploTest {
     @Test
 	public void prueba() {
 	LOG.info("test");
+	driver.findElement(By.name("userName"));
+	driver.findElement(By.name("password"));
+	driver.findElement(By.name("login"));
     }
     @BeforeMethod
     public void pruebabt() {
-	LOG.info("Metodo Before test");
+	LOG.info("Abre navegador");
+	driver=new FirefoxDriver();
+		
 		}		
     @AfterMethod
 	public void pruebaat() {
-	LOG.info("Metodo After test");			
+	LOG.info("Cerrando navegador");	
+	driver.quit();
 	}
     @BeforeClass
     public void pruebabc() {
-	LOG.info("Metodo Before class");
+	LOG.info("Instalando el driver");
+	WebDriverManager.firefoxdriver().setup();
+	
 			
 }
     @AfterClass
