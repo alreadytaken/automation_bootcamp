@@ -1,9 +1,12 @@
 package training;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
 public class EjemploTest {
+	private static final Logger Log = LogManager.getLogger(EjemploTest.class);
 	@Test(dataProvider = "Authentication")
 	public void test1(String sUsername, String sPassword, String sResult )
 	{
@@ -21,25 +24,25 @@ public class EjemploTest {
 	@BeforeMethod
 	public void test2()
 	{
-		System.out.println("Before");
+	Log.info("Before");
 	}
 	
 	@AfterMethod
 	public void test3()
 	{
-		System.out.println("After");
+		Log.info("After");
 	}
 	
 	@AfterClass
 	public void test4()
 	{
-		System.out.println("AfterClass");
+		Log.info("AfterClass");
 	}
 	
 	@BeforeClass
 	public void test5()
 	{
-		System.out.println("BeforeClass");
+		Log.info("BeforeClass");
 	}
 	
 }
