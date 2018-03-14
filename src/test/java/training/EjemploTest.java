@@ -1,5 +1,7 @@
 package training;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -11,33 +13,35 @@ import org.testng.annotations.Test;
 
 public class EjemploTest {
 
+private static final Logger LOG = LogManager.getLogger(EjemploTest.class);
 
 	@Test
 	public void coso() {
-		System.out.println("test");
+			
+		LOG.info("test");
 	}
 	
 	@BeforeMethod
 	public void coso2() {
-		System.out.println("beforetest");
+		LOG.info("beforeTest");
 	}
 	
 	@AfterMethod
 	public void coso3() {
-		System.out.println("aftertest");
+		LOG.info("aftertest");
 	}
 
 	@Test
 	public void coso4() {
-		System.out.println("test");
+		LOG.info("test");
 	}
 @BeforeClass
 	public void coso5() {
-		System.out.println("test beforeclass");
+	LOG.info("test beforeClass");
 	}
 	@AfterClass
 	public void coso6() {
-	System.out.println("test afterclass");
+		LOG.info("test afterclass");
 }
 @DataProvider(name= "Authentication")
 	public Object[][] provider(){
@@ -46,9 +50,9 @@ public class EjemploTest {
 	}
 	@Test(dataProvider = "Authentication")
 public void test(String sUsername, String sPassword) {
-	System.out.println(sUsername);
-	System.out.println(sPassword);
-	System.out.println("");
+		LOG.info(sUsername);
+		LOG.info(sPassword);
+		LOG.info("");
 	
 }
 	@Test(dataProvider = "Authentication")
