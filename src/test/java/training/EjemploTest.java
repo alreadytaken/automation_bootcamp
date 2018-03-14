@@ -1,9 +1,8 @@
 package training;
 
-import static org.testng.Assert.assertFalse;
 
-import javax.swing.SingleSelectionModel;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -16,9 +15,12 @@ import org.testng.annotations.Test;
 
 public class EjemploTest {
 	
+	
+	private static final Logger LOG=LogManager.getLogger(EjemploTest.class);
+	
     @Test
 	public void prueba() {
-	System.out.println("test");
+	LOG.info("test");
     }
     @BeforeMethod
     public void pruebabt() {
