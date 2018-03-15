@@ -10,7 +10,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import pageObject.Home;
 
 public class SeleniumTest {
@@ -24,9 +23,14 @@ public class SeleniumTest {
 	@BeforeMethod
 	public void beforemethod() {
 		  driver = new ChromeDriver();
+		  LOG.info("Browser Opened");
 	}
 	@Test
 	public void testmethod() {
+		
+		//Initialize Webelements of Home page
+		//Source:https://github.com/SeleniumHQ/selenium/wiki/PageFactory
+		
 		Home page = PageFactory.initElements(driver, Home.class);
 		LOG.info("Testing Started");
 		driver.get("http://newtours.demoaut.com/");
@@ -40,6 +44,7 @@ public class SeleniumTest {
 	@AfterMethod
 	public void aftermethod() {
 		driver.close();
+		LOG.info("Browser Closed");
 	}
 
 	@AfterClass
