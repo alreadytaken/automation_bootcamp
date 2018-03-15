@@ -40,6 +40,7 @@ public class EjemploTest {
     public void pruebabt() {
 	LOG.info("Abre navegador");
 	driver=new ChromeDriver();
+	driver.manage().window().maximize();
 		
 		}		
     @AfterMethod
