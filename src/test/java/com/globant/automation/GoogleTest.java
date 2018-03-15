@@ -26,9 +26,8 @@ public class GoogleTest {
 
     @Test
     public void searchTest() throws InterruptedException {
-        LOG.error("Search test");
+        LOG.info("Search test");
         driver.get("https://google.com");
-        Thread.sleep(5000);
     }
 
     @BeforeMethod
