@@ -46,7 +46,8 @@ public class GoogleTest {
         buscador.click();
         buscador.sendKeys(enviar);
         buscador.sendKeys(Keys.ENTER);
-        WebElement e=(new WebDriverWait(driver, 10)).until(ExpectedConditions.elementToBeClickable(By.name("q")));
+        WebElement wait = SeleniumUtils.waitUntilClickable(By.xpath("//div[@class='rc']/h3[@class='r']/a"), driver) ;
+        wait.click();
         
     }
     
