@@ -82,6 +82,7 @@ public class EjemploTest {
 	@Test(dataProvider = "Authentication")
 	public void pruebaAssert(String a, String b, String c) {
 		WebElement txtUsername = driver.findElement(By.name("userName"));
+
 		Assert.assertTrue(a != b, a + " distinto de " + b);
 		Assert.assertFalse(b == c, a + " igual a " + c);
 		LOG.info("Prueba Assert");
