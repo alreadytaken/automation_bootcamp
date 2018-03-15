@@ -3,13 +3,19 @@ package training;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class EjemploTest {
 	
 	private static final Logger LOG = LogManager.getLogger(EjemploTest.class);
-	//	public EjemploTest() {}
+	
+	private WebDriver driver;
 	
 	@Test
 	public void metodoUno() {
@@ -28,34 +34,38 @@ public class EjemploTest {
 	@BeforeMethod
 	public void metodoTres() {
 
-		System.out.println("Before Method");
-	
+		LOG.info("Before Method");
+		driver = new ChromeDriver();
+		driver.get("http://google.com");
 	}
 
-	@AfterTest
+	@AfterMethod
 	public void metodoCuatro() {
 		
-		System.out.println("After Test");
+		//LOG.info("After Test");
+		driver.quit();
 	
 	}
 	
 	@BeforeClass
 	public void metodoCinco() {
 		
-		System.out.println("Before Class");
-	
+		LOG.info("Instalando Driver");
+		WebDriverManager.chromedriver().setup();
+		
 	}
 	
 	@AfterClass
 	public void metodoSeis() {
 		
-		System.out.println("After Class");
+		LOG.info("After Class");
 	
 	}
 	
 	@DataProvider(name= "Authentication")
 	public Object[][] provider(){
 		
+		LOG.info("Creamos la matriz");
 		return new Object[][] {{"testuser_1","Test@123", "res1"},{"testuser_1","Test@123", "res2"}};
 	
 	}
@@ -65,16 +75,23 @@ public class EjemploTest {
 		sUsername = "Juan";
 		password = "Perez";
 		otro = password;
-		System.out.println(sUsername+ " " + password + "" + otro);
+		LOG.info(sUsername+ " " + password + " " + otro);
 	}
 	
 	
 	@Test(dataProvider = "Authentication")
 	public void pruebaAssert(String a, String b, String c) {
+		WebElement txtUsername = driver.findElement(By.name("userName"));
 		Assert.assertTrue(a != b, a + " distinto de " + b);
 		Assert.assertFalse(b == c, a + " igual a " + c);
-		
+		LOG.info("Prueba Assert");
 	}
+	
+	/*
+	 name="userName"
+	 name="password"
+	 name="login"
+	 */
 	
 	
 
