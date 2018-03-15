@@ -2,14 +2,23 @@ package training;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class EjemploTest {
-	private static final Logger Log = LogManager.getLogger(EjemploTest.class);
+	private WebDriver driver; 
+	private static final Logger LOG = LogManager.getLogger(EjemploTest.class);
 	@Test(dataProvider = "Authentication")
 	public void test1(String sUsername, String sPassword, String sResult )
-	{
+{
+		WebElement txtUserName = driver.findElement(By.name("userName"));
 		Assert.assertFalse(sUsername == sPassword, "estoy comparando1");
 		Assert.assertTrue(sUsername == sPassword , "estoy comparando2");
 		
@@ -24,25 +33,31 @@ public class EjemploTest {
 	@BeforeMethod
 	public void test2()
 	{
-	Log.info("Before");
+		driver = new ChromeDriver();
+	LOG.info("Before");
 	}
 	
 	@AfterMethod
 	public void test3()
 	{
-		Log.info("After");
+		LOG.info("After");
+		driver.quit();
+		//name="userName"
+		//name="password"
+		//name="login"
 	}
 	
 	@AfterClass
 	public void test4()
 	{
-		Log.info("AfterClass");
+		
 	}
 	
 	@BeforeClass
 	public void test5()
 	{
-		Log.info("BeforeClass");
+		LOG.info("instalando driver");
+		WebDriverManager.chromedriver().setup();
 	}
 	
 }
