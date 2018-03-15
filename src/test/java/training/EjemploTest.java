@@ -17,30 +17,30 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-
 public class EjemploTest {
 	private static final Logger LOG = LogManager.getLogger(EjemploTest.class);
 	private WebDriver driver;
+
 	@Test
 	public void MetodoEjemplo() {
 		LOG.info("Metodoejemplo1 Test");
 		WebElement txtUsername = driver.findElement(By.name("userName"));
-		//name=userName
-		//name=password
-		//name=login
+		// name=userName
+		// name=password
+		// name=login
 		// System.out.println("Metodoejemplo1 Test");
 	}
 
 	@BeforeMethod
 	public void MetodoEjemplo2() {
-		driver=new ChromeDriver();
+		driver = new ChromeDriver();
 		LOG.info("Metodoejemplo2 BeforeMethod");
 		// System.out.println("Metodoejemplo2 BeforeMethod");
 	}
 
 	@AfterMethod
 	public void MetodoEjemplo3() {
-		//driver.quit();
+		// driver.quit();
 		LOG.info("Metodoejemplo3 AfterMethod");
 		// System.out.println("Metodoejemplo3 AfterMethod");
 	}
