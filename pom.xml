@@ -26,12 +26,18 @@
     <artifactId>selenium-java</artifactId>
     <version>3.11.0</version>
 </dependency>
-
   <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
 <dependency>
     <groupId>io.github.bonigarcia</groupId>
     <artifactId>webdrivermanager</artifactId>
     <version>2.1.0</version>
+</dependency>
+
+  <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-core</artifactId>
+    <version>2.10.0</version>
 </dependency>
   
   </dependencies>
