@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="14937" started-at="2018-03-16T06:02:14Z" finished-at="2018-03-16T06:02:29Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="14937" started-at="2018-03-16T06:02:14Z" finished-at="2018-03-16T06:02:29Z">
+      <class name="com.globant.automation.GoogleTest">
+        <test-method status="PASS" signature="prepareClass()[pri:0, instance:com.globant.automation.GoogleTest@16d04d3d]" name="prepareClass" is-config="true" duration-ms="1538" started-at="2018-03-16T06:02:14Z" finished-at="2018-03-16T06:02:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareClass -->
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.GoogleTest@16d04d3d]" name="prepareTest" is-config="true" duration-ms="1278" started-at="2018-03-16T06:02:15Z" finished-at="2018-03-16T06:02:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareTest -->
+        <test-method status="PASS" signature="searchTest(java.lang.String)[pri:0, instance:com.globant.automation.GoogleTest@16d04d3d]" name="searchTest" duration-ms="5250" started-at="2018-03-16T06:02:17Z" data-provider="Search" finished-at="2018-03-16T06:02:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Pink Floyd]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchTest -->
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.globant.automation.GoogleTest@16d04d3d]" name="cleanup" is-config="true" duration-ms="77" started-at="2018-03-16T06:02:22Z" finished-at="2018-03-16T06:02:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.GoogleTest@16d04d3d]" name="prepareTest" is-config="true" duration-ms="773" started-at="2018-03-16T06:02:22Z" finished-at="2018-03-16T06:02:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareTest -->
+        <test-method status="PASS" signature="searchTest(java.lang.String)[pri:0, instance:com.globant.automation.GoogleTest@16d04d3d]" name="searchTest" duration-ms="2521" started-at="2018-03-16T06:02:23Z" data-provider="Search" finished-at="2018-03-16T06:02:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Led Zeppelin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchTest -->
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.globant.automation.GoogleTest@16d04d3d]" name="cleanup" is-config="true" duration-ms="74" started-at="2018-03-16T06:02:25Z" finished-at="2018-03-16T06:02:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.GoogleTest@16d04d3d]" name="prepareTest" is-config="true" duration-ms="658" started-at="2018-03-16T06:02:25Z" finished-at="2018-03-16T06:02:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareTest -->
+        <test-method status="PASS" signature="searchTest(java.lang.String)[pri:0, instance:com.globant.automation.GoogleTest@16d04d3d]" name="searchTest" duration-ms="2676" started-at="2018-03-16T06:02:26Z" data-provider="Search" finished-at="2018-03-16T06:02:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[The Beatles]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchTest -->
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.globant.automation.GoogleTest@16d04d3d]" name="cleanup" is-config="true" duration-ms="74" started-at="2018-03-16T06:02:29Z" finished-at="2018-03-16T06:02:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+      </class> <!-- com.globant.automation.GoogleTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
