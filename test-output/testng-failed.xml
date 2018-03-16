@@ -5,7 +5,7 @@
     <classes>
       <class name="com.globant.automation.GoogleTest">
         <methods>
-          <include name="searchTest"/>
+          <include name="searchTest4" invocation-numbers="0"/>
           <include name="prepareClass"/>
           <include name="cleanup"/>
           <include name="prepareTest"/>

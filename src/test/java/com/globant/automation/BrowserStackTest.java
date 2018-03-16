@@ -44,7 +44,7 @@ public void testBrowserStack() {
 	WebElement sPassword = driver.findElement(By.name("reg_passwd__"));
 	sName.sendKeys("Mauro");
 	sLastName.sendKeys("Mendaro");
-	sEmail.sendKeys("mauromendaro@prueba.com)";
+	sEmail.sendKeys("mauromendaro@prueba.com");
 	sPassword.sendKeys("123456");
     sLastName.submit();
 
