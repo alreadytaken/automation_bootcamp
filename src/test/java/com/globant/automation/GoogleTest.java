@@ -4,6 +4,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -17,6 +19,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -39,7 +42,7 @@ public class GoogleTest {
     @DataProvider(name = "q")
     public Object[][] provider()
     {
-    	return new Object [][] {{"Smash"},{"Hola"},{"ok"}};
+    	return new Object [][] {{"Smash"}, {"Link"},{"Samus"},{"Kirby"},{"Mario"}};
     }
     
 
@@ -47,11 +50,37 @@ public class GoogleTest {
     public void searchTest(String q) throws InterruptedException {
         LOG.info("Search test");
         driver.get("https://google.com");
-        WebElement element = SeleniumUtils.waitUntilClickable(By.name("q"), driver);
-    	element.sendKeys(q);
-    	element.sendKeys(Keys.ENTER);
-    	WebElement resultado1 = driver.findElements(By.xpath)
-    	element.submit();
+        WebElement gelement = SeleniumUtils.waitUntilClickable(By.name("q"), driver);
+    	gelement.sendKeys(q);
+    	gelement.sendKeys(Keys.ENTER);
+        List<WebElement> GoogleElements = driver.findElements(By.xpath("//*[@class='rc']/h3/a"));
+    	List<String> google = new ArrayList<>();
+        for (int i=0; i<5;i++)
+    	{
+        	google.add(GoogleElements.get(i).getText());
+    	}
+        
+     
+        
+        driver.get("https://bing.com");
+        WebElement belement = SeleniumUtils.waitUntilClickable(By.name("q"), driver);
+    	belement.sendKeys(q);
+    	belement.sendKeys(Keys.ENTER);
+        List<WebElement> BingElements = driver.findElements(By.xpath("//*[@class='b_algo']/h2/a"));
+        List<String> bing = new ArrayList<>();
+        for (int i=0; i<5;i++)
+    	{
+        	bing.add(BingElements.get(i).getText());
+    	}
+        
+        for (int i=0; i<5;i++)
+        {
+        	Assert.assertTrue(google.get(i) != bing.get(i), "estoy comparando1");
+        }
+        
+        
+        
+        
     }
 
     @BeforeMethod
