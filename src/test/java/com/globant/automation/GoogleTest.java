@@ -1,6 +1,10 @@
 package com.globant.automation;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
@@ -11,6 +15,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -33,7 +38,7 @@ public class GoogleTest {
     
     @DataProvider(name="Buscar")
     public Object[][] provider(){
-    	return new Object [][] {{ "uno" },{"dos"},{"tres"}};
+    	return new Object [][] {{ "uno" },{"dos"},{"tres"},{"cuatro"},{"cinco"}};
     }
     	
     
@@ -46,12 +51,43 @@ public class GoogleTest {
         buscador.click();
         buscador.sendKeys(enviar);
         buscador.sendKeys(Keys.ENTER);
-        WebElement wait = SeleniumUtils.waitUntilClickable(By.xpath("//div[@class='rc']/h3[@class='r']/a"), driver) ;
-        wait.click();
+        List <WebElement> resultados=driver.findElements(By.xpath("//div[@class='rc']/h3/a"));
+        List <String> google=new ArrayList<>();
+        for(int i=0;i<5;i++) {
+        	String texto = resultados.get(i).getText();
+        
+        google.add(texto);
+        google.get(i);
+        
+        
+        }
+        
+       
+        driver.get("https://www.bing.com");
+        WebElement buscador2 =driver.findElement(By.name("q"));
+        buscador2.click();
+        buscador2.sendKeys(enviar);
+        buscador2.sendKeys(Keys.ENTER);
+        List <WebElement> resultados2=driver.findElements(By.xpath("//li[@class='b_algo']/h2/a")); 
+        List <String> bing=new ArrayList<>();
+        
+        
+        for(int i=0;i<5;i++) {
+        	String texto = resultados2.get(i).getText();
+        
+        
+        bing.add(texto);
+        bing.get(i);
+        
+        }
+        
+       for(int i =0;i<5;i++) {
+    	   Assert.assertEquals(google.get(i), bing.get(i));
+    	   
+       }
         
     }
     
-
     @BeforeMethod
     public void prepareTest() {
         LOG.info("Prepare test");
