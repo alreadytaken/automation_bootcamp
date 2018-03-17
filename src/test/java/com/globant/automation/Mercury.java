@@ -29,9 +29,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class GoogleTest {
+public class Mercury {
 
-    public GoogleTest() {
+    public Mercury() {
 
     }
 
@@ -39,50 +39,19 @@ public class GoogleTest {
     private WebDriver driver;
 
     static {
-        LOG = LogManager.getLogger(GoogleTest.class);
+        LOG = LogManager.getLogger(Mercury.class);
     }
-/*
-    @Test
-    public void searchTest() throws InterruptedException {
-        LOG.info("Search test");
-        driver.get("https://google.com");
-        WebElement sBuscador = driver.findElement(By.name("q"));
-        WebElement sSearch = driver.findElement(By.name("btnK"));
-        sBuscador.sendKeys("perritos imagenes");
-        sSearch.submit();
-    }
-
-    @Test
-    public void searchTest2() throws InterruptedException {
-        LOG.info("Search test");
-        driver.get("https://google.com");
-        WebElement sBuscador = driver.findElement(By.name("q"));
-        WebElement sSearch = driver.findElement(By.name("btnK"));
-        sBuscador.sendKeys("tchoukball imagenes");
-        sSearch.submit();
-    }
-    
-    @Test
-    public void searchTest3() throws InterruptedException {
-        LOG.info("Search test");
-        driver.get("https://google.com");
-        WebElement sBuscador = driver.findElement(By.name("q"));
-        WebElement sSearch = driver.findElement(By.name("btnK"));
-        sBuscador.sendKeys("bicicletas imagenes");
-        sSearch.submit();
-    }*/
     
     @DataProvider(name="Search")
     public static Object[][] toSearch() {
         return new Object[][] { { "bicicletas" }};
   }
-       
-        
+               
     @Test(dataProvider = "Search")
     public void searchTest4(String sSend)  {
-        LOG.info("Test Google");
-        driver.get("https://google.com");
-        WebElement sBuscadorg = driver.findElement(By.name("q"));
+        LOG.info("Test Mercury");
+        driver.get("http://newtours.demoaut.com/.com");
+        WebElement sBuscador = driver.findElement(By.name("q"));
         
         //Declaro mis listas
         List<WebElement> sResultg = null;
