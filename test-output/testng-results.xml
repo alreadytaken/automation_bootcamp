@@ -1,59 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="18948" started-at="2018-03-15T23:40:45Z" finished-at="2018-03-15T23:41:04Z">
+  <suite name="Default suite" duration-ms="13436" started-at="2018-03-16T22:07:04Z" finished-at="2018-03-16T22:07:17Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="18948" started-at="2018-03-15T23:40:45Z" finished-at="2018-03-15T23:41:04Z">
-      <class name="com.globant.automation.GoogleTest">
-        <test-method status="PASS" signature="prepareClass()[pri:0, instance:com.globant.automation.GoogleTest@6b927fb]" name="prepareClass" is-config="true" duration-ms="1574" started-at="2018-03-15T23:40:45Z" finished-at="2018-03-15T23:40:46Z">
+    <test name="Default test" duration-ms="13436" started-at="2018-03-16T22:07:04Z" finished-at="2018-03-16T22:07:17Z">
+      <class name="com.globant.automation.comparoBusqueda">
+        <test-method status="PASS" signature="prepareClass()[pri:0, instance:com.globant.automation.comparoBusqueda@6b927fb]" name="prepareClass" is-config="true" duration-ms="2732" started-at="2018-03-16T22:07:04Z" finished-at="2018-03-16T22:07:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareClass -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.GoogleTest@6b927fb]" name="prepareTest" is-config="true" duration-ms="905" started-at="2018-03-15T23:40:46Z" finished-at="2018-03-15T23:40:47Z">
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.comparoBusqueda@6b927fb]" name="prepareTest" is-config="true" duration-ms="898" started-at="2018-03-16T22:07:07Z" finished-at="2018-03-16T22:07:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareTest -->
-        <test-method status="PASS" signature="busquedasGoogle(java.lang.String)[pri:0, instance:com.globant.automation.GoogleTest@6b927fb]" name="busquedasGoogle" duration-ms="5411" started-at="2018-03-15T23:40:47Z" data-provider="Authentication" finished-at="2018-03-15T23:40:53Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Columna de Darwin]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- busquedasGoogle -->
-        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.globant.automation.GoogleTest@6b927fb]" name="cleanup" is-config="true" duration-ms="77" started-at="2018-03-15T23:40:53Z" finished-at="2018-03-15T23:40:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanup -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.GoogleTest@6b927fb]" name="prepareTest" is-config="true" duration-ms="700" started-at="2018-03-15T23:40:53Z" finished-at="2018-03-15T23:40:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- prepareTest -->
-        <test-method status="PASS" signature="busquedasGoogle(java.lang.String)[pri:0, instance:com.globant.automation.GoogleTest@6b927fb]" name="busquedasGoogle" duration-ms="3471" started-at="2018-03-15T23:40:53Z" data-provider="Authentication" finished-at="2018-03-15T23:40:57Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Triciclos]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- busquedasGoogle -->
-        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.globant.automation.GoogleTest@6b927fb]" name="cleanup" is-config="true" duration-ms="70" started-at="2018-03-15T23:40:57Z" finished-at="2018-03-15T23:40:57Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanup -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.GoogleTest@6b927fb]" name="prepareTest" is-config="true" duration-ms="607" started-at="2018-03-15T23:40:57Z" finished-at="2018-03-15T23:40:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- prepareTest -->
-        <test-method status="PASS" signature="busquedasGoogle(java.lang.String)[pri:0, instance:com.globant.automation.GoogleTest@6b927fb]" name="busquedasGoogle" duration-ms="3252" started-at="2018-03-15T23:40:58Z" data-provider="Authentication" finished-at="2018-03-15T23:41:01Z">
+        <test-method status="PASS" signature="comparoBusquedas(java.lang.String)[pri:0, instance:com.globant.automation.comparoBusqueda@6b927fb]" name="comparoBusquedas" duration-ms="8972" started-at="2018-03-16T22:07:08Z" data-provider="Authentication" finished-at="2018-03-16T22:07:17Z">
           <params>
             <param index="0">
               <value>
@@ -63,24 +25,24 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- busquedasGoogle -->
-        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.globant.automation.GoogleTest@6b927fb]" name="cleanup" is-config="true" duration-ms="67" started-at="2018-03-15T23:41:01Z" finished-at="2018-03-15T23:41:01Z">
+        </test-method> <!-- comparoBusquedas -->
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.globant.automation.comparoBusqueda@6b927fb]" name="cleanup" is-config="true" duration-ms="71" started-at="2018-03-16T22:07:17Z" finished-at="2018-03-16T22:07:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.GoogleTest@6b927fb]" name="prepareTest" is-config="true" duration-ms="2717" started-at="2018-03-15T23:41:01Z" finished-at="2018-03-15T23:41:04Z">
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.comparoBusqueda@6b927fb]" name="prepareTest" is-config="true" duration-ms="565" started-at="2018-03-16T22:07:17Z" finished-at="2018-03-16T22:07:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareTest -->
-        <test-method status="PASS" signature="searchTest()[pri:0, instance:com.globant.automation.GoogleTest@6b927fb]" name="searchTest" duration-ms="2" started-at="2018-03-15T23:41:04Z" finished-at="2018-03-15T23:41:04Z">
+        <test-method status="PASS" signature="searchTest()[pri:0, instance:com.globant.automation.comparoBusqueda@6b927fb]" name="searchTest" duration-ms="1" started-at="2018-03-16T22:07:17Z" finished-at="2018-03-16T22:07:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchTest -->
-        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.globant.automation.GoogleTest@6b927fb]" name="cleanup" is-config="true" duration-ms="66" started-at="2018-03-15T23:41:04Z" finished-at="2018-03-15T23:41:04Z">
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.globant.automation.comparoBusqueda@6b927fb]" name="cleanup" is-config="true" duration-ms="169" started-at="2018-03-16T22:07:17Z" finished-at="2018-03-16T22:07:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
-      </class> <!-- com.globant.automation.GoogleTest -->
+      </class> <!-- com.globant.automation.comparoBusqueda -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

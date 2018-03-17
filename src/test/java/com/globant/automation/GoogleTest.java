@@ -1,9 +1,12 @@
 package com.globant.automation;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import junit.framework.Assert;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -83,8 +86,36 @@ public class GoogleTest {
         WebElement txtBusqueda= SeleniumUtils.waitUntilClickable(By.name("q"), driver);
         txtBusqueda.sendKeys(a);   
        
-        
-                
+                        
+	}
+	
+	@Test
+	public void comparoBusquedas() {
+		 driver.get("http://google.com.uy");
+		 WebElement txtBusqueda= SeleniumUtils.waitUntilClickable(By.name("q"), driver);
+		 txtBusqueda.sendKeys("Pistachos");
+		 
+		 List<WebElement> resultadosGoogle = driver.findElements(By.xpath("//div[@class='rc']/h3[@class='r']/a"));	
+	     List<String> auxG = new ArrayList();
+	     for(int i=0; i<5; i++) {
+	    	 auxG.add(resultadosGoogle.get(i).getText());
+	     }
+		 //driver.close();
+		 
+		 driver.get("https://www.bing.com/");
+		 WebElement txtBusqueda2= SeleniumUtils.waitUntilClickable(By.name("q"), driver);
+		 txtBusqueda2.sendKeys("Pistachos");
+		 
+		 List<WebElement> resultadosBing = driver.findElements(By.xpath("//div[@class='rc']/h2[@class='r']/a"));
+		 List<String> auxB = new ArrayList();
+		 for(int i=0; i<5; i++) {
+	    	 auxG.add(resultadosGoogle.get(i).getText());
+	     }
+		 
+		 for(int i=0; i<5; i++) {
+			 Assert.assertEquals(auxG.get(i)==auxB.get(i), "Comparo Resultados");
+			 
+		 }
 	}
 
 }

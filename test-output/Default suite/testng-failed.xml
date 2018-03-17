@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.globant.automation.GoogleTest">
+      <class name="com.globant.automation.comparoBusqueda">
         <methods>
-          <include name="busquedasGoogle"/>
-          <include name="prepareClass"/>
           <include name="cleanup"/>
+          <include name="comparoBusquedas" invocation-numbers="0"/>
           <include name="prepareTest"/>
+          <include name="prepareClass"/>
         </methods>
-      </class> <!-- com.globant.automation.GoogleTest -->
+      </class> <!-- com.globant.automation.comparoBusqueda -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
