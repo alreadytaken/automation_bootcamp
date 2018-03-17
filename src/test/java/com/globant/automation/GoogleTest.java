@@ -66,7 +66,7 @@ public class GoogleTest {
     		f.sendKeys(Keys.ENTER);
     		List <WebElement> resultadosbing;// = driver.findElements(By.xpath ("//li[@class='b_algo']/h2/a"));
     		List <String> resultadosbingtext;
-    		resultadosbing=(SeleniumUtils.WaitUntilVisibilityList(By.xpath("//li[@class='b_algo']/h2/a"), driver));
+    		resultadosbing=(SeleniumUtils.WaitUntilVisibilityList(By.cssSelector("li[class='b_algo'] h2 a"), driver));
     		resultadosbingtext = new ArrayList<>();    		
     		for (int j=0;j<=5;j++) {
     			resultadosbingtext.add(resultadosbing.get(j).getText());
