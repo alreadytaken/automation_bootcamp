@@ -1,15 +1,28 @@
 package com.globant.automation;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class GoogleTest {
 
@@ -28,12 +41,53 @@ public class GoogleTest {
     public void searchTest() throws InterruptedException {
         LOG.info("Search test");
         driver.get("https://google.com");
+        WebDriverWait w = new WebDriverWait(driver,10);
+        WebElement e = w.until(ExpectedConditions.elementToBeClickable(By.name("q")));
+        WebElement txtIngreso1 = driver.findElement(By.name("q"));
+        txtIngreso1.sendKeys("hola");
+    	txtIngreso1.sendKeys(Keys.ENTER);
+    	
+        LOG.info("Prepare test");
+    }
+    @Test
+    public void searchTest2() throws InterruptedException {
+        LOG.info("Search test2");
+        List<WebElement> resultados = new ArrayList<>();
+        List<String> google = new ArrayList<>();
+        List <String> bing = new ArrayList<>();
+        driver.get("https://google.com");
+        WebDriverWait w = new WebDriverWait(driver,10);
+        WebElement e = w.until(ExpectedConditions.elementToBeClickable(By.name("q")));
+        WebElement txtIngreso1 = driver.findElement(By.name("q"));
+        txtIngreso1.sendKeys("hola");
+    	txtIngreso1.sendKeys(Keys.ENTER);
+    	resultados = driver.findElements(By.xpath("//h3[@class='r']/a"));
+    	for (int i =0;i<5;i++) {
+    		google.add(resultados.get(i).getText());
+    	}
+    	driver.get("http://bing.com");
+    	WebDriverWait x = new WebDriverWait(driver,10);
+        WebElement E = w.until(ExpectedConditions.elementToBeClickable(By.name("q")));
+        WebElement txtIngreso2 = driver.findElement(By.name("q"));
+        txtIngreso1.sendKeys("hola");
+    	txtIngreso1.sendKeys(Keys.ENTER);
+    	resultados = driver.findElements(By.xpath("//h2/a"));
+    	for (int i =0;i<5;i++) {
+    		bing.add(resultados.get(i).getText());
+    	}
+    	for (int i=0;i<5;i++) {
+    		Assert.assertEquals(google.get(i), bing.get(i));
+    	}
+    	
+        LOG.info("Prepare test");
     }
 
     @BeforeMethod
-    public void prepareTest() {
-        LOG.info("Prepare test");
+    public void prepareTest() throws MalformedURLException {
+    	
         driver = new ChromeDriver();
+        /*DesiredCapabilities caps = DesiredCapabilities.firefox();
+        driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444/wd/hub"), caps);*/
     }
 
     @AfterMethod
