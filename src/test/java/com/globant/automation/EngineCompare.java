@@ -67,7 +67,7 @@ public class EngineCompare {
         bsearchBar.sendKeys(search);
         bsearchBar.submit();
         SeleniumUtils.waitUntilClickable(By.id("sb_form_go"), driver);  
-        tresultsB = driver.findElements(By.xpath("//li[@class='b_algo']/div/h2/a"));
+        tresultsB = driver.findElements(By.xpath("//li[@class='b_algo']/h2/a"));
         
         for (int i=0;i<5;i++) {
         	

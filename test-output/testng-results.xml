@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="5" ignored="0" total="5" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="60809" started-at="2018-03-16T20:29:47Z" finished-at="2018-03-16T20:30:48Z">
+  <suite name="Default suite" duration-ms="38325" started-at="2018-03-18T19:08:33Z" finished-at="2018-03-18T19:09:11Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="60809" started-at="2018-03-16T20:29:47Z" finished-at="2018-03-16T20:30:48Z">
-      <class name="com.globant.automation.EngineCompare">
-        <test-method status="PASS" signature="prepareClass()[pri:0, instance:com.globant.automation.EngineCompare@5b239d7d]" name="prepareClass" is-config="true" duration-ms="1511" started-at="2018-03-16T20:29:47Z" finished-at="2018-03-16T20:29:48Z">
+    <test name="Default test" duration-ms="38325" started-at="2018-03-18T19:08:33Z" finished-at="2018-03-18T19:09:11Z">
+      <class name="com.globant.automation.PomGoogleBingCompare">
+        <test-method status="PASS" signature="prepareClass()[pri:0, instance:com.globant.automation.PomGoogleBingCompare@16d04d3d]" name="prepareClass" is-config="true" duration-ms="1495" started-at="2018-03-18T19:08:33Z" finished-at="2018-03-18T19:08:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareClass -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.EngineCompare@5b239d7d]" name="prepareTest" is-config="true" duration-ms="1739" started-at="2018-03-16T20:29:48Z" finished-at="2018-03-16T20:29:50Z">
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.PomGoogleBingCompare@16d04d3d]" name="prepareTest" is-config="true" duration-ms="1136" started-at="2018-03-18T19:08:35Z" finished-at="2018-03-18T19:08:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareTest -->
-        <test-method status="FAIL" signature="searchTest(java.lang.String)[pri:0, instance:com.globant.automation.EngineCompare@5b239d7d]" name="searchTest" duration-ms="10240" started-at="2018-03-16T20:29:50Z" data-provider="Search" finished-at="2018-03-16T20:30:00Z">
+        <test-method status="FAIL" signature="searchTest(java.lang.String)[pri:0, instance:com.globant.automation.PomGoogleBingCompare@16d04d3d]" name="searchTest" duration-ms="7487" started-at="2018-03-18T19:08:36Z" data-provider="Search" finished-at="2018-03-18T19:08:43Z">
           <params>
             <param index="0">
               <value>
@@ -25,21 +25,20 @@
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Pink Floyd - YouTube] but found [Pink Floyd - Wikipedia, la enciclopedia libre]]]>
+              <![CDATA[Lists differ at element [0]: Pink Floyd - YouTube != Pink Floyd - Wikipedia, la enciclopedia libre expected [Pink Floyd - YouTube] but found [Pink Floyd - Wikipedia, la enciclopedia libre]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Pink Floyd - YouTube] but found [Pink Floyd - Wikipedia, la enciclopedia libre]
+              <![CDATA[java.lang.AssertionError: Lists differ at element [0]: Pink Floyd - YouTube != Pink Floyd - Wikipedia, la enciclopedia libre expected [Pink Floyd - YouTube] but found [Pink Floyd - Wikipedia, la enciclopedia libre]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:453)
-at org.testng.Assert.assertEquals(Assert.java:463)
-at com.globant.automation.EngineCompare.searchTest(EngineCompare.java:80)
+at org.testng.Assert.assertEquals(Assert.java:831)
+at org.testng.Assert.assertEquals(Assert.java:796)
+at com.globant.automation.PomGoogleBingCompare.searchTest(PomGoogleBingCompare.java:56)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
+at java.lang.reflect.Method.invoke(Method.java:497)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
 at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
 at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
@@ -67,15 +66,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchTest -->
-        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.globant.automation.EngineCompare@5b239d7d]" name="cleanup" is-config="true" duration-ms="76" started-at="2018-03-16T20:30:00Z" finished-at="2018-03-16T20:30:01Z">
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.globant.automation.PomGoogleBingCompare@16d04d3d]" name="cleanup" is-config="true" duration-ms="108" started-at="2018-03-18T19:08:43Z" finished-at="2018-03-18T19:08:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.EngineCompare@5b239d7d]" name="prepareTest" is-config="true" duration-ms="1823" started-at="2018-03-16T20:30:01Z" finished-at="2018-03-16T20:30:02Z">
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.PomGoogleBingCompare@16d04d3d]" name="prepareTest" is-config="true" duration-ms="764" started-at="2018-03-18T19:08:43Z" finished-at="2018-03-18T19:08:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareTest -->
-        <test-method status="FAIL" signature="searchTest(java.lang.String)[pri:0, instance:com.globant.automation.EngineCompare@5b239d7d]" name="searchTest" duration-ms="9777" started-at="2018-03-16T20:30:02Z" data-provider="Search" finished-at="2018-03-16T20:30:12Z">
+        <test-method status="FAIL" signature="searchTest(java.lang.String)[pri:0, instance:com.globant.automation.PomGoogleBingCompare@16d04d3d]" name="searchTest" duration-ms="5273" started-at="2018-03-18T19:08:44Z" data-provider="Search" finished-at="2018-03-18T19:08:49Z">
           <params>
             <param index="0">
               <value>
@@ -85,21 +84,20 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Led Zeppelin, II, III, IV, Houses of the …] but found [Led Zeppelin - Wikipedia, la enciclopedia libre]]]>
+              <![CDATA[Lists differ at element [0]: Led Zeppelin - Wikipedia != Led Zeppelin - Wikipedia, la enciclopedia libre expected [Led Zeppelin - Wikipedia] but found [Led Zeppelin - Wikipedia, la enciclopedia libre]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Led Zeppelin, II, III, IV, Houses of the …] but found [Led Zeppelin - Wikipedia, la enciclopedia libre]
+              <![CDATA[java.lang.AssertionError: Lists differ at element [0]: Led Zeppelin - Wikipedia != Led Zeppelin - Wikipedia, la enciclopedia libre expected [Led Zeppelin - Wikipedia] but found [Led Zeppelin - Wikipedia, la enciclopedia libre]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:453)
-at org.testng.Assert.assertEquals(Assert.java:463)
-at com.globant.automation.EngineCompare.searchTest(EngineCompare.java:80)
+at org.testng.Assert.assertEquals(Assert.java:831)
+at org.testng.Assert.assertEquals(Assert.java:796)
+at com.globant.automation.PomGoogleBingCompare.searchTest(PomGoogleBingCompare.java:56)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
+at java.lang.reflect.Method.invoke(Method.java:497)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
 at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
 at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
@@ -127,15 +125,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchTest -->
-        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.globant.automation.EngineCompare@5b239d7d]" name="cleanup" is-config="true" duration-ms="72" started-at="2018-03-16T20:30:12Z" finished-at="2018-03-16T20:30:12Z">
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.globant.automation.PomGoogleBingCompare@16d04d3d]" name="cleanup" is-config="true" duration-ms="77" started-at="2018-03-18T19:08:49Z" finished-at="2018-03-18T19:08:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.EngineCompare@5b239d7d]" name="prepareTest" is-config="true" duration-ms="1177" started-at="2018-03-16T20:30:12Z" finished-at="2018-03-16T20:30:13Z">
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.PomGoogleBingCompare@16d04d3d]" name="prepareTest" is-config="true" duration-ms="737" started-at="2018-03-18T19:08:49Z" finished-at="2018-03-18T19:08:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareTest -->
-        <test-method status="FAIL" signature="searchTest(java.lang.String)[pri:0, instance:com.globant.automation.EngineCompare@5b239d7d]" name="searchTest" duration-ms="8406" started-at="2018-03-16T20:30:13Z" data-provider="Search" finished-at="2018-03-16T20:30:22Z">
+        <test-method status="FAIL" signature="searchTest(java.lang.String)[pri:0, instance:com.globant.automation.PomGoogleBingCompare@16d04d3d]" name="searchTest" duration-ms="6640" started-at="2018-03-18T19:08:50Z" data-provider="Search" finished-at="2018-03-18T19:08:57Z">
           <params>
             <param index="0">
               <value>
@@ -145,21 +143,20 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [The Beatles] but found [The Beatles - Wikipedia, la enciclopedia libre]]]>
+              <![CDATA[Lists differ at element [0]: The Beatles != The Beatles - Wikipedia, la enciclopedia libre expected [The Beatles] but found [The Beatles - Wikipedia, la enciclopedia libre]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [The Beatles] but found [The Beatles - Wikipedia, la enciclopedia libre]
+              <![CDATA[java.lang.AssertionError: Lists differ at element [0]: The Beatles != The Beatles - Wikipedia, la enciclopedia libre expected [The Beatles] but found [The Beatles - Wikipedia, la enciclopedia libre]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:453)
-at org.testng.Assert.assertEquals(Assert.java:463)
-at com.globant.automation.EngineCompare.searchTest(EngineCompare.java:80)
+at org.testng.Assert.assertEquals(Assert.java:831)
+at org.testng.Assert.assertEquals(Assert.java:796)
+at com.globant.automation.PomGoogleBingCompare.searchTest(PomGoogleBingCompare.java:56)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
+at java.lang.reflect.Method.invoke(Method.java:497)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
 at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
 at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
@@ -187,15 +184,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchTest -->
-        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.globant.automation.EngineCompare@5b239d7d]" name="cleanup" is-config="true" duration-ms="71" started-at="2018-03-16T20:30:22Z" finished-at="2018-03-16T20:30:22Z">
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.globant.automation.PomGoogleBingCompare@16d04d3d]" name="cleanup" is-config="true" duration-ms="108" started-at="2018-03-18T19:08:57Z" finished-at="2018-03-18T19:08:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.EngineCompare@5b239d7d]" name="prepareTest" is-config="true" duration-ms="527" started-at="2018-03-16T20:30:22Z" finished-at="2018-03-16T20:30:22Z">
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.PomGoogleBingCompare@16d04d3d]" name="prepareTest" is-config="true" duration-ms="723" started-at="2018-03-18T19:08:57Z" finished-at="2018-03-18T19:08:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareTest -->
-        <test-method status="FAIL" signature="searchTest(java.lang.String)[pri:0, instance:com.globant.automation.EngineCompare@5b239d7d]" name="searchTest" duration-ms="9068" started-at="2018-03-16T20:30:22Z" data-provider="Search" finished-at="2018-03-16T20:30:31Z">
+        <test-method status="FAIL" signature="searchTest(java.lang.String)[pri:0, instance:com.globant.automation.PomGoogleBingCompare@16d04d3d]" name="searchTest" duration-ms="5848" started-at="2018-03-18T19:08:58Z" data-provider="Search" finished-at="2018-03-18T19:09:04Z">
           <params>
             <param index="0">
               <value>
@@ -205,21 +202,20 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Tame Impala - Elephant - YouTube] but found [Tame Impala - Wikipedia, la enciclopedia libre]]]>
+              <![CDATA[Lists differ at element [1]: Tame Impala - Elephant - YouTube != Tame Impala - Wikipedia, la enciclopedia libre expected [Tame Impala - Elephant - YouTube] but found [Tame Impala - Wikipedia, la enciclopedia libre]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Tame Impala - Elephant - YouTube] but found [Tame Impala - Wikipedia, la enciclopedia libre]
+              <![CDATA[java.lang.AssertionError: Lists differ at element [1]: Tame Impala - Elephant - YouTube != Tame Impala - Wikipedia, la enciclopedia libre expected [Tame Impala - Elephant - YouTube] but found [Tame Impala - Wikipedia, la enciclopedia libre]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:453)
-at org.testng.Assert.assertEquals(Assert.java:463)
-at com.globant.automation.EngineCompare.searchTest(EngineCompare.java:80)
+at org.testng.Assert.assertEquals(Assert.java:831)
+at org.testng.Assert.assertEquals(Assert.java:796)
+at com.globant.automation.PomGoogleBingCompare.searchTest(PomGoogleBingCompare.java:56)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
+at java.lang.reflect.Method.invoke(Method.java:497)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
 at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
 at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
@@ -247,15 +243,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchTest -->
-        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.globant.automation.EngineCompare@5b239d7d]" name="cleanup" is-config="true" duration-ms="73" started-at="2018-03-16T20:30:31Z" finished-at="2018-03-16T20:30:32Z">
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.globant.automation.PomGoogleBingCompare@16d04d3d]" name="cleanup" is-config="true" duration-ms="107" started-at="2018-03-18T19:09:04Z" finished-at="2018-03-18T19:09:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.EngineCompare@5b239d7d]" name="prepareTest" is-config="true" duration-ms="653" started-at="2018-03-16T20:30:32Z" finished-at="2018-03-16T20:30:32Z">
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.PomGoogleBingCompare@16d04d3d]" name="prepareTest" is-config="true" duration-ms="761" started-at="2018-03-18T19:09:04Z" finished-at="2018-03-18T19:09:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareTest -->
-        <test-method status="FAIL" signature="searchTest(java.lang.String)[pri:0, instance:com.globant.automation.EngineCompare@5b239d7d]" name="searchTest" duration-ms="15413" started-at="2018-03-16T20:30:32Z" data-provider="Search" finished-at="2018-03-16T20:30:48Z">
+        <test-method status="FAIL" signature="searchTest(java.lang.String)[pri:0, instance:com.globant.automation.PomGoogleBingCompare@16d04d3d]" name="searchTest" duration-ms="6921" started-at="2018-03-18T19:09:04Z" data-provider="Search" finished-at="2018-03-18T19:09:11Z">
           <params>
             <param index="0">
               <value>
@@ -265,21 +261,20 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Pond - Wikipedia] but found [pond - English-Spanish Dictionary - WordReference.com]]]>
+              <![CDATA[Lists differ at element [0]: Pond - Wikipedia != pond - English-Spanish Dictionary - WordReference.com expected [Pond - Wikipedia] but found [pond - English-Spanish Dictionary - WordReference.com]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Pond - Wikipedia] but found [pond - English-Spanish Dictionary - WordReference.com]
+              <![CDATA[java.lang.AssertionError: Lists differ at element [0]: Pond - Wikipedia != pond - English-Spanish Dictionary - WordReference.com expected [Pond - Wikipedia] but found [pond - English-Spanish Dictionary - WordReference.com]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:453)
-at org.testng.Assert.assertEquals(Assert.java:463)
-at com.globant.automation.EngineCompare.searchTest(EngineCompare.java:80)
+at org.testng.Assert.assertEquals(Assert.java:831)
+at org.testng.Assert.assertEquals(Assert.java:796)
+at com.globant.automation.PomGoogleBingCompare.searchTest(PomGoogleBingCompare.java:56)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
+at java.lang.reflect.Method.invoke(Method.java:497)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
 at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
 at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
@@ -307,11 +302,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchTest -->
-        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.globant.automation.EngineCompare@5b239d7d]" name="cleanup" is-config="true" duration-ms="136" started-at="2018-03-16T20:30:48Z" finished-at="2018-03-16T20:30:48Z">
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.globant.automation.PomGoogleBingCompare@16d04d3d]" name="cleanup" is-config="true" duration-ms="111" started-at="2018-03-18T19:09:11Z" finished-at="2018-03-18T19:09:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
-      </class> <!-- com.globant.automation.EngineCompare -->
+      </class> <!-- com.globant.automation.PomGoogleBingCompare -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
