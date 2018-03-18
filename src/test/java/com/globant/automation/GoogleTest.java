@@ -30,11 +30,10 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class GoogleTest {
-
+/*
     public GoogleTest() {
-
     }
-
+*/
     private static final Logger LOG;
     private WebDriver driver;
 

@@ -2,35 +2,35 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11544" started-at="2018-03-16T22:01:58Z" finished-at="2018-03-16T22:02:09Z">
+  <suite name="Default suite" duration-ms="51371" started-at="2018-03-18T22:54:13Z" finished-at="2018-03-18T22:55:04Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="11544" started-at="2018-03-16T22:01:58Z" finished-at="2018-03-16T22:02:09Z">
-      <class name="com.globant.automation.GoogleTest">
-        <test-method status="PASS" signature="prepareClass()[pri:0, instance:com.globant.automation.GoogleTest@5876a9af]" name="prepareClass" is-config="true" duration-ms="1356" started-at="2018-03-16T22:01:58Z" finished-at="2018-03-16T22:01:59Z">
+    <test name="Default test" duration-ms="51371" started-at="2018-03-18T22:54:13Z" finished-at="2018-03-18T22:55:04Z">
+      <class name="com.globant.automation.GoogleBingTestPage">
+        <test-method status="PASS" signature="prepareClass()[pri:0, instance:com.globant.automation.GoogleBingTestPage@79924b]" name="prepareClass" is-config="true" duration-ms="4215" started-at="2018-03-18T22:54:13Z" finished-at="2018-03-18T22:54:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareClass -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.GoogleTest@5876a9af]" name="prepareTest" is-config="true" duration-ms="1070" started-at="2018-03-16T22:01:59Z" finished-at="2018-03-16T22:02:00Z">
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.GoogleBingTestPage@79924b]" name="prepareTest" is-config="true" duration-ms="5647" started-at="2018-03-18T22:54:17Z" finished-at="2018-03-18T22:54:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareTest -->
-        <test-method status="PASS" signature="searchTest4(java.lang.String)[pri:0, instance:com.globant.automation.GoogleTest@5876a9af]" name="searchTest4" duration-ms="9014" started-at="2018-03-16T22:02:00Z" data-provider="Search" finished-at="2018-03-16T22:02:09Z">
+        <test-method status="PASS" signature="searchGoogleBing(java.lang.String)[pri:0, instance:com.globant.automation.GoogleBingTestPage@79924b]" name="searchGoogleBing" duration-ms="40722" started-at="2018-03-18T22:54:22Z" data-provider="Search" finished-at="2018-03-18T22:55:03Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[bicicletas]]>
+                <![CDATA[tchoukball]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchTest4 -->
-        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.globant.automation.GoogleTest@5876a9af]" name="cleanup" is-config="true" duration-ms="77" started-at="2018-03-16T22:02:09Z" finished-at="2018-03-16T22:02:09Z">
+        </test-method> <!-- searchGoogleBing -->
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.globant.automation.GoogleBingTestPage@79924b]" name="cleanup" is-config="true" duration-ms="751" started-at="2018-03-18T22:55:03Z" finished-at="2018-03-18T22:55:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
-      </class> <!-- com.globant.automation.GoogleTest -->
+      </class> <!-- com.globant.automation.GoogleBingTestPage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
