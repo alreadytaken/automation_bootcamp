@@ -77,8 +77,8 @@ public class MercadoLibreHome {
     
     	//uso la PO para ingrear datos y dar en submit
     	pHome = test1.getHomePrice();
-    	LOG.info(pHome.get(1), pHome.get(2), pHome.get(3));
-    	
+    	LOG.info(pHome.get(0));
+    	LOG.info(pHome.get(1));
     	
     	//pProduct = test1.getProductPrice();
     	/*

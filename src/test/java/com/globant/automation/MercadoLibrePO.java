@@ -46,27 +46,34 @@ public class MercadoLibrePO {
 		
 		PageFactory.initElements(driver, this);
 	}
-		@FindBy(xpath = "/html[1]/body[1]/main[1]/div[1]/div[1]/section[13]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]/div[2]/div[1]/span[1]/span[2]")
+		@FindBy(xpath = "//h1[text()='Ofertas de la semana']/../..//span[contains(@class, 'ui-item__price')]")
 		private WebElement homePrice;
 		
-		@FindBy(xpath = "/html[1]/body[1]/main[1]/div[1]/div[1]/section[13]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]/div[2]/div[1]/span[2]")
+		@FindBy(xpath = "//h1[text()='Ofertas de la semana']/../..//span[contains(@class, 'ui-item__discount-text')]")
 		private WebElement homeDiscount;
 		
-		@FindBy(xpath = "/html[1]/body[1]/main[1]/div[1]/div[1]/section[13]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]/div[2]/p[1]")
-		private WebElement homeName;
+		@FindBy (xpath = "")
 		
-		//metodo de extracción del home
+		
+		
+		//@FindBy(xpath = "/html[1]/body[1]/main[1]/div[1]/div[1]/section[13]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]/div[2]/p[1]")
+		//private WebElement homeName;
+		
+		//metodo de extraccion del home
 	   public List<String> getHomePrice() {
-		   
-		      
+		   		      
 		   List<String> priceHome = new ArrayList();
 		   priceHome.add(homePrice.getText());
 		   priceHome.add(homeDiscount.getText());
-		   priceHome.add(homeName.getText());
+		   
+		  // priceHome.add(homeName.getText());
 		   	 
 	       return priceHome;
 	    }
+	   
+	   ////h1[text()='Ofertas de la semana']/../..//a[contains(@class,'ui-item')]
 	   /*
+	    * 
 	   
 	   public GoogleBingTestPO submitGoogleSearch() {
 	        this.buttonGoogleLocator.click();
