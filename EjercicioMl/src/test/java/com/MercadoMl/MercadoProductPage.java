@@ -1,4 +1,4 @@
-package com.ejercicioMl;
+package com.MercadoMl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,13 +46,15 @@ public class MercadoProductPage extends MercadoHomePage   {
 	@FindBy(xpath="//h1[text()='Ofertas de la semana']/following::div[contains(@class,'ui-item__image-container')]")
 	WebElement container;
 	
+	@FindBy(xpath="//h1[text()='Ofertas de la semana']/following::div[contains(@class,'ui-item__image-container')]")
+	List <WebElement> container2;
+	
 
 	 
 	
 	public void leerDatos() throws InterruptedException {
 
 
-		
 		 for (int i=0;i<10;i++)
 		    {
 		        
@@ -62,13 +64,16 @@ public class MercadoProductPage extends MercadoHomePage   {
 				    builder.moveToElement(container).perform();
 				    
 					botonPasar.click();
+				
 					
 				}
-				SeleniumUtils.waitUntilClickable(precios.get(i), driver);
-
+			 SeleniumUtils.waitUntilVisibility(container2.get(i), driver);
+	
+		     SeleniumUtils.waitUntilClickable(precios.get(i), driver);
+		     
 			 builder.moveToElement(precios.get(i)).perform();
-		
-		
+			 builder.moveToElement(descuentoProducto.get(i)).perform();
+             
 		
 		List <String> ar = new ArrayList<>();
 		

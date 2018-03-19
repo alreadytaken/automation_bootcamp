@@ -1,4 +1,4 @@
-package com.ejercicioMl;
+package com.MercadoMl;
 
 import java.util.ArrayList;
 import java.util.List;
