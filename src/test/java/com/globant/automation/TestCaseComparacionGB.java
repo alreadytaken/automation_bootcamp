@@ -57,10 +57,7 @@ public class TestCaseComparacionGB  {
 	public void searchTest(String search) throws InterruptedException {
 		LOG.info("----Search test-----");
 		
-		
-		
-
-		
+				
 		/**listas de strings con los resultados*/
 		List <String> resultadosGoogle = new ArrayList<>();
 		List <String> resultadosBing = new ArrayList<>();			

@@ -29,8 +29,11 @@ public class BingPage{
 	
 
 	
-	public void SendDataBing(String dataB) {
+	public ResultadosBing SendDataBing(String dataB) {
 		txtsearchB.sendKeys(dataB);
+		txtsearchB.submit();
+		
+		return ResultadosBing(driver);
 	}
 	
 	public void listaResultados() {

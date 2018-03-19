@@ -30,8 +30,11 @@ public class GooglePage{
 	
 	//WebElement txtsearchG = driver.findElement(By.name("q"));
 	
-	public void sendDataGoogle(String dataG) {
+	public ResultadosGoogle sendDataGoogle(String dataG) {
 		txtsearchG.sendKeys(dataG);
+		txtsearchG.submit();
+		
+		return ResultadosGoogle(driver);
 	}
 	
 	public void listaResultados() {
