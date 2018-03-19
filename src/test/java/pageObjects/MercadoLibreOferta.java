@@ -18,7 +18,7 @@ public class MercadoLibreOferta {
 	
 	public MercadoLibreOferta(WebDriver driver) {
 		this.driver = driver;
-		SeleniumUtils.waitUntilClickable(By.className("nav-logo"), driver);
+		SeleniumUtils.waitUntilVisible(By.cssSelector("span[class='price-tag']>span:nth-of-type(2)"), driver);
 		PageFactory.initElements(driver, this);
 	}
 	

@@ -33,6 +33,7 @@ public class MercadoLibreOfertasTest {
 	@Test
 	public void ofertasTest(){
 		driver.get("https://www.mercadolibre.com.uy");
+		driver.manage().window().maximize();
 		MercadoLibreHome homePage = new MercadoLibreHome(driver);
 		homePage.saveDeals();
 		MercadoLibreHome homePageSlideOne = new MercadoLibreHomeSlideOne(driver,1); //PRIMER SLIDE

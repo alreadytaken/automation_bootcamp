@@ -19,7 +19,9 @@ public class MercadoLibreHome {
 	
 	public MercadoLibreHome(WebDriver driver){
 		this.driver = driver;
-		SeleniumUtils.waitUntilPresent(By.cssSelector(".recommendations button[class='next-button icon-right-open-big ']"), driver);			
+		SeleniumUtils.waitUntilPresent(By.cssSelector(".recommendations button[class='next-button icon-right-open-big ']"), driver);
+		SeleniumUtils.waitUntilVisible(By.cssSelector("span[class='price-tag ui-item__price'] .price-tag-fraction"), driver);
+		SeleniumUtils.waitUntilVisible(By.cssSelector(".recommendations .ui-item__discount-text"), driver);
 		PageFactory.initElements(driver, this);
 		}
 	
@@ -79,7 +81,7 @@ public class MercadoLibreHome {
 	public void saveDeals() {
 
 		for(WebElement deal: dealsTitle) {
-			titleText.add(deal.getAttribute("alt"));
+			titleText.add(deal.getAttribute("alt").trim());
 		}
 		for(WebElement deal: dealsPrice) {
 			priceText.add(deal.getText());
