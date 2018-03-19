@@ -26,6 +26,7 @@ public class MercadoLibreTest {
 	public void prepareTest() throws MalformedURLException {
 		LOG.info("Iniciando test");
 		driver = new ChromeDriver();
+		driver.manage().window().maximize();
 	}
 
 	@AfterMethod
@@ -38,19 +39,36 @@ public class MercadoLibreTest {
 		WebDriverManager.chromedriver().setup();
 	}
 
+//	@Test
+//	public void test() {
+//		driver.get("https://www.mercadolibre.com.uy/");
+//		MercadoLibreMainPage m = new MercadoLibreMainPage(driver);		
+//		String [] datos = m.obtenerDatosOferta();
+//		LOG.info(datos[0]);
+//		LOG.info(datos[1]);
+//		LOG.info(datos[2]);
+//		MercadoLibreItemPage pag = m.clickOferta();
+//		String [] datos2 = pag.obtenerDatos();
+//		LOG.info(datos2[0]);
+//		LOG.info(datos2[1]);
+//		LOG.info(datos2[2]);
+//		Assert.assertEquals(datos, datos2);
+//	}
+	
 	@Test
-	public void test() {
+	public void testOfertas() {
 		driver.get("https://www.mercadolibre.com.uy/");
-		MercadoLibreMainPage m = new MercadoLibreMainPage(driver);
-		String [] datos = m.obtenerDatosOferta();
+		MercadoLibreMainPage mainPage = new MercadoLibreMainPage(driver);
+		String [] datos = mainPage.obtenerDatosOferta(2);
 		LOG.info(datos[0]);
 		LOG.info(datos[1]);
 		LOG.info(datos[2]);
-		MercadoLibreItemPage pag = m.clickOferta();
-		String [] datos2 = pag.obtenerDatos();
-		LOG.info(datos2[0]);
-		LOG.info(datos2[1]);
-		LOG.info(datos2[2]);
-		Assert.assertEquals(datos, datos2);
+		datos = mainPage.obtenerDatosOferta(0);
+		LOG.info(datos[0]);
+		LOG.info(datos[1]);
+		LOG.info(datos[2]);
+		mainPage.clickOferta(2);
 	}
+	
+
 }

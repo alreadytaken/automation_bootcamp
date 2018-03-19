@@ -7,8 +7,8 @@
         <methods>
           <include name="prepareTest"/>
           <include name="prepareClass"/>
-          <include name="test"/>
           <include name="cleanup"/>
+          <include name="testOfertas"/>
         </methods>
       </class> <!-- com.globant.automation.MercadoLibreTest -->
     </classes>
