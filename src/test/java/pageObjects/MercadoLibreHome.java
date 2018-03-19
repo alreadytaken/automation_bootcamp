@@ -19,23 +19,40 @@ public class MercadoLibreHome {
 	
 	public MercadoLibreHome(WebDriver driver){
 		this.driver = driver;
-		SeleniumUtils.waitUntilClickable(By.className("nav-logo"), driver);
-		
-//		WebElement dealsSliderNextButton = driver.findElement(By.cssSelector("button[class='next-button icon-right-open-big ']"));
-//        Actions action = new Actions(driver);
-//        
-//        action.moveToElement(driver.findElement(By.cssSelector(".recommendations .slick-track>div[data-index='4']"))).build().perform();
-//        
-//		while (dealsSliderNextButton.isEnabled()) {
-//			dealsSliderNextButton.click();
-//		}
-		
+		SeleniumUtils.waitUntilPresent(By.cssSelector(".recommendations button[class='next-button icon-right-open-big ']"), driver);			
 		PageFactory.initElements(driver, this);
-
-
-		
-	}
+		}
 	
+	public MercadoLibreHome(WebDriver driver,int i){ //Overload de constructor para utilizar en los page objects de scrolleo
+		this.driver = driver;
+		//SeleniumUtils.waitUntilPresent(By.cssSelector(".recommendations button[class='next-button icon-right-open-big ']"), driver);
+		
+		Actions action = new Actions(driver);
+		
+		WebElement we = driver.findElement(By.cssSelector(".recommendations>div"));
+		action.moveToElement(we).moveToElement(driver.findElement(By.cssSelector(".recommendations button[class='next-button icon-right-open-big ']"))).click().build().perform();
+		PageFactory.initElements(driver, this);
+		}
+	
+	public MercadoLibreHome(WebDriver driver,int i, int e){
+		this.driver = driver;
+		SeleniumUtils.waitUntilPresent(By.cssSelector(".recommendations button[class='next-button icon-right-open-big ']"), driver);
+		
+		Actions action = new Actions(driver);
+		WebElement we = driver.findElement(By.cssSelector(".recommendations>div"));
+		action.moveToElement(we).moveToElement(driver.findElement(By.cssSelector(".recommendations button[class='next-button icon-right-open-big ']"))).click().build().perform();
+		PageFactory.initElements(driver, this);
+		}
+	
+	public MercadoLibreHome(WebDriver driver,int i, int e, int f){
+		this.driver = driver;
+		SeleniumUtils.waitUntilPresent(By.cssSelector(".recommendations button[class='next-button icon-right-open-big ']"), driver);
+		
+		Actions action = new Actions(driver);
+		WebElement we = driver.findElement(By.cssSelector(".recommendations>div"));
+		action.moveToElement(we).moveToElement(driver.findElement(By.cssSelector(".recommendations button[class='next-button icon-right-open-big ']"))).click().build().perform();
+		PageFactory.initElements(driver, this);
+		}
 	
 	@FindBy(how = How.CSS, using = ".recommendations img") //Guardo las imagenes de las ofertas, porque en el 'alt' contienen el nombre
 	private List<WebElement> dealsTitle;

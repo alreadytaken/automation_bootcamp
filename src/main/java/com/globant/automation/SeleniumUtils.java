@@ -11,5 +11,8 @@ public class SeleniumUtils {
 	public static WebElement waitUntilClickable (By by, WebDriver driver) {
 		return (new WebDriverWait(driver, 10)).until(ExpectedConditions.elementToBeClickable(by));
 	}
-
+	
+	public static WebElement waitUntilPresent (By by, WebDriver driver) {
+		return (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(by));
+	}
 }

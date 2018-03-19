@@ -12,6 +12,9 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pageObjects.MercadoLibreHome;
+import pageObjects.MercadoLibreHomeSlideOne;
+import pageObjects.MercadoLibreHomeSlideThree;
+import pageObjects.MercadoLibreHomeSlideTwo;
 import pageObjects.MercadoLibreOferta;
 
 public class MercadoLibreOfertasTest {
@@ -32,8 +35,12 @@ public class MercadoLibreOfertasTest {
 		driver.get("https://www.mercadolibre.com.uy");
 		MercadoLibreHome homePage = new MercadoLibreHome(driver);
 		homePage.saveDeals();
-//		for(int i = 0;i<10;i++)
-//			LOG.info(homePage.getDeal(i));
+		MercadoLibreHome homePageSlideOne = new MercadoLibreHomeSlideOne(driver,1); //PRIMER SLIDE
+		homePageSlideOne.saveDeals();
+		MercadoLibreHome homePageSlideTwo = new MercadoLibreHomeSlideTwo(driver,1,1); //SEGUNDO SLIDE
+		homePageSlideTwo.saveDeals();
+		MercadoLibreHome homePageSlideThree = new MercadoLibreHomeSlideThree(driver,1,1,1); //SEGUNDO SLIDE
+		homePageSlideThree.saveDeals();
 
 		for(int i = 0;i<5;i++) {
 			LOG.info(homePage.getDeal(i));	
@@ -42,6 +49,35 @@ public class MercadoLibreOfertasTest {
 			LOG.info(dealPage.getDeal());
 		
 			Assert.assertEquals(dealPage.getDeal(),homePage.getDeal(i));
+		}
+				
+		for(int i = 5;i<10;i++) {
+			LOG.info(homePageSlideOne.getDeal(i));	
+			driver.get(homePageSlideOne.linkText.get(i));
+			MercadoLibreOferta dealPage = new MercadoLibreOferta(driver);
+			LOG.info(dealPage.getDeal());
+		
+			Assert.assertEquals(dealPage.getDeal(),homePageSlideOne.getDeal(i));
+		}
+		
+
+
+		for(int i = 10;i<15;i++) {
+			LOG.info(homePageSlideTwo.getDeal(i));	
+			driver.get(homePageSlideTwo.linkText.get(i));
+			MercadoLibreOferta dealPage = new MercadoLibreOferta(driver);
+			LOG.info(dealPage.getDeal());
+		
+			Assert.assertEquals(dealPage.getDeal(),homePageSlideTwo.getDeal(i));
+		}
+		
+		for(int i = 15;i<19;i++) {
+			LOG.info(homePageSlideThree.getDeal(i));	
+			driver.get(homePageSlideThree.linkText.get(i));
+			MercadoLibreOferta dealPage = new MercadoLibreOferta(driver);
+			LOG.info(dealPage.getDeal());
+		
+			Assert.assertEquals(dealPage.getDeal(),homePageSlideThree.getDeal(i));
 		}
 
 		
