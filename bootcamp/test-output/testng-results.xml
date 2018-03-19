@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="61599" started-at="2018-03-19T23:54:06Z" finished-at="2018-03-19T23:55:08Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="61599" started-at="2018-03-19T23:54:06Z" finished-at="2018-03-19T23:55:08Z">
+      <class name="com.PedidosYa.TestPedidosYa">
+        <test-method status="PASS" signature="prepareClass()[pri:0, instance:com.PedidosYa.TestPedidosYa@49c386c8]" name="prepareClass" is-config="true" duration-ms="2370" started-at="2018-03-20T00:54:06Z" finished-at="2018-03-20T00:54:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareClass -->
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.PedidosYa.TestPedidosYa@49c386c8]" name="prepareTest" is-config="true" duration-ms="2030" started-at="2018-03-20T00:54:08Z" finished-at="2018-03-20T00:54:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareTest -->
+        <test-method status="PASS" signature="makeOrder(java.lang.String)[pri:0, instance:com.PedidosYa.TestPedidosYa@49c386c8]" name="makeOrder" duration-ms="57073" started-at="2018-03-20T00:54:10Z" data-provider="direccion" finished-at="2018-03-20T00:55:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Nicaragua 1666]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- makeOrder -->
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.PedidosYa.TestPedidosYa@49c386c8]" name="cleanup" is-config="true" duration-ms="101" started-at="2018-03-20T00:55:08Z" finished-at="2018-03-20T00:55:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+      </class> <!-- com.PedidosYa.TestPedidosYa -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

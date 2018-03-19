@@ -1,0 +1,30 @@
+package com.PedidosYa;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class PedidosSuggestionPage {
+
+	protected WebDriver driver;
+	public PedidosSuggestionPage(WebDriver driver) {
+		
+		this.driver=driver;
+		PageFactory.initElements(driver,this);
+		
+	}
+	
+	@FindBy(xpath="")
+	WebElement suggestion;
+	
+	
+	
+	public void clickSuggestion() {
+		suggestion.click();
+		
+	}
+
+
+
+}
