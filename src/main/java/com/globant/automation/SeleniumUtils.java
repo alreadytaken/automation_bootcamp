@@ -10,13 +10,19 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SeleniumUtils {
 	public static WebElement WaitUntilClickable(WebElement e,WebDriver driver) {
-		return (new WebDriverWait(driver,10)).until(ExpectedConditions.elementToBeClickable(e));
+		return (new WebDriverWait(driver,60)).until(ExpectedConditions.elementToBeClickable(e));
 	}
 	public static WebElement WaitUntilClickable(By localizador,WebDriver driver) {
-		return (new WebDriverWait(driver,10)).until(ExpectedConditions.elementToBeClickable(localizador));
+		return (new WebDriverWait(driver,60)).until(ExpectedConditions.elementToBeClickable(localizador));
+	}
+	public static WebElement WaitUntilPresence(By localizador,WebDriver driver) {
+		return (new WebDriverWait(driver,60)).until(ExpectedConditions.presenceOfElementLocated(localizador));
+	}
+	public static List<WebElement> WaitUntilPresenceList(By localizador,WebDriver driver) {
+		return (new WebDriverWait(driver,60)).until(ExpectedConditions.presenceOfAllElementsLocatedBy(localizador));
 	}
 	public static List <WebElement> WaitUntilVisibilityList(By localizador,WebDriver driver){
-		return (new WebDriverWait(driver,10)).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(localizador));
+		return (new WebDriverWait(driver,60)).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(localizador));
 	}
 	//lista elementos timeout
 	

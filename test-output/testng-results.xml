@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="5" passed="4">
+<testng-results skipped="0" failed="5" ignored="0" total="5" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="89743" started-at="2018-03-19T22:52:24Z" finished-at="2018-03-19T22:53:54Z">
+  <suite name="Default suite" duration-ms="98130" started-at="2018-03-19T23:36:03Z" finished-at="2018-03-19T23:37:41Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="89743" started-at="2018-03-19T22:52:24Z" finished-at="2018-03-19T22:53:54Z">
+    <test name="Default test" duration-ms="98130" started-at="2018-03-19T23:36:03Z" finished-at="2018-03-19T23:37:41Z">
       <class name="com.globant.automation.GoogleVsBingTest">
-        <test-method status="PASS" signature="prepareClass()[pri:0, instance:com.globant.automation.GoogleVsBingTest@38c6f217]" name="prepareClass" is-config="true" duration-ms="2178" started-at="2018-03-19T22:52:24Z" finished-at="2018-03-19T22:52:27Z">
+        <test-method status="PASS" signature="prepareClass()[pri:0, instance:com.globant.automation.GoogleVsBingTest@38c6f217]" name="prepareClass" is-config="true" duration-ms="1825" started-at="2018-03-19T23:36:03Z" finished-at="2018-03-19T23:36:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareClass -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.GoogleVsBingTest@38c6f217]" name="prepareTest" is-config="true" duration-ms="7212" started-at="2018-03-19T22:52:27Z" finished-at="2018-03-19T22:52:34Z">
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.GoogleVsBingTest@38c6f217]" name="prepareTest" is-config="true" duration-ms="4769" started-at="2018-03-19T23:36:05Z" finished-at="2018-03-19T23:36:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareTest -->
-        <test-method status="PASS" signature="metodoTestGvsB(java.lang.String)[pri:0, instance:com.globant.automation.GoogleVsBingTest@38c6f217]" name="metodoTestGvsB" duration-ms="15166" started-at="2018-03-19T22:52:34Z" data-provider="terminosBusqueda" finished-at="2018-03-19T22:52:49Z">
+        <test-method status="FAIL" signature="metodoTestGvsB(java.lang.String)[pri:0, instance:com.globant.automation.GoogleVsBingTest@38c6f217]" name="metodoTestGvsB" duration-ms="12606" started-at="2018-03-19T23:36:10Z" data-provider="terminosBusqueda" finished-at="2018-03-19T23:36:23Z">
           <params>
             <param index="0">
               <value>
@@ -23,77 +23,18 @@
               </value>
             </param>
           </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- metodoTestGvsB -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.GoogleVsBingTest@38c6f217]" name="prepareTest" is-config="true" duration-ms="4056" started-at="2018-03-19T22:52:49Z" finished-at="2018-03-19T22:52:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- prepareTest -->
-        <test-method status="PASS" signature="metodoTestGvsB(java.lang.String)[pri:0, instance:com.globant.automation.GoogleVsBingTest@38c6f217]" name="metodoTestGvsB" duration-ms="8856" started-at="2018-03-19T22:52:53Z" data-provider="terminosBusqueda" finished-at="2018-03-19T22:53:02Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Basquetball]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- metodoTestGvsB -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.GoogleVsBingTest@38c6f217]" name="prepareTest" is-config="true" duration-ms="4198" started-at="2018-03-19T22:53:02Z" finished-at="2018-03-19T22:53:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- prepareTest -->
-        <test-method status="PASS" signature="metodoTestGvsB(java.lang.String)[pri:0, instance:com.globant.automation.GoogleVsBingTest@38c6f217]" name="metodoTestGvsB" duration-ms="10140" started-at="2018-03-19T22:53:06Z" data-provider="terminosBusqueda" finished-at="2018-03-19T22:53:16Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Tenis]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- metodoTestGvsB -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.GoogleVsBingTest@38c6f217]" name="prepareTest" is-config="true" duration-ms="3982" started-at="2018-03-19T22:53:16Z" finished-at="2018-03-19T22:53:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- prepareTest -->
-        <test-method status="PASS" signature="metodoTestGvsB(java.lang.String)[pri:0, instance:com.globant.automation.GoogleVsBingTest@38c6f217]" name="metodoTestGvsB" duration-ms="13301" started-at="2018-03-19T22:53:20Z" data-provider="terminosBusqueda" finished-at="2018-03-19T22:53:34Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Golf]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- metodoTestGvsB -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.GoogleVsBingTest@38c6f217]" name="prepareTest" is-config="true" duration-ms="4065" started-at="2018-03-19T22:53:34Z" finished-at="2018-03-19T22:53:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- prepareTest -->
-        <test-method status="FAIL" signature="metodoTestGvsB(java.lang.String)[pri:0, instance:com.globant.automation.GoogleVsBingTest@38c6f217]" name="metodoTestGvsB" duration-ms="16520" started-at="2018-03-19T22:53:38Z" data-provider="terminosBusqueda" finished-at="2018-03-19T22:53:54Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Ping Pong]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.NullPointerException">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Verifico si son iguales expected [La fecha FIFA ofrece grandes amistosos a partir del miércoles - Fútbol ...] but found [Fútbol - Wikipedia, la enciclopedia libre]]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:323)
-at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:234)
-at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:229)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
-at com.globant.automation.SeleniumUtils.WaitUntilVisibilityList(SeleniumUtils.java:19)
-at com.globant.automation.GoogleSearchResult.<init>(GoogleSearchResult.java:20)
-at com.globant.automation.GoogleMain.search(GoogleMain.java:32)
-at com.globant.automation.GoogleVsBingTest.metodoTestGvsB(GoogleVsBingTest.java:30)
+              <![CDATA[java.lang.AssertionError: Verifico si son iguales expected [La fecha FIFA ofrece grandes amistosos a partir del miércoles - Fútbol ...] but found [Fútbol - Wikipedia, la enciclopedia libre]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at com.globant.automation.GoogleVsBingTest.metodoTestGvsB(GoogleVsBingTest.java:39)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -121,7 +62,227 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- metodoTestGvsB -->
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.GoogleVsBingTest@38c6f217]" name="prepareTest" is-config="true" duration-ms="4083" started-at="2018-03-19T23:36:23Z" finished-at="2018-03-19T23:36:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareTest -->
+        <test-method status="FAIL" signature="metodoTestGvsB(java.lang.String)[pri:0, instance:com.globant.automation.GoogleVsBingTest@38c6f217]" name="metodoTestGvsB" duration-ms="12129" started-at="2018-03-19T23:36:27Z" data-provider="terminosBusqueda" finished-at="2018-03-19T23:36:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Basquetball]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Verifico si son iguales expected [RESULTADOS Y TABLAS – Federacion Uruguaya de Basketball] but found [The official site of the NBA | NBA.com]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Verifico si son iguales expected [RESULTADOS Y TABLAS – Federacion Uruguaya de Basketball] but found [The official site of the NBA | NBA.com]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at com.globant.automation.GoogleVsBingTest.metodoTestGvsB(GoogleVsBingTest.java:39)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- metodoTestGvsB -->
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.GoogleVsBingTest@38c6f217]" name="prepareTest" is-config="true" duration-ms="4481" started-at="2018-03-19T23:36:39Z" finished-at="2018-03-19T23:36:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareTest -->
+        <test-method status="FAIL" signature="metodoTestGvsB(java.lang.String)[pri:0, instance:com.globant.automation.GoogleVsBingTest@38c6f217]" name="metodoTestGvsB" duration-ms="16330" started-at="2018-03-19T23:36:43Z" data-provider="terminosBusqueda" finished-at="2018-03-19T23:37:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Tenis]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Verifico si son iguales expected [Tenis - Marca] but found [Tenis en AS.com]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Verifico si son iguales expected [Tenis - Marca] but found [Tenis en AS.com]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at com.globant.automation.GoogleVsBingTest.metodoTestGvsB(GoogleVsBingTest.java:39)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- metodoTestGvsB -->
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.GoogleVsBingTest@38c6f217]" name="prepareTest" is-config="true" duration-ms="4355" started-at="2018-03-19T23:37:00Z" finished-at="2018-03-19T23:37:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareTest -->
+        <test-method status="FAIL" signature="metodoTestGvsB(java.lang.String)[pri:0, instance:com.globant.automation.GoogleVsBingTest@38c6f217]" name="metodoTestGvsB" duration-ms="16712" started-at="2018-03-19T23:37:04Z" data-provider="terminosBusqueda" finished-at="2018-03-19T23:37:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Golf]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Verifico si son iguales expected [Club de Golf | Bienvenidos] but found [Golf News, Scores, Players, Schedule and Courses - Golf - ESPN]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Verifico si son iguales expected [Club de Golf | Bienvenidos] but found [Golf News, Scores, Players, Schedule and Courses - Golf - ESPN]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at com.globant.automation.GoogleVsBingTest.metodoTestGvsB(GoogleVsBingTest.java:39)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- metodoTestGvsB -->
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.GoogleVsBingTest@38c6f217]" name="prepareTest" is-config="true" duration-ms="4388" started-at="2018-03-19T23:37:21Z" finished-at="2018-03-19T23:37:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareTest -->
+        <test-method status="FAIL" signature="metodoTestGvsB(java.lang.String)[pri:0, instance:com.globant.automation.GoogleVsBingTest@38c6f217]" name="metodoTestGvsB" duration-ms="16420" started-at="2018-03-19T23:37:25Z" data-provider="terminosBusqueda" finished-at="2018-03-19T23:37:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Ping Pong]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Verifico si son iguales expected [Tenis de mesa - Wikipedia, la enciclopedia libre] but found [Juegos de Ping Pong - MiniJuegos.com]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Verifico si son iguales expected [Tenis de mesa - Wikipedia, la enciclopedia libre] but found [Juegos de Ping Pong - MiniJuegos.com]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at com.globant.automation.GoogleVsBingTest.metodoTestGvsB(GoogleVsBingTest.java:39)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- metodoTestGvsB -->

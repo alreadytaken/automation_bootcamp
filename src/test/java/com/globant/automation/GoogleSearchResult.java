@@ -17,7 +17,7 @@ public class GoogleSearchResult {
 	List <WebElement> searchResults;
 	
 	public GoogleSearchResult(WebDriver driver) {
-		searchResults=SeleniumUtils.WaitUntilVisibilityList(By.xpath("//div[@class='rc']/h3/a"), driver);
+	    SeleniumUtils.WaitUntilPresenceList(By.xpath("//div[@class='rc']/h3/a"), driver);
 		PageFactory.initElements(driver, this);
 	}
 	

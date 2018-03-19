@@ -1,5 +1,6 @@
 package com.globant.automation;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -29,8 +30,15 @@ public class GoogleVsBingTest {
 	GoogleMain PaginaGoogle = new GoogleMain(driver);
 	GoogleSearchResult pageResults = PaginaGoogle.search(terminoBusqueda);
 	List<String> resultados = pageResults.getResults();
+	driver.get("https://bing.com");
+	BingMain PaginaBing = new BingMain(driver);
+	BingSearchResult pageBingResults = PaginaBing.bingSearch(terminoBusqueda);
+	List<String> bingResultados = pageBingResults.getBingResults();
 	
-    }
+	for (int k=0;k<5;k++) {
+		Assert.assertEquals(bingResultados.get(k), resultados.get(k), "Verifico si son iguales");
+	}
+   }
     
 	@BeforeMethod
 	public void prepareTest() {

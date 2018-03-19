@@ -5,7 +5,7 @@
     <classes>
       <class name="com.globant.automation.GoogleVsBingTest">
         <methods>
-          <include name="metodoTestGvsB" invocation-numbers="4"/>
+          <include name="metodoTestGvsB" invocation-numbers="0 1 2 3 4"/>
           <include name="prepareClass"/>
           <include name="prepareTest"/>
         </methods>
