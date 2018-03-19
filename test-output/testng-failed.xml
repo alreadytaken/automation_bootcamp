@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.mercado.libre.nivel.Dos.TestSlide">
+      <class name="test.mercado.libre.TestVerificarDatosEnUnaOfertaSemanal">
         <methods>
-          <include name="verificarOfertas"/>
-          <include name="cleanup"/>
           <include name="prepareClass"/>
           <include name="prepareTest"/>
+          <include name="verificarDatosEnOferta"/>
+          <include name="cleanup"/>
         </methods>
-      </class> <!-- test.mercado.libre.nivel.Dos.TestSlide -->
+      </class> <!-- test.mercado.libre.TestVerificarDatosEnUnaOfertaSemanal -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

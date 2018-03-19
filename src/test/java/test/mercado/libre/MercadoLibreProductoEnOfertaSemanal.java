@@ -1,5 +1,7 @@
 package test.mercado.libre;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,6 +18,9 @@ public class MercadoLibreProductoEnOfertaSemanal {
 	
 	@FindBy(how = How.XPATH, using = "//div[@class='price-tag discount-arrow arrow-left']")
 	private WebElement descuentoProducto;
+	
+	@FindBy(how = How.XPATH, using = "//input[@id ='nav-header-menu-switch']//../a[@class = 'nav-logo']")
+	private WebElement home;
 	
 	private WebDriver driver;
 	
@@ -40,4 +45,8 @@ public class MercadoLibreProductoEnOfertaSemanal {
 		return descuentoProducto.getAttribute("innerText");
 	}
 	
+	public MercadoLibreHomePage goHome() {
+		this.home.click();
+		return new MercadoLibreHomePage(driver);
+	}
 }

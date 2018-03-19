@@ -26,9 +26,13 @@ public class MercadoLibreHomePage {
 	//Filtro nombres de slides Activos
 	@FindBy(how = How.XPATH, using = "//h1[text()='Ofertas de la semana']/../..//div[@class='slick-track']//div[@class='ui-item__content']//p[@class='ui-item__title']")
 	private List<WebElement> nombreProductosEnOfertasSemanales;
-/*			
+
+	@FindBy(how = How.XPATH, using = "//h1[text()='Ofertas de la semana']/../..//div[@class = 'carousel-container']//button[@class='next-button icon-right-open-big ']")
+	private WebElement nextButton;
+	/*			
 	@FindBy(how = How.XPATH, using ="//h1[text()='Ofertas de la semana']/../..//div[@class='slick-track']/div/div/a/@href")
 	private List<WebElement> urlOfertasSemanales;
+	/div[@class='slick-slide slick-active']
 */
 	private WebDriver driver;
 
@@ -65,6 +69,20 @@ public class MercadoLibreHomePage {
 		//String tab = Keys.chord(Keys.CONTROL + Keys.RETURN + "2");
 		preciosDeOfertasSemanales.get(i).click();
 		return new MercadoLibreProductoEnOfertaSemanal(driver);
+	}
+	public void irAlSiguiente() {
+		this.nextButton.click();
+	}
+	
+	public void actualizar() {
+		
+		List<WebElement> preciosActuales = driver.findElements(By.xpath("//h1[text()='Ofertas de la semana']/../..//div[@class='slick-track']//div[@class='ui-item__price-block']//span[@class='price-tag ui-item__price']/span[@class='price-tag-fraction']"));
+		List<WebElement> nombresActuales = driver.findElements(By.xpath("//h1[text()='Ofertas de la semana']/../..//div[@class='slick-track']//div[@class='ui-item__content']//p[@class='ui-item__title']"));
+		List<WebElement> descuentosActuales = driver.findElements(By.xpath("//h1[text()='Ofertas de la semana']/../..//div[@class='slick-track']//div[@class='ui-item__price-block']//span[@class='ui-item__discount-text']"));
+		
+		this.descuentosDeOfertasSemanales = descuentosActuales;
+		this.preciosDeOfertasSemanales = preciosActuales;
+		this.nombreProductosEnOfertasSemanales= nombresActuales;
 	}
 	
 }

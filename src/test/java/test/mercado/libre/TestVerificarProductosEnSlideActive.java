@@ -16,7 +16,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.testng.Assert;
 
 public class TestVerificarProductosEnSlideActive {
-/*
+
 	private static final Logger LOG;
     private WebDriver driver;
 
@@ -58,7 +58,8 @@ public class TestVerificarProductosEnSlideActive {
         	Assert.assertEquals(nameBeforeClicking, nameAfterClicking);
         	Assert.assertEquals(priceBeforeClicking, priceAfterClicking);
         	Assert.assertEquals(discountBeforeClicking, discountAfterClicking);
-        	driver.switchTo().window(session);
+          	mercadoLibreHome = productPage.goHome();
+          	
 
     	}
     }
@@ -66,5 +67,5 @@ public class TestVerificarProductosEnSlideActive {
     public void cleanup() {
         driver.quit();
     }
-*/
+
 }

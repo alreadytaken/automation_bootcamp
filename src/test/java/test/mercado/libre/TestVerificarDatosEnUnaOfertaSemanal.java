@@ -44,8 +44,11 @@ public class TestVerificarDatosEnUnaOfertaSemanal {
     public void verificarDatosEnOferta() {
     	
     	driver.get("http://mercadolibre.com.uy");
+    	
     	MercadoLibreHomePage mercadoLibreHome = new MercadoLibreHomePage(driver);
-    
+    /*
+    	mercadoLibreHome.irAlSiguiente();
+    	mercadoLibreHome.actualizar();*/
     	String priceBeforeClicking = mercadoLibreHome.getPreciosSemanales(0);       	
     	String discountBeforeClicking = mercadoLibreHome.getDescuentosSemanales(0); 	
     	String nameBeforeClicking = mercadoLibreHome.getNombreProducto(0);
@@ -59,7 +62,8 @@ public class TestVerificarDatosEnUnaOfertaSemanal {
     	Assert.assertEquals(nameBeforeClicking, nameAfterClicking);
     	Assert.assertEquals(priceBeforeClicking, priceAfterClicking);
     	Assert.assertEquals(discountBeforeClicking, discountAfterClicking);
-   
+    	
+    	mercadoLibreHome = productPage.goHome();
     	
    }
     
