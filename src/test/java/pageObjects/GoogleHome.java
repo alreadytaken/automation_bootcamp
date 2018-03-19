@@ -1,4 +1,4 @@
-package pageObjectsGoogleBing;
+package pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -15,8 +15,8 @@ public class GoogleHome {
 	
 	public GoogleHome(WebDriver driver){
 		this.driver = driver;
-		PageFactory.initElements(driver, this);
 		SeleniumUtils.waitUntilClickable(By.id("gsri_ok0"), driver);
+		PageFactory.initElements(driver, this);
 		}
 	
 	@FindBy(how = How.NAME, using = "q")

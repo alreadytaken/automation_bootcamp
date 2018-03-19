@@ -1,4 +1,4 @@
-package pageObjectsGoogleBing;
+package pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -14,8 +14,9 @@ public class BingHome {
 	
 	public BingHome(WebDriver driver) {
 		this.driver = driver;
-		PageFactory.initElements(driver, this);
 		SeleniumUtils.waitUntilClickable(By.id("sb_form_go"), driver);
+		PageFactory.initElements(driver, this);
+
 	}
 	
 	@FindBy(how = How.ID, using = "sb_form_q")

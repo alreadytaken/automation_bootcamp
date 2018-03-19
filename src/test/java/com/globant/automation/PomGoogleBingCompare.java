@@ -14,10 +14,10 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import pageObjectsGoogleBing.BingHome;
-import pageObjectsGoogleBing.BingResults;
-import pageObjectsGoogleBing.GoogleHome;
-import pageObjectsGoogleBing.GoogleResults;
+import pageObjects.BingHome;
+import pageObjects.BingResults;
+import pageObjects.GoogleHome;
+import pageObjects.GoogleResults;
 
 public class PomGoogleBingCompare {
 	public PomGoogleBingCompare(){
