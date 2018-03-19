@@ -53,7 +53,7 @@ public class GoogleTest {
 	 * resultados.get(0).click(); }
 	 */
 
-	/*@Test(dataProvider = "Busqueda")
+	@Test(dataProvider = "Busqueda")
 	public void testEjercicio(String busqueda) {
 		List<String> resultadosGoogle = new ArrayList<String>();
 		List<String> resultadosBing = new ArrayList<String>();
@@ -97,7 +97,7 @@ public class GoogleTest {
 		}
 		Assert.assertArrayEquals(resultadosGoogle.toArray(), resultadosBing.toArray());
 
-	}*/
+	}
 
 	/*
 	 * @Test public void searchTest() throws InterruptedException {

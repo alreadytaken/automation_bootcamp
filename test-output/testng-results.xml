@@ -2,95 +2,28 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="6429" started-at="2018-03-16T23:44:51Z" finished-at="2018-03-16T23:44:57Z">
+  <suite name="Default suite" duration-ms="15336" started-at="2018-03-19T17:30:58Z" finished-at="2018-03-19T17:31:13Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="6429" started-at="2018-03-16T23:44:51Z" finished-at="2018-03-16T23:44:57Z">
-      <class name="com.globant.automation.GoogleTest">
-        <test-method status="PASS" signature="prepareClass()[pri:0, instance:com.globant.automation.GoogleTest@5876a9af]" name="prepareClass" is-config="true" duration-ms="1557" started-at="2018-03-16T23:44:51Z" finished-at="2018-03-16T23:44:53Z">
+    <test name="Default test" duration-ms="15336" started-at="2018-03-19T17:30:58Z" finished-at="2018-03-19T17:31:13Z">
+      <class name="com.globant.automation.MercadoLibreTest">
+        <test-method status="PASS" signature="prepareClass()[pri:0, instance:com.globant.automation.MercadoLibreTest@3e58a80e]" name="prepareClass" is-config="true" duration-ms="1601" started-at="2018-03-19T17:30:58Z" finished-at="2018-03-19T17:31:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareClass -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.GoogleTest@5876a9af]" name="prepareTest" is-config="true" duration-ms="967" started-at="2018-03-16T23:44:53Z" finished-at="2018-03-16T23:44:54Z">
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.MercadoLibreTest@3e58a80e]" name="prepareTest" is-config="true" duration-ms="5568" started-at="2018-03-19T17:31:00Z" finished-at="2018-03-19T17:31:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareTest -->
-        <test-method status="PASS" signature="testNewtour(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.globant.automation.GoogleTest@5876a9af]" name="testNewtour" duration-ms="3810" started-at="2018-03-16T23:44:54Z" data-provider="Datos newtours" finished-at="2018-03-16T23:44:57Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Gonzalo]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Lombardi]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[000000000]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[asd@asd.com]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Mi casa]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[1234]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[Montevideo]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[Centro]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[11200]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[Uruguay]]>
-              </value>
-            </param>
-            <param index="10">
-              <value>
-                <![CDATA[Usuario]]>
-              </value>
-            </param>
-            <param index="11">
-              <value>
-                <![CDATA[pass]]>
-              </value>
-            </param>
-            <param index="12">
-              <value>
-                <![CDATA[pass]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="test()[pri:0, instance:com.globant.automation.MercadoLibreTest@3e58a80e]" name="test" duration-ms="7331" started-at="2018-03-19T17:31:05Z" finished-at="2018-03-19T17:31:13Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testNewtour -->
-        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.globant.automation.GoogleTest@5876a9af]" name="cleanup" is-config="true" duration-ms="73" started-at="2018-03-16T23:44:57Z" finished-at="2018-03-16T23:44:57Z">
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.globant.automation.MercadoLibreTest@3e58a80e]" name="cleanup" is-config="true" duration-ms="819" started-at="2018-03-19T17:31:13Z" finished-at="2018-03-19T17:31:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
-      </class> <!-- com.globant.automation.GoogleTest -->
+      </class> <!-- com.globant.automation.MercadoLibreTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
