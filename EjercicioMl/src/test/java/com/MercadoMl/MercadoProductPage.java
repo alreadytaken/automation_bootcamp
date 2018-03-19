@@ -23,8 +23,6 @@ public class MercadoProductPage extends MercadoHomePage   {
 		super(driver);
 		this.driver=driver;
 		
-
-		
 	}
 	
 	
