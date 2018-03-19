@@ -102,12 +102,12 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.globant.automation.GoogleTest" hash-for-method="searchTest(celulares)">searchTest(celulares)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.globant.automation.TestCaseComparacionGB" hash-for-method="searchTest(computadoras)">searchTest(computadoras)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.globant.automation.GoogleTest" hash-for-method="searchTest(computadores)">searchTest(computadores)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.globant.automation.TestCaseComparacionGB" hash-for-method="searchTest(celulares)">searchTest(celulares)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -125,23 +125,20 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.globant.automation.GoogleTest</span>
+              <span class="class-name">com.globant.automation.TestCaseComparacionGB</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="searchTest(celulares)">
-                  </a> <!-- searchTest(celulares) -->
+                  <a name="searchTest(computadoras)">
+                  </a> <!-- searchTest(computadoras) -->
                   <span class="method-name">searchTest</span>
-                  <span class="parameters">(celulares)</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [Tienda Antel] but found [Celulares y Smartphones en Mercado Libre Uruguay]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at org.testng.Assert.assertEquals(Assert.java:463)
-	at com.globant.automation.GoogleTest.searchTest(GoogleTest.java:107)
+                  <span class="parameters">(computadoras)</span>
+                  <div class="stack-trace">java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+	at java.util.ArrayList.get(ArrayList.java:433)
+	at com.globant.automation.TestCaseComparacionGB.LlenarArrayString(TestCaseComparacionGB.java:49)
+	at com.globant.automation.TestCaseComparacionGB.searchTest(TestCaseComparacionGB.java:72)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -173,18 +170,15 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="searchTest(computadores)">
-                  </a> <!-- searchTest(computadores) -->
+                  <a name="searchTest(celulares)">
+                  </a> <!-- searchTest(celulares) -->
                   <span class="method-name">searchTest</span>
-                  <span class="parameters">(computadores)</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [Los Mejores Laptops, Computadoras, Tablets y …] but found [Computadores, Notebooks y Desktop de HP, ASUS, Apple, Lenovo y ...]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at org.testng.Assert.assertEquals(Assert.java:463)
-	at com.globant.automation.GoogleTest.searchTest(GoogleTest.java:107)
+                  <span class="parameters">(celulares)</span>
+                  <div class="stack-trace">java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+	at java.util.ArrayList.get(ArrayList.java:433)
+	at com.globant.automation.TestCaseComparacionGB.LlenarArrayString(TestCaseComparacionGB.java:49)
+	at com.globant.automation.TestCaseComparacionGB.searchTest(TestCaseComparacionGB.java:72)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -219,7 +213,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/tmp/testng-eclipse--342002218/testng-customsuite.xml</span>
+            <span class="header-content">/tmp/testng-eclipse--332483022/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -228,7 +222,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.globant.automation.GoogleTest&quot;/&gt;
+      &lt;class name=&quot;com.globant.automation.TestCaseComparacionGB&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -271,17 +265,17 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'searchTest')
-data.setCell(0, 2, 'com.globant.automation.GoogleTest')
-data.setCell(0, 3, 10272);
+data.setCell(0, 2, 'com.globant.automation.TestCaseComparacionGB')
+data.setCell(0, 3, 5961);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'searchTest')
-data.setCell(1, 2, 'com.globant.automation.GoogleTest')
-data.setCell(1, 3, 9343);
+data.setCell(1, 2, 'com.globant.automation.TestCaseComparacionGB')
+data.setCell(1, 3, 5781);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 19 seconds</span>
+              <span class="suite-total-time">Total running time: 11 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -307,38 +301,38 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.globant.automation.GoogleTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.globant.automation.TestCaseComparacionGB</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">prepareClass</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">prepareTest</span>
-                <span class="method-start">1639 ms</span>
+                <span class="method-start">2558 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">searchTest(celulares)</span>
-                <span class="method-start">2549 ms</span>
+                <span class="method-start">2559 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanup</span>
-                <span class="method-start">12824 ms</span>
+                <span class="method-start">8524 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">prepareTest</span>
-                <span class="method-start">12896 ms</span>
+                <span class="method-start">8601 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">searchTest(computadores)</span>
-                <span class="method-start">13437 ms</span>
+                <span class="method-name">searchTest(computadoras)</span>
+                <span class="method-start">8601 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanup</span>
-                <span class="method-start">22781 ms</span>
+                <span class="method-start">14383 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

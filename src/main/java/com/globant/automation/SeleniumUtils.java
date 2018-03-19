@@ -18,4 +18,8 @@ public class SeleniumUtils {
 		return (new WebDriverWait(driver, 10)).until(ExpectedConditions.elementToBeClickable(localizador));
 	}
 
+	public static boolean isPresent(By localizador, WebDriver driver) {
+		return (new WebDriverWait(driver, 10)).until(ExpectedConditions.elementToBeClickable(localizador)) != null;
+	}
+	
 }

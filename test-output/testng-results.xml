@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="2" ignored="0" total="2" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="22866" started-at="2018-03-16T22:15:29Z" finished-at="2018-03-16T22:15:52Z">
+  <suite name="Default suite" duration-ms="14467" started-at="2018-03-19T22:56:46Z" finished-at="2018-03-19T22:57:01Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="22866" started-at="2018-03-16T22:15:29Z" finished-at="2018-03-16T22:15:52Z">
-      <class name="com.globant.automation.GoogleTest">
-        <test-method status="PASS" signature="prepareClass()[pri:0, instance:com.globant.automation.GoogleTest@5b239d7d]" name="prepareClass" is-config="true" duration-ms="1631" started-at="2018-03-16T22:15:29Z" finished-at="2018-03-16T22:15:31Z">
+    <test name="Default test" duration-ms="14467" started-at="2018-03-19T22:56:46Z" finished-at="2018-03-19T22:57:01Z">
+      <class name="com.globant.automation.TestCaseComparacionGB">
+        <test-method status="PASS" signature="prepareClass()[pri:0, instance:com.globant.automation.TestCaseComparacionGB@52bf72b5]" name="prepareClass" is-config="true" duration-ms="2551" started-at="2018-03-19T22:56:46Z" finished-at="2018-03-19T22:56:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareClass -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.GoogleTest@5b239d7d]" name="prepareTest" is-config="true" duration-ms="910" started-at="2018-03-16T22:15:31Z" finished-at="2018-03-16T22:15:32Z">
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.TestCaseComparacionGB@52bf72b5]" name="prepareTest" is-config="true" duration-ms="1" started-at="2018-03-19T22:56:49Z" finished-at="2018-03-19T22:56:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareTest -->
-        <test-method status="FAIL" signature="searchTest(java.lang.String)[pri:0, instance:com.globant.automation.GoogleTest@5b239d7d]" name="searchTest" duration-ms="10272" started-at="2018-03-16T22:15:32Z" data-provider="searchdp" finished-at="2018-03-16T22:15:42Z">
+        <test-method status="FAIL" signature="searchTest(java.lang.String)[pri:0, instance:com.globant.automation.TestCaseComparacionGB@52bf72b5]" name="searchTest" duration-ms="5961" started-at="2018-03-19T22:56:49Z" data-provider="DataSearch" finished-at="2018-03-19T22:56:55Z">
           <params>
             <param index="0">
               <value>
@@ -23,19 +23,16 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
+          <exception class="java.lang.IndexOutOfBoundsException">
             <message>
-              <![CDATA[expected [Tienda Antel] but found [Celulares y Smartphones en Mercado Libre Uruguay]]]>
+              <![CDATA[Index: 0, Size: 0]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Tienda Antel] but found [Celulares y Smartphones en Mercado Libre Uruguay]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:453)
-at org.testng.Assert.assertEquals(Assert.java:463)
-at com.globant.automation.GoogleTest.searchTest(GoogleTest.java:107)
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+at java.util.ArrayList.get(ArrayList.java:433)
+at com.globant.automation.TestCaseComparacionGB.LlenarArrayString(TestCaseComparacionGB.java:49)
+at com.globant.automation.TestCaseComparacionGB.searchTest(TestCaseComparacionGB.java:72)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -63,39 +60,32 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchTest -->
-        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.globant.automation.GoogleTest@5b239d7d]" name="cleanup" is-config="true" duration-ms="71" started-at="2018-03-16T22:15:42Z" finished-at="2018-03-16T22:15:42Z">
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.globant.automation.TestCaseComparacionGB@52bf72b5]" name="cleanup" is-config="true" duration-ms="76" started-at="2018-03-19T22:56:55Z" finished-at="2018-03-19T22:56:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.GoogleTest@5b239d7d]" name="prepareTest" is-config="true" duration-ms="541" started-at="2018-03-16T22:15:42Z" finished-at="2018-03-16T22:15:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- prepareTest -->
-        <test-method status="FAIL" signature="searchTest(java.lang.String)[pri:0, instance:com.globant.automation.GoogleTest@5b239d7d]" name="searchTest" duration-ms="9343" started-at="2018-03-16T22:15:43Z" data-provider="searchdp" finished-at="2018-03-16T22:15:52Z">
+        <test-method status="FAIL" signature="searchTest(java.lang.String)[pri:0, instance:com.globant.automation.TestCaseComparacionGB@52bf72b5]" name="searchTest" duration-ms="5781" started-at="2018-03-19T22:56:55Z" data-provider="DataSearch" finished-at="2018-03-19T22:57:01Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[computadores]]>
+                <![CDATA[computadoras]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
+          <exception class="java.lang.IndexOutOfBoundsException">
             <message>
-              <![CDATA[expected [Los Mejores Laptops, Computadoras, Tablets y …] but found [Computadores, Notebooks y Desktop de HP, ASUS, Apple, Lenovo y ...]]]>
+              <![CDATA[Index: 0, Size: 0]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Los Mejores Laptops, Computadoras, Tablets y …] but found [Computadores, Notebooks y Desktop de HP, ASUS, Apple, Lenovo y ...]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:453)
-at org.testng.Assert.assertEquals(Assert.java:463)
-at com.globant.automation.GoogleTest.searchTest(GoogleTest.java:107)
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+at java.util.ArrayList.get(ArrayList.java:433)
+at com.globant.automation.TestCaseComparacionGB.LlenarArrayString(TestCaseComparacionGB.java:49)
+at com.globant.automation.TestCaseComparacionGB.searchTest(TestCaseComparacionGB.java:72)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -123,15 +113,19 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchTest -->
-        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.globant.automation.GoogleTest@5b239d7d]" name="cleanup" is-config="true" duration-ms="77" started-at="2018-03-16T22:15:52Z" finished-at="2018-03-16T22:15:52Z">
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.TestCaseComparacionGB@52bf72b5]" name="prepareTest" is-config="true" duration-ms="0" started-at="2018-03-19T22:56:55Z" finished-at="2018-03-19T22:56:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareTest -->
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.globant.automation.TestCaseComparacionGB@52bf72b5]" name="cleanup" is-config="true" duration-ms="72" started-at="2018-03-19T22:57:01Z" finished-at="2018-03-19T22:57:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
-      </class> <!-- com.globant.automation.GoogleTest -->
+      </class> <!-- com.globant.automation.TestCaseComparacionGB -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

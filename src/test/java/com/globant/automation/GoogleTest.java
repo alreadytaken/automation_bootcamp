@@ -61,51 +61,27 @@ public class GoogleTest {
 	public void searchTest(String search) throws InterruptedException {
 		LOG.info("Search test");
 		
-		//driver.get("http://newtours.demoaut.com");
+		driver.get("http://newtours.demoaut.com");
 		
-		//WebElement txtsearch = driver.findElement(By.name("q"));
+		WebElement txtsearch = driver.findElement(By.name("q"));
 		
 		
-		//WebElement gmail = driver.findElement(By.className("gb_P"));
+		WebElement gmail = driver.findElement(By.className("gb_P"));
 		
-		//Glorioso Mercury tours
-		//WebElement userMT = (new WebDriverWait(driver, 10)).until(ExpectedConditions.elementToBeClickable(By.name("userName")));
-		//userMT.sendKeys("Camila");
+		/**Glorioso Mercury tours**/
+		WebElement userMT = (new WebDriverWait(driver, 10)).until(ExpectedConditions.elementToBeClickable(By.name("userName")));
+		userMT.sendKeys("Camila");
 	
 		
 		
-		driver.get("http://google.com");
-		WebElement txtsearch = SeleniumUtils.waitUntilClickeable(By.name("q"), driver);
-		txtsearch.sendKeys(search);
-		txtsearch.submit();
+	//	driver.get("http://google.com");
+	//	WebElement txtsearch = SeleniumUtils.waitUntilClickeable(By.name("q"), driver);
+	//	txtsearch.sendKeys(search);
+	//	txtsearch.submit();
 		
-		List <WebElement> res = driver.findElements(By.xpath("//div[@class='rc']/h3/a"));
-		List <String> resultadosGoogle = new ArrayList<>();
-		List <String> resultadosBing = new ArrayList<>();
+
 		
-		for (int i=0; i<5; i++){
-			resultadosGoogle.add(res.get(i).getText());
-					
-			//LOG.info(res.toString());
-		}
-		
-		driver.get("https://www.bing.com/?setlang=es");
-		WebElement txtsearchB = SeleniumUtils.waitUntilClickeable(By.name("q"), driver);
-		txtsearchB.sendKeys(search);
-		
-		txtsearchB.submit();
-		
-		res = driver.findElements(By.xpath("//li[@class='b_algo']/h2/a"));
-		
-		for(int i= 0; i<5; i++ ) {
-			
-			resultadosBing.add(res.get(i).getText());
-		}
-				
-		for (int i=0; i < 5; i++) {
-			
-			Assert.assertEquals(resultadosGoogle.get(i), resultadosBing.get(i));
-		}
+	
 				
 	}//metodo
 
