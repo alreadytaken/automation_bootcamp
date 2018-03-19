@@ -7,6 +7,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SeleniumUtils {
+	
+	public WebDriver driver;
 
 	public static WebElement waitUntilClickable(WebElement e, WebDriver driver) {
 		
@@ -19,4 +21,9 @@ public static WebElement waitUntilClickable(By by, WebDriver driver) {
 		
 }
 
+public WebElement getElement(By Xpath) {
+
+	return driver.findElement(Xpath);
+
+}
 }

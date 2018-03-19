@@ -26,7 +26,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class GoogleTest {
+public class GoogleTest extends FunctionalTest{
 
     public GoogleTest() {
 
@@ -50,27 +50,25 @@ public class GoogleTest {
     public void searchTest(String q) throws InterruptedException {
         LOG.info("Search test");
         driver.get("https://google.com");
-        WebElement gelement = SeleniumUtils.waitUntilClickable(By.name("q"), driver);
-    	gelement.sendKeys(q);
-    	gelement.sendKeys(Keys.ENTER);
-        List<WebElement> GoogleElements = driver.findElements(By.xpath("//*[@class='rc']/h3/a"));
+        GoogleHomePage a = new GoogleHomePage(driver);
+        GoogleSearchResultPage c = new GoogleSearchResultPage(driver);
+        a.inputsearchbar(q);
     	List<String> google = new ArrayList<>();
         for (int i=0; i<5;i++)
     	{
-        	google.add(GoogleElements.get(i).getText());
+        	google.add(c.GoogleElements().get(i).getText());
     	}
         
      
         
         driver.get("https://bing.com");
-        WebElement belement = SeleniumUtils.waitUntilClickable(By.name("q"), driver);
-    	belement.sendKeys(q);
-    	belement.sendKeys(Keys.ENTER);
-        List<WebElement> BingElements = driver.findElements(By.xpath("//*[@class='b_algo']/h2/a"));
-        List<String> bing = new ArrayList<>();
+        BingHomePage b = new BingHomePage(driver);
+        BingSearchResultsPage d = new BingSearchResultsPage(driver);
+        b.inputsearchbar(q);
+    	List<String> bing = new ArrayList<>();
         for (int i=0; i<5;i++)
     	{
-        	bing.add(BingElements.get(i).getText());
+        	bing.add(d.BingElements().get(i).getText());
     	}
         
         for (int i=0; i<5;i++)
