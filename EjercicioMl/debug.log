@@ -1,0 +1,2 @@
+[0319/121647.021:ERROR:exception_snapshot_win.cc(88)] thread ID 8060 not found in process
+[0319/121647.022:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
