@@ -1,3 +1,4 @@
+/*
 package com.globant.automation;
 
 import org.openqa.selenium.support.FindBy;
@@ -8,3 +9,4 @@ public class mercuryHome {
 WebElement userInput;
 
 }
+*/

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 5 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods, 5 failed,   1 passed</span>
+                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,27 +102,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.globant.automation.GoogleTest" hash-for-method="metodoEjemplo7(Ping Pong)">metodoEjemplo7(Ping Pong)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.globant.automation.GoogleTest" hash-for-method="metodoEjemplo7(Futbol)">metodoEjemplo7(Futbol)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.globant.automation.GoogleTest" hash-for-method="metodoEjemplo7(Golf)">metodoEjemplo7(Golf)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.globant.automation.GoogleTest" hash-for-method="metodoEjemplo7(Basquetball)">metodoEjemplo7(Basquetball)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.globant.automation.GoogleTest" hash-for-method="metodoEjemplo7(Tenis)">metodoEjemplo7(Tenis)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.globant.automation.GoogleVsBingTest" hash-for-method="metodoTestGvsB(Ping Pong)">metodoTestGvsB(Ping Pong)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -136,7 +116,22 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.globant.automation.GoogleTest" hash-for-method="searchTest">searchTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.globant.automation.GoogleVsBingTest" hash-for-method="metodoTestGvsB(Basquetball)">metodoTestGvsB(Basquetball)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.globant.automation.GoogleVsBingTest" hash-for-method="metodoTestGvsB(Tenis)">metodoTestGvsB(Tenis)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.globant.automation.GoogleVsBingTest" hash-for-method="metodoTestGvsB(Golf)">metodoTestGvsB(Golf)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.globant.automation.GoogleVsBingTest" hash-for-method="metodoTestGvsB(Futbol)">metodoTestGvsB(Futbol)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -154,190 +149,24 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.globant.automation.GoogleTest</span>
+              <span class="class-name">com.globant.automation.GoogleVsBingTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="metodoEjemplo7(Ping Pong)">
-                  </a> <!-- metodoEjemplo7(Ping Pong) -->
-                  <span class="method-name">metodoEjemplo7</span>
+                  <a name="metodoTestGvsB(Ping Pong)">
+                  </a> <!-- metodoTestGvsB(Ping Pong) -->
+                  <span class="method-name">metodoTestGvsB</span>
                   <span class="parameters">(Ping Pong)</span>
-                  <div class="stack-trace">java.lang.AssertionError: Verifico si son iguales expected [Tenis de mesa - Wikipedia, la enciclopedia libre] but found [Juegos de Ping Pong - MiniJuegos.com]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at com.globant.automation.GoogleTest.metodoEjemplo7(GoogleTest.java:76)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="metodoEjemplo7(Futbol)">
-                  </a> <!-- metodoEjemplo7(Futbol) -->
-                  <span class="method-name">metodoEjemplo7</span>
-                  <span class="parameters">(Futbol)</span>
-                  <div class="stack-trace">java.lang.AssertionError: Verifico si son iguales expected [Futbol.uy - Portal Deportivo. Noticias y videos de fútbol, básquetbol ...] but found [Fútbol - Wikipedia, la enciclopedia libre]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at com.globant.automation.GoogleTest.metodoEjemplo7(GoogleTest.java:76)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="metodoEjemplo7(Golf)">
-                  </a> <!-- metodoEjemplo7(Golf) -->
-                  <span class="method-name">metodoEjemplo7</span>
-                  <span class="parameters">(Golf)</span>
-                  <div class="stack-trace">java.lang.AssertionError: Verifico si son iguales expected [Club de Golf | Bienvenidos] but found [Golf News, Scores, Players, Schedule and Courses - Golf - ESPN]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at com.globant.automation.GoogleTest.metodoEjemplo7(GoogleTest.java:76)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="metodoEjemplo7(Basquetball)">
-                  </a> <!-- metodoEjemplo7(Basquetball) -->
-                  <span class="method-name">metodoEjemplo7</span>
-                  <span class="parameters">(Basquetball)</span>
-                  <div class="stack-trace">java.lang.AssertionError: Verifico si son iguales expected [RESULTADOS Y TABLAS – Federacion Uruguaya de Basketball] but found [The official site of the NBA | NBA.com]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at com.globant.automation.GoogleTest.metodoEjemplo7(GoogleTest.java:76)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="metodoEjemplo7(Tenis)">
-                  </a> <!-- metodoEjemplo7(Tenis) -->
-                  <span class="method-name">metodoEjemplo7</span>
-                  <span class="parameters">(Tenis)</span>
-                  <div class="stack-trace">java.lang.AssertionError: Verifico si son iguales expected [Asociación Uruguaya de Tenis: AUT] but found [Tenis en AS.com]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at com.globant.automation.GoogleTest.metodoEjemplo7(GoogleTest.java:76)
+                  <div class="stack-trace">java.lang.NullPointerException
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:323)
+	at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:234)
+	at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:229)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
+	at com.globant.automation.SeleniumUtils.WaitUntilVisibilityList(SeleniumUtils.java:19)
+	at com.globant.automation.GoogleSearchResult.&lt;init&gt;(GoogleSearchResult.java:20)
+	at com.globant.automation.GoogleMain.search(GoogleMain.java:32)
+	at com.globant.automation.GoogleVsBingTest.metodoTestGvsB(GoogleVsBingTest.java:30)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -372,14 +201,39 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.globant.automation.GoogleTest</span>
+              <span class="class-name">com.globant.automation.GoogleVsBingTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="searchTest">
-                  </a> <!-- searchTest -->
-                  <span class="method-name">searchTest</span>
+                  <a name="metodoTestGvsB(Basquetball)">
+                  </a> <!-- metodoTestGvsB(Basquetball) -->
+                  <span class="method-name">metodoTestGvsB</span>
+                  <span class="parameters">(Basquetball)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="metodoTestGvsB(Tenis)">
+                  </a> <!-- metodoTestGvsB(Tenis) -->
+                  <span class="method-name">metodoTestGvsB</span>
+                  <span class="parameters">(Tenis)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="metodoTestGvsB(Golf)">
+                  </a> <!-- metodoTestGvsB(Golf) -->
+                  <span class="method-name">metodoTestGvsB</span>
+                  <span class="parameters">(Golf)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="metodoTestGvsB(Futbol)">
+                  </a> <!-- metodoTestGvsB(Futbol) -->
+                  <span class="method-name">metodoTestGvsB</span>
+                  <span class="parameters">(Futbol)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -387,7 +241,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/tmp/testng-eclipse-1418346594/testng-customsuite.xml</span>
+            <span class="header-content">/tmp/testng-eclipse-1665935058/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -396,7 +250,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.globant.automation.GoogleTest&quot;/&gt;
+      &lt;class name=&quot;com.globant.automation.GoogleVsBingTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -436,31 +290,27 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(6);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'metodoEjemplo7')
-data.setCell(0, 2, 'com.globant.automation.GoogleTest')
-data.setCell(0, 3, 20076);
+data.setCell(0, 1, 'metodoTestGvsB')
+data.setCell(0, 2, 'com.globant.automation.GoogleVsBingTest')
+data.setCell(0, 3, 16520);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'metodoEjemplo7')
-data.setCell(1, 2, 'com.globant.automation.GoogleTest')
-data.setCell(1, 3, 17456);
+data.setCell(1, 1, 'metodoTestGvsB')
+data.setCell(1, 2, 'com.globant.automation.GoogleVsBingTest')
+data.setCell(1, 3, 15166);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'metodoEjemplo7')
-data.setCell(2, 2, 'com.globant.automation.GoogleTest')
-data.setCell(2, 3, 16531);
+data.setCell(2, 1, 'metodoTestGvsB')
+data.setCell(2, 2, 'com.globant.automation.GoogleVsBingTest')
+data.setCell(2, 3, 13301);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'metodoEjemplo7')
-data.setCell(3, 2, 'com.globant.automation.GoogleTest')
-data.setCell(3, 3, 15409);
+data.setCell(3, 1, 'metodoTestGvsB')
+data.setCell(3, 2, 'com.globant.automation.GoogleVsBingTest')
+data.setCell(3, 3, 10140);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'metodoEjemplo7')
-data.setCell(4, 2, 'com.globant.automation.GoogleTest')
-data.setCell(4, 3, 14976);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'searchTest')
-data.setCell(5, 2, 'com.globant.automation.GoogleTest')
-data.setCell(5, 3, 2);
+data.setCell(4, 1, 'metodoTestGvsB')
+data.setCell(4, 2, 'com.globant.automation.GoogleVsBingTest')
+data.setCell(4, 3, 8856);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -491,93 +341,53 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.globant.automation.GoogleTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.globant.automation.GoogleVsBingTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">prepareClass</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">prepareTest</span>
-                <span class="method-start">1984 ms</span>
+                <span class="method-start">2186 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">metodoTestGvsB(Futbol)</span>
+                <span class="method-start">9398 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">prepareTest</span>
+                <span class="method-start">24566 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">metodoTestGvsB(Basquetball)</span>
+                <span class="method-start">28622 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">prepareTest</span>
+                <span class="method-start">37480 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">metodoTestGvsB(Tenis)</span>
+                <span class="method-start">41678 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">prepareTest</span>
+                <span class="method-start">51819 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">metodoTestGvsB(Golf)</span>
+                <span class="method-start">55801 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">prepareTest</span>
+                <span class="method-start">69104 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">metodoEjemplo7(Futbol)</span>
-                <span class="method-start">6703 ms</span>
+                <span class="method-name">metodoTestGvsB(Ping Pong)</span>
+                <span class="method-start">73169 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">cleanup</span>
-                <span class="method-start">23237 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">prepareTest</span>
-                <span class="method-start">23239 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">metodoEjemplo7(Basquetball)</span>
-                <span class="method-start">27746 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">cleanup</span>
-                <span class="method-start">45204 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">prepareTest</span>
-                <span class="method-start">45204 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">metodoEjemplo7(Tenis)</span>
-                <span class="method-start">49776 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">cleanup</span>
-                <span class="method-start">69853 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">prepareTest</span>
-                <span class="method-start">69854 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">metodoEjemplo7(Golf)</span>
-                <span class="method-start">74246 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">cleanup</span>
-                <span class="method-start">89657 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">prepareTest</span>
-                <span class="method-start">89658 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">metodoEjemplo7(Ping Pong)</span>
-                <span class="method-start">94250 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">cleanup</span>
-                <span class="method-start">109228 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">prepareTest</span>
-                <span class="method-start">109231 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">searchTest</span>
-                <span class="method-start">113837 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">cleanup</span>
-                <span class="method-start">113846 ms</span>
-              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
