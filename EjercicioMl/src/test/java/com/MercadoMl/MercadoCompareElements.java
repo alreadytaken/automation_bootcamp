@@ -43,7 +43,7 @@ public class MercadoCompareElements {
 	    	
 	    		
 	    		  driver.get("http://www.mercadolibre.com.uy");
-	    		driver.manage().window().maximize();	
+	    		  driver.manage().window().maximize();	
 	    	
 MercadoProductPage mercadoProductPage= new MercadoProductPage(driver);
 			
