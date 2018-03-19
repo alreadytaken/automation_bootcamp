@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="13436" started-at="2018-03-16T22:07:04Z" finished-at="2018-03-16T22:07:17Z">
+  <suite name="Default suite" duration-ms="30047" started-at="2018-03-19T20:34:52Z" finished-at="2018-03-19T20:35:22Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="13436" started-at="2018-03-16T22:07:04Z" finished-at="2018-03-16T22:07:17Z">
-      <class name="com.globant.automation.comparoBusqueda">
-        <test-method status="PASS" signature="prepareClass()[pri:0, instance:com.globant.automation.comparoBusqueda@6b927fb]" name="prepareClass" is-config="true" duration-ms="2732" started-at="2018-03-16T22:07:04Z" finished-at="2018-03-16T22:07:07Z">
+    <test name="Default test" duration-ms="30047" started-at="2018-03-19T20:34:52Z" finished-at="2018-03-19T20:35:22Z">
+      <class name="test.compare.results.CompareResultCase">
+        <test-method status="PASS" signature="prepareClass()[pri:0, instance:test.compare.results.CompareResultCase@1fa268de]" name="prepareClass" is-config="true" duration-ms="4522" started-at="2018-03-19T20:34:52Z" finished-at="2018-03-19T20:34:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareClass -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.comparoBusqueda@6b927fb]" name="prepareTest" is-config="true" duration-ms="898" started-at="2018-03-16T22:07:07Z" finished-at="2018-03-16T22:07:08Z">
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:test.compare.results.CompareResultCase@1fa268de]" name="prepareTest" is-config="true" duration-ms="6034" started-at="2018-03-19T20:34:56Z" finished-at="2018-03-19T20:35:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareTest -->
-        <test-method status="PASS" signature="comparoBusquedas(java.lang.String)[pri:0, instance:com.globant.automation.comparoBusqueda@6b927fb]" name="comparoBusquedas" duration-ms="8972" started-at="2018-03-16T22:07:08Z" data-provider="Authentication" finished-at="2018-03-16T22:07:17Z">
+        <test-method status="PASS" signature="comparoBusquedas(java.lang.String)[pri:0, instance:test.compare.results.CompareResultCase@1fa268de]" name="comparoBusquedas" duration-ms="18335" started-at="2018-03-19T20:35:02Z" data-provider="Authentication" finished-at="2018-03-19T20:35:21Z">
           <params>
             <param index="0">
               <value>
@@ -26,23 +26,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- comparoBusquedas -->
-        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.globant.automation.comparoBusqueda@6b927fb]" name="cleanup" is-config="true" duration-ms="71" started-at="2018-03-16T22:07:17Z" finished-at="2018-03-16T22:07:17Z">
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:test.compare.results.CompareResultCase@1fa268de]" name="cleanup" is-config="true" duration-ms="1078" started-at="2018-03-19T20:35:21Z" finished-at="2018-03-19T20:35:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.comparoBusqueda@6b927fb]" name="prepareTest" is-config="true" duration-ms="565" started-at="2018-03-16T22:07:17Z" finished-at="2018-03-16T22:07:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- prepareTest -->
-        <test-method status="PASS" signature="searchTest()[pri:0, instance:com.globant.automation.comparoBusqueda@6b927fb]" name="searchTest" duration-ms="1" started-at="2018-03-16T22:07:17Z" finished-at="2018-03-16T22:07:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchTest -->
-        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.globant.automation.comparoBusqueda@6b927fb]" name="cleanup" is-config="true" duration-ms="169" started-at="2018-03-16T22:07:17Z" finished-at="2018-03-16T22:07:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cleanup -->
-      </class> <!-- com.globant.automation.comparoBusqueda -->
+      </class> <!-- test.compare.results.CompareResultCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

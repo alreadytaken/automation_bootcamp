@@ -9,7 +9,7 @@ import org.openqa.selenium.support.How;
 
 //public class MercuryHomePage extends BasePage;
 public class MercuryHomePage {
-	
+	/*
 	public MercuryHomePage(WebDriver driver) {
 		SeleniumUtils.waitUntilClickable(By.name("login"), driver);
 	}
@@ -30,6 +30,7 @@ public class MercuryHomePage {
 		
 		//return new UserInPage(driver)
 	}
+	 */
 }
 
 
@@ -41,4 +42,3 @@ public class MercuryHomePage {
 	
 	
 */
- */
