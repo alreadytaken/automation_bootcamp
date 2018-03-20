@@ -31,12 +31,12 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi">0</td><td class="numi">61,6 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">87.2 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">Default test &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="1">com.PedidosYa.TestPedidosYa</td><td><a href="#m1"><b>makeOrder</b>  </a></td><td class="numi">1</td><td>1521503650994</td><td class="numi">57073</td></tr>
+<tr><th colspan="4">Default test &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">com.PedidosYa.TestPedidosYa</td><td><a href="#m1"><b>makeOrder</b>  </a></td><td class="numi">1</td><td>1521575280349</td><td class="numi">72500</td></tr>
 </table>
 <h1>Default test</h1>
 <h2 id="m1">com.PedidosYa.TestPedidosYa:makeOrder</h2>
@@ -44,6 +44,33 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <tr class="param"><th>Parameter #1</th></tr>
 <tr class="param stripe"><td>Nicaragua 1666</td>
 </tr>
+<tr><td style="padding-left:3em" colspan="1">
+<p>Expected condition failed: waiting for element to be clickable: By.xpath: //div[contains(@class,&apos;button-container&apos;)] (tried for 30 second(s) with 500 milliseconds interval)</p>
+org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:81)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:271)
+<br/>at com.PedidosYa.SeleniumUtils.waitUntilPresence(SeleniumUtils.java:24)
+<br/>at com.PedidosYa.PopUpLogin.&lt;init&gt;(PopUpLogin.java:17)
+<br/>at com.PedidosYa.TestPedidosYa.makeOrder(TestPedidosYa.java:88)
+<br/>25 lines not shown
+<p>Caused by Cannot locate an element using By.xpath: //div[contains(@class,&apos;button-container&apos;)]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;SD300817-VAIO&apos;, ip: &apos;192.168.1.41&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: driver.version: unknown</p>
+org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)
+<br/>at java.util.Optional.orElseThrow(Unknown Source)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:657)
+<br/>at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:654)
+<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
+<br/>at com.PedidosYa.SeleniumUtils.waitUntilPresence(SeleniumUtils.java:24)
+<br/>at com.PedidosYa.PopUpLogin.&lt;init&gt;(PopUpLogin.java:17)
+<br/>at com.PedidosYa.TestPedidosYa.makeOrder(TestPedidosYa.java:88)
+<br/>25 lines not shown
+</td></tr>
 </table>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>

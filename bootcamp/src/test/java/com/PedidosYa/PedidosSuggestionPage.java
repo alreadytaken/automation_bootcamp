@@ -15,14 +15,22 @@ public class PedidosSuggestionPage {
 		
 	}
 	
-	@FindBy(xpath="")
-	WebElement suggestion;
+	@FindBy(xpath="//div[contains(@class,'content_info')]/span[text()='Milanesa completa al pan con papas fritas']")
+	WebElement foodSuggestion;
 	
+	@FindBy(xpath="//div[contains(@class,'content_info')]/span[text()='Milanesa completa al pan con papas fritas']/following::span[contains(@class,'after_price')]")
+	WebElement priceSuggestion;
 	
+	String PrecSuggestion;
 	
 	public void clickSuggestion() {
-		suggestion.click();
+		SeleniumUtils.waitUntilClickable(foodSuggestion, driver);
+		foodSuggestion.click();
 		
+	}
+	public String getPrecSuggestion() {
+        PrecSuggestion = priceSuggestion.getText();
+		return PrecSuggestion;
 	}
 
 

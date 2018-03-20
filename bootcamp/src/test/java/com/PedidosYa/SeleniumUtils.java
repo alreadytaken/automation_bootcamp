@@ -10,23 +10,28 @@ public class SeleniumUtils {
 
 	
 public static WebElement waitUntilClickable(WebElement e,WebDriver driver) {
-	return (new WebDriverWait(driver,10)).until(ExpectedConditions.elementToBeClickable(e));
+	return (new WebDriverWait(driver,30)).until(ExpectedConditions.elementToBeClickable(e));
 	
 	
 }
 
-public static WebElement waitUntilClickable(By e,WebDriver driver) {
-	return (new WebDriverWait(driver,10)).until(ExpectedConditions.elementToBeClickable(e));
+public static WebElement waitUntilClickable(By localizador,WebDriver driver) {
+	return (new WebDriverWait(driver,30)).until(ExpectedConditions.elementToBeClickable(localizador));
+	
+	
+}
+public static WebElement waitUntilPresence(By localizador,WebDriver driver) {
+	return (new WebDriverWait(driver,30)).until(ExpectedConditions.elementToBeClickable(localizador));
 	
 	
 }
 public static WebElement waitUntilVisibility(WebElement e,WebDriver driver) {
-	return (new WebDriverWait(driver,10)).until(ExpectedConditions.elementToBeClickable(e));
+	return (new WebDriverWait(driver,30)).until(ExpectedConditions.elementToBeClickable(e));
 	
 	
 }
 public static WebElement waitUntilVisibility(By e,WebDriver driver) {
-	return (new WebDriverWait(driver,10)).until(ExpectedConditions.visibilityOf((WebElement) e));
+	return (new WebDriverWait(driver,30)).until(ExpectedConditions.visibilityOf((WebElement) e));
 	
 	
 

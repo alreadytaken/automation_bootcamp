@@ -13,6 +13,8 @@ public class PedidosInitPage {
 		
 		this.driver=driver;
 		PageFactory.initElements(driver,this);
+		SeleniumUtils.waitUntilClickable(BanderaUruguay, driver);
+
 		
 	}
 	
