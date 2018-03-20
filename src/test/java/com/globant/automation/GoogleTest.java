@@ -67,10 +67,10 @@ public class GoogleTest {
     	}
     	driver.get("http://bing.com");
     	WebDriverWait x = new WebDriverWait(driver,10);
-        WebElement E = w.until(ExpectedConditions.elementToBeClickable(By.name("q")));
+        WebElement E = x.until(ExpectedConditions.elementToBeClickable(By.name("q")));
         WebElement txtIngreso2 = driver.findElement(By.name("q"));
-        txtIngreso1.sendKeys("hola");
-    	txtIngreso1.sendKeys(Keys.ENTER);
+        txtIngreso2.sendKeys("hola");
+        txtIngreso2.sendKeys(Keys.ENTER);
     	resultados = driver.findElements(By.xpath("//h2/a"));
     	for (int i =0;i<5;i++) {
     		bing.add(resultados.get(i).getText());
@@ -81,7 +81,37 @@ public class GoogleTest {
     	
         LOG.info("Prepare test");
     }
-
+    @Test
+    public void pedidosYaTest() throws InterruptedException {
+        LOG.info("Pedidos Ya Test");
+        List<WebElement> resultados = new ArrayList<>();
+        List<String> google = new ArrayList<>();
+        List <String> bing = new ArrayList<>();
+        driver.get("http://www.pedidosya.com");
+        WebDriverWait a = new WebDriverWait(driver,10);
+        WebElement b = a.until(ExpectedConditions.elementToBeClickable(By.id("linkUy")));
+        WebElement btnUruguay = driver.findElement(By.id("linkUy"));
+        btnUruguay.sendKeys(Keys.ENTER);
+    	resultados = driver.findElements(By.xpath("//h3[@class='r']/a"));
+    	for (int i =0;i<5;i++) {
+    		google.add(resultados.get(i).getText());
+    	}
+    	driver.get("http://bing.com");
+    	WebDriverWait x = new WebDriverWait(driver,10);
+        WebElement E = x.until(ExpectedConditions.elementToBeClickable(By.name("q")));
+        WebElement txtIngreso2 = driver.findElement(By.name("q"));
+        txtIngreso2.sendKeys("hola");
+        txtIngreso2.sendKeys(Keys.ENTER);
+    	resultados = driver.findElements(By.xpath("//h2/a"));
+    	for (int i =0;i<5;i++) {
+    		bing.add(resultados.get(i).getText());
+    	}
+    	for (int i=0;i<5;i++) {
+    		Assert.assertEquals(google.get(i), bing.get(i));
+    	}
+    	
+        LOG.info("Prepare test");
+    }
     @BeforeMethod
     public void prepareTest() throws MalformedURLException {
     	
