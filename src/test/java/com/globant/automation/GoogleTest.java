@@ -12,7 +12,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+//import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -85,7 +85,7 @@ public class GoogleTest {
     @BeforeMethod
     public void prepareTest() {
         LOG.info("Prepare test");
-        driver = new FirefoxDriver();
+        driver = new ChromeDriver();
     }
 
     @AfterMethod
@@ -96,7 +96,7 @@ public class GoogleTest {
     @BeforeClass
     private void prepareClass() {
         LOG.info("Prepare class");
-        WebDriverManager.firefoxdriver().setup();
+        WebDriverManager.chromedriver().setup();
     }
     @DataProvider(name = "terminosBusqueda")
 	public Object[][] provider() {
