@@ -8,31 +8,23 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.globant.automation.SeleniumUtils;
 
-public class PedidosYaHomePage {
-
+public class PedidosYaSelectPage {
 	private WebDriver driver;
 	
-	public PedidosYaHomePage(WebDriver driver){
+	public PedidosYaSelectPage(WebDriver driver){
 		this.driver = driver;
 		
-		if (!SeleniumUtils.isPresent(By.id("linkUy"), driver)) {
+		if (!SeleniumUtils.isPresent(By.xpath("//span[@class=\"promo\"]"), driver)) {
 			throw new IllegalStateException("Page did not load");
 		}
-		
 		PageFactory.initElements(driver, this);
 	}
 	
+	@FindBy(xpath="//span[@class=\"promo\"]")
+	private WebElement promo;
 	
-	@FindBy(id="linkUy")
-	private WebElement uruguayFlag;
-	
-	public PedidosYaHomePage enterPage() {
-        this.uruguayFlag.click();
-        return new PedidosYaHomePage(driver);
-    }
-	
-	
-	
-	
-	
+	public PedidosYaSelectPage selectPromo() {
+		this.promo.click();
+		return new PedidosYaSelectPage(driver);
+	}
 }

@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.globant.automation.MercadoLibreHome">
+      <class name="PedidosYa.PedidosYaTestPage">
         <methods>
-          <include name="cleanup"/>
-          <include name="prepareClass"/>
           <include name="prepareTest"/>
-          <include name="compareData"/>
+          <include name="normalTest"/>
+          <include name="prepareClass"/>
+          <include name="cleanup"/>
         </methods>
-      </class> <!-- com.globant.automation.MercadoLibreHome -->
+      </class> <!-- PedidosYa.PedidosYaTestPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -16,20 +16,37 @@ public class PedidosYaSearchPage {
 		
 		if (!SeleniumUtils.isPresent(By.id("search"), driver)) {
 			throw new IllegalStateException("Page did not load");
-		}
-		
+		}		
 		PageFactory.initElements(driver, this);
 	}
-	
-	
+		
 	@FindBy(name="address")
 	private WebElement address;
 	
 	@FindBy(name="optional")
 	private WebElement food;
 	
+	@FindBy(id="search")
+	private WebElement send;
 	
+	@FindBy(id="confirm")
+	private WebElement confirm;
 	
+	public void typeOrder(String data) {
+		this.address.sendKeys(data);
+		this.food.sendKeys(data);
+	}
 	
+	public void sendOrder() {
+		this.send.click();
+	}
 	
+	public PedidosYaSearchPage confirmOrder() {
+		if (!SeleniumUtils.isPresent(By.id("confirm"), driver)) {
+			throw new IllegalStateException("Confirm did not load");
+		} else {
+			this.confirm.click();
+		}
+		return new PedidosYaSearchPage(driver);
+	}
 }

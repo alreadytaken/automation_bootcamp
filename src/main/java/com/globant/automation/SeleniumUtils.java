@@ -19,4 +19,5 @@ public class SeleniumUtils {
 	public static boolean isPresent(By e, WebDriver driver) {
 		 return (new WebDriverWait(driver, 90).until(ExpectedConditions.visibilityOfElementLocated(e)) != null);
 	} 
+	
 }

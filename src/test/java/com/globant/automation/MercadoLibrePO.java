@@ -51,9 +51,7 @@ public class MercadoLibrePO {
 		
 		@FindBy(xpath = "//h1[text()='Ofertas de la semana']/../..//span[contains(@class, 'ui-item__discount-text')]")
 		private WebElement homeDiscount;
-		
-		@FindBy (xpath = "")
-		
+			
 		
 		
 		//@FindBy(xpath = "/html[1]/body[1]/main[1]/div[1]/div[1]/section[13]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]/div[2]/p[1]")
