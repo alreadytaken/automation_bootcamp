@@ -88,6 +88,8 @@ public class MercadoLibreHomePage {
 		mouse.mousePress(InputEvent.BUTTON1_MASK);
 		mouse.mouseRelease(InputEvent.BUTTON1_MASK);
 		 */
+		Actions actions = new Actions(driver);
+		actions.moveToElement(preciosDeOfertasSemanales.get(0)).perform();
 		nextButton.click();
 	}
 	

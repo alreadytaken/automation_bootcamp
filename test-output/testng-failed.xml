@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.mercado.libre.TestVerificarProductosEnSlideActive">
+      <class name="test.mercado.libre.TestRecorrerSlide">
         <methods>
-          <include name="verifySlideActiveProducts"/>
-          <include name="prepareTest"/>
+          <include name="recorrerSlide"/>
           <include name="prepareClass"/>
+          <include name="prepareTest"/>
           <include name="cleanup"/>
         </methods>
-      </class> <!-- test.mercado.libre.TestVerificarProductosEnSlideActive -->
+      </class> <!-- test.mercado.libre.TestRecorrerSlide -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
