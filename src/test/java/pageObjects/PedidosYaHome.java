@@ -31,8 +31,10 @@ public class PedidosYaHome {
 		foodInput.sendKeys(foodtype);
 	}
 	
-	public void navigateToConfirmLocation(WebDriver driver) {
+	public PedidosYaConfirmLocation navigateToConfirmLocation(WebDriver driver) {
 		searchButton.click();
+		return new PedidosYaConfirmLocation(driver);
+		
 	}
 
 }

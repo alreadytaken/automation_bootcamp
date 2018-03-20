@@ -17,7 +17,7 @@ public class PedidosYaCountryPage {
 	@FindBy(css = "div[class='flag-sprite uruguay']")
 	WebElement uruguay;
 
-	public PedidosYaHome navigateToUruguay(WebDriver driver){
+	public PedidosYaHome navigateToUyHome(WebDriver driver){
 		uruguay.click();
 		return new PedidosYaHome(driver);
 	}
