@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
-import com.globant.automation.SeleniumUtils;
+
 
 public class HomePagePedidosYa {
 
@@ -14,7 +14,7 @@ public class HomePagePedidosYa {
 	public HomePagePedidosYa(WebDriver driver) {
 		this.driver = driver;
 		
-		if(!SeleniumUtils.isPresent(By.xpath("//*[@id=\\\"linkUy\\\"]"), driver)) {
+		if(!SeleniumUtils.isPresent(By.id("linkUy"), driver)) {
 			throw new IllegalStateException("Page did not load.");
 		}
 		

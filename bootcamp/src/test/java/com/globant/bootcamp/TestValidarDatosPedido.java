@@ -2,15 +2,20 @@ package com.globant.bootcamp;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
-
+import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 public class TestValidarDatosPedido {
+	WebDriver driver;
+	
+	
 	
 	public TestValidarDatosPedido(){
 		
@@ -25,7 +30,19 @@ private static final Logger LOG;
 	
 	
 	
+@Test
+public void ValidarDatos() {
 	
+	driver.get("http://www.pedidosya.com");
+	HomePagePedidosYa PYhome = new HomePagePedidosYa(driver);
+	PYhome.ClickearUruguay();
+	
+	
+	
+	
+	
+	
+}
 	
 	
 	
@@ -33,7 +50,7 @@ private static final Logger LOG;
 public void prepareTest() {
 	
 	LOG.info("Preparing");
-	
+	driver = new ChromeDriver();
 	
 }
 @AfterMethod
