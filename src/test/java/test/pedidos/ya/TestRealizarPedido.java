@@ -1,5 +1,6 @@
 package test.pedidos.ya;
 
+import java.awt.AWTException;
 import java.net.MalformedURLException;
 
 import org.apache.logging.log4j.LogManager;
@@ -11,6 +12,8 @@ import org.testng.annotations.Test;
 import org.testng.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
@@ -42,11 +45,13 @@ public class TestRealizarPedido {
     @BeforeMethod
     public void prepareTest() throws MalformedURLException {
     	
-        driver = new ChromeDriver();
-    }
+    	ChromeOptions options = new ChromeOptions();
+    	options.addArguments("--start-maximized");
+        driver = new ChromeDriver(options);
+   }
 
     @Test
-    public void realizarCompra() throws InterruptedException {
+    public void realizarCompra() throws InterruptedException, AWTException {
     	
     	driver.get("http://pedidosya.com");
     	PedidosYaHomePage homePedidosYa = new PedidosYaHomePage(driver);

@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -33,8 +34,11 @@ public class TestVerificarProductosEnSlideActive {
     @BeforeMethod
     public void prepareTest() throws MalformedURLException {
     	
-        driver = new ChromeDriver();
-    }
+    	ChromeOptions options = new ChromeOptions();
+    	options.addArguments("--start-maximized");
+        driver = new ChromeDriver(options);
+   }
+    
    
     @Test
     public void verifySlideActiveProducts() throws InterruptedException {

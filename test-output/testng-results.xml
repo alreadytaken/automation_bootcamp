@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="49687" started-at="2018-03-20T17:48:37Z" finished-at="2018-03-20T17:49:26Z">
+  <suite name="Default suite" duration-ms="46819" started-at="2018-03-20T20:08:24Z" finished-at="2018-03-20T20:09:10Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="49687" started-at="2018-03-20T17:48:37Z" finished-at="2018-03-20T17:49:26Z">
+    <test name="Default test" duration-ms="46819" started-at="2018-03-20T20:08:24Z" finished-at="2018-03-20T20:09:10Z">
       <class name="test.pedidos.ya.TestRealizarPedido">
-        <test-method status="PASS" signature="prepareClass()[pri:0, instance:test.pedidos.ya.TestRealizarPedido@4f18837a]" name="prepareClass" is-config="true" duration-ms="3848" started-at="2018-03-20T17:48:37Z" finished-at="2018-03-20T17:48:41Z">
+        <test-method status="PASS" signature="prepareClass()[pri:0, instance:test.pedidos.ya.TestRealizarPedido@4f18837a]" name="prepareClass" is-config="true" duration-ms="4053" started-at="2018-03-20T20:08:24Z" finished-at="2018-03-20T20:08:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareClass -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:test.pedidos.ya.TestRealizarPedido@4f18837a]" name="prepareTest" is-config="true" duration-ms="5847" started-at="2018-03-20T17:48:41Z" finished-at="2018-03-20T17:48:46Z">
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:test.pedidos.ya.TestRealizarPedido@4f18837a]" name="prepareTest" is-config="true" duration-ms="4998" started-at="2018-03-20T20:08:28Z" finished-at="2018-03-20T20:08:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareTest -->
-        <test-method status="PASS" signature="realizarCompra()[pri:0, instance:test.pedidos.ya.TestRealizarPedido@4f18837a]" name="realizarCompra" duration-ms="38898" started-at="2018-03-20T17:48:46Z" finished-at="2018-03-20T17:49:25Z">
+        <test-method status="PASS" signature="realizarCompra()[pri:0, instance:test.pedidos.ya.TestRealizarPedido@4f18837a]" name="realizarCompra" duration-ms="36653" started-at="2018-03-20T20:08:33Z" finished-at="2018-03-20T20:09:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- realizarCompra -->
-        <test-method status="PASS" signature="cleanup()[pri:0, instance:test.pedidos.ya.TestRealizarPedido@4f18837a]" name="cleanup" is-config="true" duration-ms="1043" started-at="2018-03-20T17:49:25Z" finished-at="2018-03-20T17:49:26Z">
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:test.pedidos.ya.TestRealizarPedido@4f18837a]" name="cleanup" is-config="true" duration-ms="1045" started-at="2018-03-20T20:09:09Z" finished-at="2018-03-20T20:09:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->

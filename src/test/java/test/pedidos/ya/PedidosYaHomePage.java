@@ -1,5 +1,6 @@
 package test.pedidos.ya;
 
+import java.awt.AWTException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -19,8 +20,19 @@ public class PedidosYaHomePage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public PedidosYaHomeUruguay pedidosYaUruguay() {
+	public PedidosYaHomeUruguay pedidosYaUruguay() throws AWTException {
+		
 		uruguayButton.click();
 		return new PedidosYaHomeUruguay(driver);
 	}
 }
+
+/*
+Point coordenadas = uruguayButton.getLocation();
+Robot mouse = new Robot();
+//Actions actions = new Actions(driver);
+//actions.moveToElement(uruguayButton).build().perform();
+mouse.mouseMove(coordenadas.getX(), coordenadas.getY() + 120);
+mouse.mousePress(InputEvent.BUTTON1_MASK);
+mouse.mouseRelease(InputEvent.BUTTON1_MASK);
+*/

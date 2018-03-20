@@ -1,15 +1,22 @@
 package test.mercado.libre;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.InputEvent;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.globant.automation.SeleniumUtils;
 
@@ -27,7 +34,7 @@ public class MercadoLibreHomePage {
 	@FindBy(how = How.XPATH, using = "//h1[text()='Ofertas de la semana']/../..//div[@class='slick-track']//div[@class='ui-item__content']//p[@class='ui-item__title']")
 	private List<WebElement> nombreProductosEnOfertasSemanales;
 
-	@FindBy(how = How.XPATH, using = "//h1[text()='Ofertas de la semana']/../..//div[@class = 'carousel-container']//button[@class='next-button icon-right-open-big ']")
+	@FindBy(how = How.XPATH, using = "//h1[text()='Ofertas de la semana']/../..//div[@class = 'carousel-container']//div[@class='slick-initialized slick-slider']/button[1]")
 	private WebElement nextButton;
 	/*			
 	@FindBy(how = How.XPATH, using ="//h1[text()='Ofertas de la semana']/../..//div[@class='slick-track']/div/div/a/@href")
@@ -40,6 +47,8 @@ public class MercadoLibreHomePage {
 
 		this.driver = driver;				
 		PageFactory.initElements(driver, this);
+		//SeleniumUtils.waitUntilClickable(nextButton, driver);
+		
 
 	}
 	
@@ -70,8 +79,16 @@ public class MercadoLibreHomePage {
 		preciosDeOfertasSemanales.get(i).click();
 		return new MercadoLibreProductoEnOfertaSemanal(driver);
 	}
-	public void irAlSiguiente() {
-		this.nextButton.click();
+	public void irAlSiguiente() throws AWTException, InterruptedException {
+		/*
+		Point coordenadas = nextButton.getLocation();
+		Robot mouse = new Robot();
+		mouse.mouseMove(coordenadas.getX(), coordenadas.getY() + 120);
+
+		mouse.mousePress(InputEvent.BUTTON1_MASK);
+		mouse.mouseRelease(InputEvent.BUTTON1_MASK);
+		 */
+		nextButton.click();
 	}
 	
 	public void actualizar() {
