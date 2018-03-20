@@ -39,12 +39,12 @@ public class TestPedidosYa {
 	    }
 	    @DataProvider(name="direccion")
 		public Object [][] provider() {
-		 return new Object [][] {{"Nicaragua 1666"}};
+		 return new Object [][] {{"Nicaragua 1666","Milanesa","sebastianrodriguezpaiva@gmail.com","prueba1234"}};
 	}
 	
 	    
 	    @Test(dataProvider="direccion")
-	    public void makeOrder(String direccion) throws InterruptedException {
+	    public void makeOrder(String direccion,String comida,String usuario,String pass) throws InterruptedException {
 	    	driver.get("http://www.pedidosya.com");
 	    	driver.manage().window().maximize();
 	    	PedidosInitPage pedidosInitPage = new PedidosInitPage(driver);
@@ -55,6 +55,7 @@ public class TestPedidosYa {
 	    	pedidosInitPage.clickBanderaUruguay();
 	    	
 	    	pedidosHomePage.submitDireccion(direccion);
+	    	pedidosHomePage.submitComida(comida);
 	    	pedidosHomePage.clickConf();
 	    	
 	    	
@@ -86,12 +87,14 @@ public class TestPedidosYa {
 	    	
  
             
-	        new PopUpLogin(driver);
+	       PopUpLogin popUpLogin = new PopUpLogin(driver);
 	        
-	        
+	        popUpLogin.logIn(usuario);
+	        popUpLogin.logIn2(pass);
 	        
 	    	//rest api
-	    	
+	    	//iframe
+	        //Comprobar Primer Nombre coincida
 	    	
 	    }
 	

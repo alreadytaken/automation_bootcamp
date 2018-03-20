@@ -21,6 +21,9 @@ public class PedidosHomePage {
 	@FindBy(name="address")
 	WebElement BarraDireccion;
 	
+	@FindBy(name="optional")
+	WebElement BarraComida;
+	
 	@FindBy(id="confirm")
 	WebElement buttonConf;
 	
@@ -30,7 +33,14 @@ public class PedidosHomePage {
 	public void submitDireccion(String text) {
 		BarraDireccion.click();
 		BarraDireccion.sendKeys(text);
-		BarraDireccion.sendKeys(Keys.ENTER);
+		
+		
+	}
+	
+	public void submitComida(String text) {
+		BarraComida.click();
+		BarraComida.sendKeys(text);
+		BarraComida.sendKeys(Keys.ENTER);
 		
 	}
 	
