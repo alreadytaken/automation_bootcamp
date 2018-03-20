@@ -23,10 +23,11 @@ public class PedidosYaHomePage {
 	}
 	
 	
-	@FindBy(id="linkUy")
+	@FindBy(xpath="//div[contains(@class, 'uruguay')]")
 	private WebElement uruguayFlag;
 	
 	public PedidosYaHomePage enterPage() {
+		this.uruguayFlag.clear();
         this.uruguayFlag.click();
         return new PedidosYaHomePage(driver);
     }

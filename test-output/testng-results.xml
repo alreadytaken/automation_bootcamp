@@ -2,23 +2,23 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="22791" started-at="2018-03-20T19:30:41Z" finished-at="2018-03-20T19:31:03Z">
+  <suite name="Default suite" duration-ms="32068" started-at="2018-03-20T19:57:11Z" finished-at="2018-03-20T19:57:43Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="22791" started-at="2018-03-20T19:30:41Z" finished-at="2018-03-20T19:31:03Z">
+    <test name="Default test" duration-ms="32068" started-at="2018-03-20T19:57:11Z" finished-at="2018-03-20T19:57:43Z">
       <class name="PedidosYa.PedidosYaTestPage">
-        <test-method status="PASS" signature="prepareClass()[pri:0, instance:PedidosYa.PedidosYaTestPage@4fb61f4a]" name="prepareClass" is-config="true" duration-ms="4138" started-at="2018-03-20T19:30:41Z" finished-at="2018-03-20T19:30:45Z">
+        <test-method status="PASS" signature="prepareClass()[pri:0, instance:PedidosYa.PedidosYaTestPage@4fb61f4a]" name="prepareClass" is-config="true" duration-ms="2482" started-at="2018-03-20T19:57:11Z" finished-at="2018-03-20T19:57:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareClass -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:PedidosYa.PedidosYaTestPage@4fb61f4a]" name="prepareTest" is-config="true" duration-ms="15551" started-at="2018-03-20T19:30:45Z" finished-at="2018-03-20T19:31:00Z">
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:PedidosYa.PedidosYaTestPage@4fb61f4a]" name="prepareTest" is-config="true" duration-ms="6706" started-at="2018-03-20T19:57:13Z" finished-at="2018-03-20T19:57:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareTest -->
-        <test-method status="FAIL" signature="normalTest()[pri:0, instance:PedidosYa.PedidosYaTestPage@4fb61f4a]" name="normalTest" duration-ms="1089" started-at="2018-03-20T19:31:00Z" finished-at="2018-03-20T19:31:01Z">
+        <test-method status="FAIL" signature="normalTest()[pri:0, instance:PedidosYa.PedidosYaTestPage@4fb61f4a]" name="normalTest" duration-ms="22242" started-at="2018-03-20T19:57:20Z" finished-at="2018-03-20T19:57:42Z">
           <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[unknown error: unhandled inspector error: {"code":-32000,"message":"Cannot navigate to invalid URL"}
+              <![CDATA[chrome not reachable
   (Session info: chrome=64.0.3282.186)
   (Driver info: chromedriver=2.37.543627 (63642262d9fb93fb4ab52398be4286d844092a5e),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
@@ -26,10 +26,11 @@ Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.1
 System info: host: 'DESKTOP-1MICR9D', ip: '192.168.1.42', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.543627 (63642262d9fb93..., userDataDir: C:\Users\papu_\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 64.0.3282.186, webStorageEnabled: true}
-Session ID: cc4dbb51431daec329103bb94c3b8586]]>
+Session ID: c6aa0f324aef407f492eafe06dc5c126
+*** Element info: {Using=id, value=search}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: unhandled inspector error: {"code":-32000,"message":"Cannot navigate to invalid URL"}
+              <![CDATA[org.openqa.selenium.WebDriverException: chrome not reachable
   (Session info: chrome=64.0.3282.186)
   (Driver info: chromedriver=2.37.543627 (63642262d9fb93fb4ab52398be4286d844092a5e),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
@@ -37,7 +38,8 @@ Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.1
 System info: host: 'DESKTOP-1MICR9D', ip: '192.168.1.42', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_161'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.543627 (63642262d9fb93..., userDataDir: C:\Users\papu_\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 64.0.3282.186, webStorageEnabled: true}
-Session ID: cc4dbb51431daec329103bb94c3b8586
+Session ID: c6aa0f324aef407f492eafe06dc5c126
+*** Element info: {Using=id, value=search}
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -50,8 +52,18 @@ at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttp
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:273)
-at PedidosYa.PedidosYaTestPage.normalTest(PedidosYaTestPage.java:50)
+at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:346)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementsById(RemoteWebDriver.java:369)
+at org.openqa.selenium.By$ById.findElements(By.java:210)
+at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:307)
+at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
+at com.globant.automation.SeleniumUtils.isPresent(SeleniumUtils.java:20)
+at PedidosYa.PedidosYaSearchPage.<init>(PedidosYaSearchPage.java:17)
+at PedidosYa.PedidosYaTestPage.normalTest(PedidosYaTestPage.java:53)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -83,7 +95,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- normalTest -->
-        <test-method status="PASS" signature="cleanup()[pri:0, instance:PedidosYa.PedidosYaTestPage@4fb61f4a]" name="cleanup" is-config="true" duration-ms="1798" started-at="2018-03-20T19:31:02Z" finished-at="2018-03-20T19:31:03Z">
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:PedidosYa.PedidosYaTestPage@4fb61f4a]" name="cleanup" is-config="true" duration-ms="581" started-at="2018-03-20T19:57:42Z" finished-at="2018-03-20T19:57:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
