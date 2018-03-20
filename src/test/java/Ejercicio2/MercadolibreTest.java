@@ -2,6 +2,7 @@ package Ejercicio2;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -79,9 +80,5 @@ public class MercadolibreTest extends FunctionalTest{
         driver.quit();
     }
 
-    @BeforeClass
-    private void prepareClass() {
-        LOG.info("Prepare class");
-        WebDriverManager.chromedriver().setup();
-    }
+    
 }

@@ -20,7 +20,7 @@ public class MercadolibreHomePage extends PageObject {
 	@FindBy(how = How.XPATH, using = "/html/body/main/div/div/section[3]/div/div[2]/div/div/div/div[1]/div/a/div[2]/div/span[2]")
 	private WebElement OdlSDescuentoProducto; 
 	
-	@FindBy(how = How.XPATH, using = "/html/body/main/div/div/section[3]/div/div[2]/div/div/div/div[1]/div/a/div[1]/img")
+	@FindBy(how = How.XPATH, using = "(//h1[text()='Ofertas de la semana']/../..//div[@class='ui-item__image-container'])[1]")
 	private WebElement FotoProducto;
 	
 	public MercadolibreHomePage(WebDriver driver) {
@@ -29,27 +29,27 @@ public class MercadolibreHomePage extends PageObject {
 	
 	public WebElement getnombreproducto() {
 		Actions builder = new Actions(driver);
-		builder.moveToElement(OdlSNombreProducto).perform();
+		builder.moveToElement(FotoProducto).build().perform();
 		WebElement OdlSNombreProducto = SeleniumUtils.waitUntilClickable(By.xpath("/html/body/main/div/div/section[3]/div/div[2]/div/div/div/div[1]/div/a/div[2]/p"), driver);
 		return OdlSNombreProducto;
 	}
 	
 	public WebElement getprecioproducto() {
 		Actions builder = new Actions(driver);
-		builder.moveToElement(OdlSPrecioProducto).perform();
+		builder.moveToElement(FotoProducto).perform();
 		WebElement OdlSPrecioProducto = SeleniumUtils.waitUntilClickable(By.xpath("/html/body/main/div/div/section[3]/div/div[2]/div/div/div/div[1]/div/a/div[2]/div/span[1]/span[2]"), driver);
 		return OdlSPrecioProducto;
 	}
 	
 	public WebElement getdescuentoproducto() {
 		Actions builder = new Actions(driver);
-		builder.moveToElement(OdlSDescuentoProducto).perform();
+		builder.moveToElement(FotoProducto).perform();
 		WebElement OdlSDescuentoProducto = SeleniumUtils.waitUntilClickable(By.xpath("/html/body/main/div/div/section[3]/div/div[2]/div/div/div/div[1]/div/a/div[2]/div/span[2]"), driver);
 		return OdlSDescuentoProducto;
 	}
 	
 	public PaginaProducto click() {
-		OdlSNombreProducto.click();
+		FotoProducto.click();
 		return new PaginaProducto(driver);
 	}
 

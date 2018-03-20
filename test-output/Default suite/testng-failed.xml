@@ -5,10 +5,12 @@
     <classes>
       <class name="Ejercicio2.MercadolibreTest">
         <methods>
+          <include name="setUp"/>
           <include name="PublicacionTest"/>
           <include name="cleanup"/>
-          <include name="prepareClass"/>
+          <include name="tearDown"/>
           <include name="prepareTest"/>
+          <include name="cleanUp"/>
         </methods>
       </class> <!-- Ejercicio2.MercadolibreTest -->
     </classes>
