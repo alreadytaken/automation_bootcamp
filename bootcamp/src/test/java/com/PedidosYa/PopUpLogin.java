@@ -14,9 +14,9 @@ public class PopUpLogin {
 		
 		this.driver=driver;
 		PageFactory.initElements(driver,this);
-		SeleniumUtils.waitUntilPresence(By.xpath("//div[contains(@class,'button-container')]"), driver);
+		SeleniumUtils.waitUntilPresence(By.xpath("//h1"), driver);
 
-//$x ("//a[text()='Olvidé mi contraseña']")		
+	
 		
 	}
 	

@@ -85,8 +85,12 @@ public class TestPedidosYa {
 	    	pedidosConfirmOrder.clickContinueButton();
 	    	
  
-            //new PopUpLogin(driver);
-	    	
+            
+	        new PopUpLogin(driver);
+	        
+	        
+	        
+	    	//rest api
 	    	
 	    	
 	    }
