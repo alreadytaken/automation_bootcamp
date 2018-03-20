@@ -14,9 +14,10 @@ public class PedidosYaFoodSelectionPage extends PedidosYaRestaurantSelectionPage
 	public PedidosYaFoodSelectionPage(WebDriver d) {
 		super(d);
 		PageFactory.initElements(driver, this);
+		menuPopUp = SeleniumUtils.waitUntilClickable(By.id("menuModal"), driver);
 	}
 	
-	@FindBy (how = How.CSS, using = "div[class='tcontent']")
+	//@FindBy (how = How.CSS, using = "div[class='tcontent']")
 	private WebElement menuPopUp;
 	
 	public String obtenerPrecio () {

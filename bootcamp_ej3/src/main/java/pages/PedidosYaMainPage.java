@@ -24,11 +24,11 @@ public class PedidosYaMainPage extends PedidosYaCountrySelectionPage {
 	@FindBy(how = How.NAME, using = "optional")
 	private WebElement txtOpcional;
 
-	public PedidosYaRestaurantSelectionPage buscarDireccion(String direccion, String opcional) {
+	public PedidosYaPopUpMapa buscarDireccion(String direccion, String opcional) {
 		txtDireccion.sendKeys(direccion);
 		txtOpcional.sendKeys(opcional);
 		btnBuscar.click();
-		SeleniumUtils.waitUntilClickable(By.id("confirm"), driver).click();
-		return new PedidosYaRestaurantSelectionPage(driver);
+		//SeleniumUtils.waitUntilClickable(By.id("confirm"), driver).click();
+		return new PedidosYaPopUpMapa(driver);
 	}
 }
