@@ -12,4 +12,11 @@ public class SeleniumUtils {
 		return ((new WebDriverWait(driver, 10)).until(ExpectedConditions.elementToBeClickable(e)));
 	}
 	
+	public static WebElement waitUntilClickables(By e, WebDriver driver) {
+		return ((new WebDriverWait(driver, 10)).until(ExpectedConditions.elementToBeClickable(e)));
+	} 
+	
+	public static boolean isPresent(By e, WebDriver driver) {
+		 return (new WebDriverWait(driver, 90).until(ExpectedConditions.visibilityOfElementLocated(e)) != null);
+	} 
 }
