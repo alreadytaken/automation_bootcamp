@@ -12,6 +12,10 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import pages.PedidosYaCountrySelectionPage;
+import pages.PedidosYaFoodSelectionPage;
+import pages.PedidosYaMainPage;
+import pages.PedidosYaRestaurantSelectionPage;
 
 public class PedidosYaTest {
 	private static final Logger LOG;
@@ -36,10 +40,18 @@ public class PedidosYaTest {
 	private void prepareClass() {
 		WebDriverManager.chromedriver().setup();
 	}
+	
+	//Direccion : Nicaragua 1666
+	//Opcional: Milanesa
 
 	@Test
-	public void a() {
-
+	public void testPedidosYa() {
+		driver.get("http://www.pedidosya.com/");
+		PedidosYaCountrySelectionPage pedidosYaCSP = new PedidosYaCountrySelectionPage(driver);
+		PedidosYaMainPage pedidosYaMP = pedidosYaCSP.seleccionarUruguay();
+		PedidosYaRestaurantSelectionPage pedidosYaRSP = pedidosYaMP.buscarDireccion("Nicaragua 1666", "Milanesa");
+		PedidosYaFoodSelectionPage pedidosYaFSP = pedidosYaRSP.clickPromo();
+		LOG.info(pedidosYaFSP.obtenerPrecio());
 	}
 
 }
