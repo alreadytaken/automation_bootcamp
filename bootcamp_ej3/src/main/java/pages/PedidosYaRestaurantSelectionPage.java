@@ -1,7 +1,5 @@
 package pages;
 
-import static org.testng.Assert.assertNotEquals;
-
 import java.util.List;
 
 import org.openqa.selenium.By;

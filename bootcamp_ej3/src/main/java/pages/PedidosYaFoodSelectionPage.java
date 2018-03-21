@@ -15,6 +15,7 @@ public class PedidosYaFoodSelectionPage extends PedidosYaRestaurantSelectionPage
 	}
 
 	private WebElement datosPedido;
+	private WebElement btnContinuar;
 
 	public String[] obtenerDatos() {
 		datosPedido = SeleniumUtils.waitUntilClickable(By.id("scrollContent"), driver);
@@ -23,5 +24,11 @@ public class PedidosYaFoodSelectionPage extends PedidosYaRestaurantSelectionPage
 		ret[0] = datosPedido.findElement(By.className("data")).getText();
 		ret[1] = datosPedido.findElement(By.className("price")).getText();
 		return ret;
+	}
+
+	public PedidosYaPopUpLogIn clickContinuar() {
+		btnContinuar = SeleniumUtils.waitUntilClickable(By.id("order"), driver);
+		btnContinuar.click();
+		return new PedidosYaPopUpLogIn(driver);
 	}
 }

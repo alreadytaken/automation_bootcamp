@@ -1,6 +1,7 @@
 package com.globant.automation;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 import java.net.MalformedURLException;
 
@@ -19,7 +20,9 @@ import pages.PedidosYaCountrySelectionPage;
 import pages.PedidosYaFoodPopUp;
 import pages.PedidosYaFoodSelectionPage;
 import pages.PedidosYaMainPage;
+import pages.PedidosYaPopUpLogIn;
 import pages.PedidosYaPopUpMapa;
+import pages.PedidosYaPostLogInPage;
 import pages.PedidosYaRestaurantSelectionPage;
 
 public class PedidosYaTest {
@@ -75,6 +78,10 @@ public class PedidosYaTest {
 		LOG.info("Los precios coinciden");
 		assertEquals(datos[0], "Nicaragua 1666");
 		LOG.info("La dirección coincide");
+		PedidosYaPopUpLogIn pedidosYaPULI = pedidosYaFSP.clickContinuar();
+		PedidosYaPostLogInPage pedidosYaPLIP = pedidosYaPULI.ingresarDatos("gonzalolombardi@hotmail.com", "g4914861");
+		assertTrue(pedidosYaPLIP.isLogged());
+		
 	}
 
 }
