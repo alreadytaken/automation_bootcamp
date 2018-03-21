@@ -14,13 +14,14 @@ public class PedidosYaPopUpMapa extends PedidosYaMainPage {
 	public PedidosYaPopUpMapa(WebDriver d) {
 		super(d);
 		PageFactory.initElements(driver, this);
-		btnConfirmar = SeleniumUtils.waitUntilClickable(By.id("confirm"), driver);
 	}
 
-	//@FindBy(how = How.ID, using = "confirm")
 	private WebElement btnConfirmar;
 
 	public PedidosYaRestaurantSelectionPage confirmarUbicacion() {
+		SeleniumUtils.waitUntilClickable(By.id("searchMap"), driver);
+		SeleniumUtils.waitUntilVisible(By.xpath("//div[@class='gmnoprint']"), driver);
+		btnConfirmar = SeleniumUtils.waitUntilClickable(By.id("confirm"), driver);
 		btnConfirmar.click();
 		return new PedidosYaRestaurantSelectionPage(driver);
 	}

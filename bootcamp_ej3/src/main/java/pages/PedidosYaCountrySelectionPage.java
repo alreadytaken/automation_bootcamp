@@ -13,10 +13,10 @@ public class PedidosYaCountrySelectionPage {
 		driver = d;
 		PageFactory.initElements(driver, this);
 	}
-	
+
 	@FindBy(how = How.ID, using = "linkUy")
 	private WebElement lnkUY;
-	
+
 	public PedidosYaMainPage seleccionarUruguay() {
 		lnkUY.click();
 		return new PedidosYaMainPage(driver);

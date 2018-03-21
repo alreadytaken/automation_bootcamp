@@ -1,5 +1,9 @@
 package pages;
 
+import static org.testng.Assert.assertNotEquals;
+
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,14 +16,19 @@ public class PedidosYaRestaurantSelectionPage extends PedidosYaMainPage {
 	public PedidosYaRestaurantSelectionPage(WebDriver d) {
 		super(d);
 		PageFactory.initElements(driver, this);
-		promo = SeleniumUtils.waitUntilClickable(By.xpath("//span[@class='promo']"), driver);
+
 	}
 
-	// @FindBy(how = How.CSS, using = "span[class='promo']")
-	private WebElement promo; // = SeleniumUtils.waitUntilClickable(By.xpath("//span[@class='promo']"),
-								// driver);
+	private WebElement promo;
 
 	public PedidosYaFoodPopUp clickPromo() {
+		promo = SeleniumUtils.waitUntilClickable(By.xpath("//span[@class='promo']"), driver);
+		// Codigo de emergencia
+		List<WebElement> lista = driver.findElements(By.xpath("//span[@class='promo']"));
+		if (promo.getText().equals("Milanesa completa al pan con papas fritas")) {
+			promo = lista.get(1);
+		}
+		// Hasta acá
 		promo.click();
 		return new PedidosYaFoodPopUp(driver);
 	}

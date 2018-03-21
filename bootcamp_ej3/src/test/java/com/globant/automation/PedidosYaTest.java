@@ -1,5 +1,7 @@
 package com.globant.automation;
 
+import static org.testng.Assert.assertEquals;
+
 import java.net.MalformedURLException;
 
 import org.apache.logging.log4j.LogManager;
@@ -9,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -42,20 +45,36 @@ public class PedidosYaTest {
 	private void prepareClass() {
 		WebDriverManager.chromedriver().setup();
 	}
-	
-	//Direccion : Nicaragua 1666
-	//Opcional: Milanesa
 
-	@Test
-	public void testPedidosYa() {
-		driver.get("https://staging.pedidosya.com/");
+	// Direccion : Nicaragua 1666
+	// Opcional: Milanesa
+	// Codigo temporal
+	@DataProvider(name = "Busqueda")
+	public Object[][] provider() {
+		return new Object[][] { { "1" }, { "2" }, { "3" }, { "4" }, { "5" } };
+	}
+
+	// Hasta acá
+	@Test(dataProvider = "Busqueda") // DataProvider no necesario
+	public void testPedidosYa(String temporal) {
+		LOG.info("Test No: " + temporal);
+		driver.get("https://www.pedidosya.com/");
 		PedidosYaCountrySelectionPage pedidosYaCSP = new PedidosYaCountrySelectionPage(driver);
 		PedidosYaMainPage pedidosYaMP = pedidosYaCSP.seleccionarUruguay();
 		PedidosYaPopUpMapa pedidosYaPUM = pedidosYaMP.buscarDireccion("Nicaragua 1666", "Milanesa");
 		PedidosYaRestaurantSelectionPage pedidosYaRSP = pedidosYaPUM.confirmarUbicacion();
 		PedidosYaFoodPopUp pedidosYaFPU = pedidosYaRSP.clickPromo();
-		//PedidosYaFoodSelectionPage pedidosYaFSP = 
-		LOG.info(pedidosYaFPU.obtenerPrecio());
+		String precioPre = pedidosYaFPU.obtenerPrecio();
+		LOG.info(precioPre);
+		PedidosYaFoodSelectionPage pedidosYaFSP = pedidosYaFPU.agregarPedido();
+		String[] datos = pedidosYaFSP.obtenerDatos();
+		String[] temp = datos[0].split(" ");
+		datos[0] = temp[2] + " " + temp[3];
+		LOG.info("Direccion: " + datos[0] + "\n" + "Precio: " + datos[1]);
+		assertEquals(precioPre, datos[1]);
+		LOG.info("Los precios coinciden");
+		assertEquals(datos[0], "Nicaragua 1666");
+		LOG.info("La dirección coincide");
 	}
 
 }
