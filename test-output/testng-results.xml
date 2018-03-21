@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="55157" started-at="2018-03-21T00:07:59Z" finished-at="2018-03-21T00:08:54Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="55157" started-at="2018-03-21T00:07:59Z" finished-at="2018-03-21T00:08:54Z">
+      <class name="com.globant.automation.PedidosYaTest">
+        <test-method status="PASS" signature="prepareClass()[pri:0, instance:com.globant.automation.PedidosYaTest@2d7275fc]" name="prepareClass" is-config="true" duration-ms="3004" started-at="2018-03-21T00:07:59Z" finished-at="2018-03-21T00:08:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareClass -->
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.PedidosYaTest@2d7275fc]" name="prepareTest" is-config="true" duration-ms="5247" started-at="2018-03-21T00:08:02Z" finished-at="2018-03-21T00:08:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareTest -->
+        <test-method status="PASS" signature="testPedidosYa()[pri:0, instance:com.globant.automation.PedidosYaTest@2d7275fc]" name="testPedidosYa" duration-ms="46878" started-at="2018-03-21T00:08:07Z" finished-at="2018-03-21T00:08:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPedidosYa -->
+      </class> <!-- com.globant.automation.PedidosYaTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
