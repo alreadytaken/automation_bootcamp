@@ -13,15 +13,17 @@ public class PedidosYaConfirmLocation {
 	
 	PedidosYaConfirmLocation(WebDriver driver){
 		this.driver = driver;
-		SeleniumUtils.waitUntilClickable(By.cssSelector("a#confirm"), driver);
+		SeleniumUtils.waitUntilVisible(By.cssSelector("#mapContainer"), driver);
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(css = "a#confirm")
-	WebElement confirmButton;
+	@FindBy(css = "#mapContainer")
+	WebElement mapContainer;
+	
+	WebElement confirmButton = mapContainer.findElement(By.cssSelector("a#confirm"));
 	
 	public Boolean confirmLocationPresence() {
-		return confirmButton.isDisplayed();
+		return mapContainer.isDisplayed();
 	}
 	
 	public PedidosYaFoodSuggestions navigateToFoodSuggestions(WebDriver driver) {

@@ -21,7 +21,7 @@ public class PedidosYaAddToOrder {
 	@FindBy(css = "#footerOpen a.button")
 	WebElement addButton;
 	
-	@FindBy(css = ".has-picture div.price span")
+	@FindBy(css = "div.tinner div.price span")
 	WebElement itemPrice;
 	
 	public String getPrice() {

@@ -38,5 +38,8 @@ public class PedidosYaOrderOverview {
 		return priceTotal.getText();
 	}
 	
-	//public PedidosYaSignInForm navigateToSignInForm
+	public PedidosYaSignInForm navigateToSignInForm() {
+		orderButton.click();
+		return new PedidosYaSignInForm(driver);
+	}
 }

@@ -13,12 +13,14 @@ public class PedidosYaSignInForm {
 	
 	public PedidosYaSignInForm(WebDriver driver) {
 		this.driver = driver;
-		SeleniumUtils.waitUntilClickable(By.cssSelector("#login"), driver);
+		SeleniumUtils.waitUntilVisible(By.cssSelector("#login"), driver);
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(css = "#divFormContainer h1")
-	WebElement formTitle;
+	@FindBy(css = "#divFormContainer")
+	WebElement formContainer;
+	
+	WebElement formTitle = formContainer.findElement(By.cssSelector("h1"));
 	
 	public Boolean loginFormPresence() {
 		Boolean aux = false;
