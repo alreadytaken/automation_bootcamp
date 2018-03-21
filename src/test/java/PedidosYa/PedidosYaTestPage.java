@@ -10,13 +10,13 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.globant.automation.GoogleBingTestPage;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class PedidosYaTestPage {
 	
 	private WebDriver driver;
+	//private WebDriver driver2;
 	
 	private static final Logger LOG;
     
@@ -47,15 +47,18 @@ public class PedidosYaTestPage {
     	String address = "Nicariagua 1666";
     	String food = "milanesa";
     	
-    	driver.get("https://www.pedidosya.com");
+    	driver.get("https://staging.pedidosya.com");
     	
     	PedidosYaHomePage testHome = new PedidosYaHomePage(driver);
-    	PedidosYaSearchPage testSearch = new PedidosYaSearchPage(driver);
-    	PedidosYaSelectPage testSelect = new PedidosYaSelectPage(driver);
-    	PedidosYaConfirmPage testConfirm = new PedidosYaConfirmPage(driver);
-    	PedidosYaPopUpPage testPopUp = new PedidosYaPopUpPage(driver);
+    	PedidosYaSearchPage testSearch ;
+    	PedidosYaSelectPage testSelect;
+    	/*PedidosYaConfirmPage testConfirm = new PedidosYaConfirmPage(driver);
+    	PedidosYaPopUpPage testPopUp = new PedidosYaPopUpPage(driver);*/
     	
-    	testHome.enterPage();
+    	testSearch = testHome.enterPage();
+    	testSearch.typeOrder(address, food);
+    	testSearch.sendOrder();
+    	testSelect = testSearch.confirmOrder();
     	
     }
 }

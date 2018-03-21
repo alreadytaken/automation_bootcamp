@@ -32,21 +32,22 @@ public class PedidosYaSearchPage {
 	@FindBy(id="confirm")
 	private WebElement confirm;
 	
-	public void typeOrder(String data) {
-		this.address.sendKeys(data);
-		this.food.sendKeys(data);
+	public void typeOrder(String data1, String data2) {
+		this.address.sendKeys(data1);
+		this.food.sendKeys(data2);
 	}
 	
 	public void sendOrder() {
 		this.send.click();
 	}
 	
-	public PedidosYaSearchPage confirmOrder() {
+	//hago que devuelva una pagina del siguiente tipo (PedidosYaSelectPage)
+	public PedidosYaSelectPage confirmOrder() {
 		if (!SeleniumUtils.isPresent(By.id("confirm"), driver)) {
 			throw new IllegalStateException("Confirm did not load");
 		} else {
 			this.confirm.click();
 		}
-		return new PedidosYaSearchPage(driver);
+		return new PedidosYaSelectPage(driver);
 	}
 }
