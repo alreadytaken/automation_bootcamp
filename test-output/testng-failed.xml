@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.globant.automation.GoogleVsBingTest">
+      <class name="com.globant.automation.PedidosYaTest">
         <methods>
-          <include name="metodoTestGvsB" invocation-numbers="0 1 2 3 4"/>
-          <include name="prepareClass"/>
+          <include name="testPedidosYa"/>
           <include name="prepareTest"/>
+          <include name="prepareClass"/>
         </methods>
-      </class> <!-- com.globant.automation.GoogleVsBingTest -->
+      </class> <!-- com.globant.automation.PedidosYaTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -5,7 +5,7 @@ import static org.testng.Assert.assertEquals;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -27,17 +27,19 @@ public class PedidosYaTest {
     	PedidosYaCountrySel CountrySel=new PedidosYaCountrySel(driver);
     	PedidosYaUruguayMain UruguayMain = CountrySel.clickOnUruguay();
     	UruguayMain.ingresarDireccion("Nicaragua 1666");
-    	
+    	UruguayMain.ingresarComidaRestaurante("Milanesa");
+    	ConfirmPopUp ConfirmPage=UruguayMain.clickEnBuscar();
+    	ConfirmPage.confirmarUbicacion();
     }
 	
    	@BeforeMethod
    	public void prepareTest() {
    	    LOG.info("Prepare test");
-   	    driver = new ChromeDriver();
+   	    driver = new FirefoxDriver();
    	}
    	@BeforeClass
    	private void prepareClass() {
    	    LOG.info("Prepare class");
-   	    WebDriverManager.chromedriver().setup();
+   	    WebDriverManager.firefoxdriver().setup();
    	}
 }
