@@ -13,7 +13,7 @@ public class PedidosYaHome {
 
 	public PedidosYaHome(WebDriver driver) {
 		this.driver = driver;
-		SeleniumUtils.waitUntilClickable(By.cssSelector("fieldset.row a.chosen-single"), driver);
+		SeleniumUtils.waitUntilClickable(By.cssSelector("button#search"), driver);
 		PageFactory.initElements(driver, this);
 	}
 	

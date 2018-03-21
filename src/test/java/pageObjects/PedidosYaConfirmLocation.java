@@ -17,13 +17,13 @@ public class PedidosYaConfirmLocation {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(css = "#mapContainer")
-	WebElement mapContainer;
+	@FindBy(css = "a#confirm.button")
+	WebElement confirmButton;
 	
-	WebElement confirmButton = mapContainer.findElement(By.cssSelector("a#confirm"));
+	//WebElement confirmButton = mapContainer.findElement(By.cssSelector("a#confirm.button"));
 	
 	public Boolean confirmLocationPresence() {
-		return mapContainer.isDisplayed();
+		return confirmButton.isDisplayed();
 	}
 	
 	public PedidosYaFoodSuggestions navigateToFoodSuggestions(WebDriver driver) {

@@ -13,21 +13,55 @@ public class PedidosYaSignInForm {
 	
 	public PedidosYaSignInForm(WebDriver driver) {
 		this.driver = driver;
-		SeleniumUtils.waitUntilVisible(By.cssSelector("#login"), driver);
+		SeleniumUtils.waitUntilVisible(By.cssSelector(".tinner iframe"), driver);
+		WebElement frame = driver.findElement(By.cssSelector(".tinner iframe"));
+		driver.switchTo().frame(frame);
+		SeleniumUtils.waitUntilClickable(By.cssSelector("#loginDiv #login"), driver);
 		PageFactory.initElements(driver, this);
+		
+
 	}
 
-	@FindBy(css = "#divFormContainer")
-	WebElement formContainer;
+//	@FindBy(css = ".tinner")
+//	WebElement formContainer;
 	
-	WebElement formTitle = formContainer.findElement(By.cssSelector("h1"));
+//	@FindBy(css = ".tinner iframe")
+//	WebElement loginIFrame;
 	
-	public Boolean loginFormPresence() {
-		Boolean aux = false;
-		if (formTitle.getText().trim()=="Ingresar a mi cuenta") {
-			aux = true;
-		}
-		return aux;
-				
+	@FindBy(css = "#loginDiv input#email")
+	WebElement emailField;
+	
+	@FindBy(css = "#loginDiv input#password")
+	WebElement passwordField;
+	
+	@FindBy(css = "#loginDiv #login")
+	WebElement loginButton;
+	
+	@FindBy(css = "#loginDiv")
+	WebElement loginDiv;
+	
+	//WebElement formTitle = formContainer.findElement(By.cssSelector("h1"));
+	
+//	public Boolean loginFormPresence() {
+//		Boolean aux = false;
+//		if (formContainer.isDisplayed()) {
+//			aux = true;
+//		}
+//		return aux;
+//	}
+	
+	public void fillLogInForm(String email, String password) {
+		emailField.sendKeys(email);
+		passwordField.sendKeys(password);
+		loginButton.click();
+		driver.switchTo().parentFrame();
+		
 	}
+	
+	public Boolean checkFrame() {
+		Boolean aux = false;
+		aux = loginDiv.isDisplayed();
+		return aux;
+	}
+
 }
