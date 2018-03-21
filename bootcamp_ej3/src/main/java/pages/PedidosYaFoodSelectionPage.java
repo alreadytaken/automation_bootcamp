@@ -31,4 +31,10 @@ public class PedidosYaFoodSelectionPage extends PedidosYaRestaurantSelectionPage
 		btnContinuar.click();
 		return new PedidosYaPopUpLogIn(driver);
 	}
+	
+	public PedidosYaPopUpLogIn clickLogIn() {
+		WebElement btnLogIn = driver.findElement(By.id("lnkLogin"));
+		btnLogIn.click();
+		return new PedidosYaPopUpLogIn(driver);
+	}
 }

@@ -5,7 +5,7 @@
     <classes>
       <class name="com.globant.automation.PedidosYaTest">
         <methods>
-          <include name="testPedidosYa"/>
+          <include name="testPedidosYa" invocation-numbers="0 1 2 3 4"/>
           <include name="cleanup"/>
           <include name="prepareTest"/>
           <include name="prepareClass"/>

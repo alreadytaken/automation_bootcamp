@@ -16,14 +16,20 @@ public class PedidosYaPopUpLogIn extends PedidosYaFoodSelectionPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	private WebElement cuadroDeDatos = SeleniumUtils.waitUntilVisible(By.className("user-form"), driver);
+	private WebElement cuadroDeDatos;// = SeleniumUtils.waitUntilVisible(By.id("modalLogin"), driver);
 
 	public PedidosYaPostLogInPage ingresarDatos(String eMail, String password) {
-		List<WebElement> input = cuadroDeDatos.findElements(By.className("row"));
-		input.get(0).sendKeys(eMail);
-		input.get(1).sendKeys(password);
-		WebElement btnConfirmar = cuadroDeDatos.findElement(By.className("button-container"));
+		
+		cuadroDeDatos = SeleniumUtils.waitUntilVisible(By.id("modalLogin"), driver);
+		driver.switchTo().frame(1);
+		WebElement temp = SeleniumUtils.waitUntilVisible(By.id("divFormContainer"), driver);
+		WebElement temp2 = temp.findElement(By.className("input-container"));
+		//List<WebElement> input = temp2.findElements(By.className("row"));
+		temp2.findElement(By.name("email")).sendKeys(eMail);
+		temp2.findElement(By.name("password")).sendKeys(password);
+		WebElement btnConfirmar = temp.findElement(By.className("button-container"));
 		btnConfirmar.click();
+		driver.switchTo().frame(0);
 		return new PedidosYaPostLogInPage(driver);
 	}
 

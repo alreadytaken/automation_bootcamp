@@ -37,6 +37,7 @@ public class PedidosYaTest {
 	public void prepareTest() throws MalformedURLException {
 		LOG.info("Iniciando test");
 		driver = new ChromeDriver();
+		//driver.manage().window().maximize();
 	}
 
 	@AfterMethod
@@ -78,10 +79,10 @@ public class PedidosYaTest {
 		LOG.info("Los precios coinciden");
 		assertEquals(datos[0], "Nicaragua 1666");
 		LOG.info("La dirección coincide");
-		PedidosYaPopUpLogIn pedidosYaPULI = pedidosYaFSP.clickContinuar();
+		PedidosYaPopUpLogIn pedidosYaPULI = pedidosYaFSP.clickLogIn();
 		PedidosYaPostLogInPage pedidosYaPLIP = pedidosYaPULI.ingresarDatos("gonzalolombardi@hotmail.com", "g4914861");
-		assertTrue(pedidosYaPLIP.isLogged());
-		
+		assertTrue(pedidosYaPLIP.isLogged("Gonzalo"));
+		LOG.info("El usuario es correcto");
 	}
 
 }

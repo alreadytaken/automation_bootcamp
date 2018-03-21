@@ -14,9 +14,11 @@ public class PedidosYaPostLogInPage extends PedidosYaPopUpLogIn {
 
 	private WebElement txtConfirmation;
 
-	public boolean isLogged() {
-		txtConfirmation = SeleniumUtils.waitUntilClickable(By.className("js-title-text"), driver);
-		return txtConfirmation.equals("Seleccioná tu dirección de entrega");
+	public boolean isLogged(String nombreUsuario) {
+		txtConfirmation = SeleniumUtils.waitUntilClickable(By.id("lnkUserName"), driver);
+		WebElement temp = txtConfirmation.findElement(By.className("top-link"));
+		return temp.getText().equals(nombreUsuario);
+		
 	}
 
 }

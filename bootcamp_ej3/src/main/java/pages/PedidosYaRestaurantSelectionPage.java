@@ -22,10 +22,10 @@ public class PedidosYaRestaurantSelectionPage extends PedidosYaMainPage {
 	public PedidosYaFoodPopUp clickPromo() {
 		promo = SeleniumUtils.waitUntilClickable(By.xpath("//span[@class='promo']"), driver);
 		// Codigo de emergencia
-		List<WebElement> lista = driver.findElements(By.xpath("//span[@class='promo']"));
-		if (promo.getText().equals("Milanesa completa al pan con papas fritas")) {
-			promo = lista.get(1);
-		}
+//		List<WebElement> lista = driver.findElements(By.xpath("//span[@class='promo']"));
+//		if (promo.getText().equals("Milanesa completa al pan con papas fritas")) {
+//			promo = lista.get(1);
+//		}
 		// Hasta acá
 		promo.click();
 		return new PedidosYaFoodPopUp(driver);
