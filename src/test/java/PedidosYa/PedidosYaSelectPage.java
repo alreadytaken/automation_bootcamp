@@ -20,8 +20,11 @@ public class PedidosYaSelectPage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath="//span[@class=\"promo\"]")
+	@FindBy(xpath="//span[@class='promo']")
 	private WebElement promo;
+	
+	@FindBy(xpath="//*[@id='footerOpen']/a")
+	private WebElement promoE;
 	
 	@FindBy(xpath="//span[@class='after_price']")
 	private WebElement price;

@@ -1,5 +1,7 @@
 package PedidosYa;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,12 +22,21 @@ public class PedidosYaConfirmPage {
 		}
 		PageFactory.initElements(driver, this);
 	}
+private static final Logger LOG;
+    
+    static {
+        LOG = LogManager.getLogger(PedidosYaTestPage.class);
+    }
 
-	@FindBy(xpath="//a[@class='button']")
+	@FindBy(xpath="//*[@id='footerOpen']/a[contains(text(), 'Agregar a mi pedido (')]")
 	private WebElement button;
 	
-	@FindBy(xpath="//div[@class='data']/span")
-	private WebElement address;
+	
+	
+	public String dirConf(){
+		String data = driver.findElement(By.xpath("//div[@class='data']/span")).getAttribute("title");
+		return data;
+	}
 	
 	@FindBy(xpath="//span[@id='scrollContent']//section[@id=' ']/div[@data-auto]")
 	private WebElement totalPrice;
@@ -34,16 +45,32 @@ public class PedidosYaConfirmPage {
 	private WebElement order;
 	
 	public boolean validate(String data, String data2) {
-		return ((address.getText()==data) && (totalPrice.getText()==data2));
+		SeleniumUtils.waitUntilClickables(By.id("order"), driver);
+		/*LOG.info("DireccionPrimera");
+		LOG.info(data);
+		LOG.info("DireccionActual");
+		LOG.info(dirConf());
+		LOG.info("PrecioPrimero");
+		LOG.info(data2);
+		LOG.info("PrecioActual");
+		LOG.info(totalPrice.getText());*/
+		String direccion = dirConf();
+		boolean trueDire = direccion.equals(data);
+		boolean truePrice = totalPrice.getText().equals(data2);
+		return (trueDire && truePrice);
 	}
 	
+	//bElement conteiner = driver.findElement(By.xpath("//*[@id='footerOpen']/a[contains(text(), 'Agregar a mi pedido (')]");
+	
 	public void confirmPromo() {
+		//SeniumUtils.waitUntilClickables(By.xpath("\"//*[@id='footerOpen']/a[contains(text(), 'Agregar a mi pedido (')]\""), driver).click();
 		this.button.click();
 	}
 	
-	public PedidosYaConfirmPage orderFood() {
+	public PedidosYaPopUpPage orderFood() {
+		SeleniumUtils.waitUntilClickable(order, driver);
 		this.order.click();
-		return new PedidosYaConfirmPage(driver);
+		return new PedidosYaPopUpPage(driver);
 	}
 		
 }
