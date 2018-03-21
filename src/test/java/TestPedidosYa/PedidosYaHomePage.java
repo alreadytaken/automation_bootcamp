@@ -8,7 +8,7 @@ import org.openqa.selenium.support.How;
 
 
 public class PedidosYaHomePage extends PageObject {
-@FindBy(how = How.ID, using = "//a[@id='linkUy']")
+@FindBy(how = How.XPATH, using = "//a[@id='linkUy']")
 private WebElement Pais;
 
 public PedidosYaHomePage (WebDriver driver) {
