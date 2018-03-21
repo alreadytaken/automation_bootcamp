@@ -45,25 +45,16 @@ private static final Logger LOG;
 	private WebElement order;
 	
 	public boolean validate(String data, String data2) {
+		
 		SeleniumUtils.waitUntilClickables(By.id("order"), driver);
-		/*LOG.info("DireccionPrimera");
-		LOG.info(data);
-		LOG.info("DireccionActual");
-		LOG.info(dirConf());
-		LOG.info("PrecioPrimero");
-		LOG.info(data2);
-		LOG.info("PrecioActual");
-		LOG.info(totalPrice.getText());*/
 		String direccion = dirConf();
 		boolean trueDire = direccion.equals(data);
 		boolean truePrice = totalPrice.getText().equals(data2);
 		return (trueDire && truePrice);
 	}
 	
-	//bElement conteiner = driver.findElement(By.xpath("//*[@id='footerOpen']/a[contains(text(), 'Agregar a mi pedido (')]");
-	
 	public void confirmPromo() {
-		//SeniumUtils.waitUntilClickables(By.xpath("\"//*[@id='footerOpen']/a[contains(text(), 'Agregar a mi pedido (')]\""), driver).click();
+		SeleniumUtils.waitUntilClickable(button, driver);
 		this.button.click();
 	}
 	

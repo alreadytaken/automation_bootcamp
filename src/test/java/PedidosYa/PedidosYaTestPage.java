@@ -68,7 +68,9 @@ public class PedidosYaTestPage {
     	
     	testPopUp = testConfirm.orderFood();
     	
-    	
+    	/* Usuario y contraseña para PedidosYa
+    	 * Usuario:  MiEjemploGlobant@gmail.com
+    	 * Contraseña: kesmaneskesman*/
     	
     }
 }
