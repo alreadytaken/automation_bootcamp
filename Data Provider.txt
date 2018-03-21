@@ -1,0 +1,13 @@
+  @DataProvider(name="direccion")
+	  		public Object [][] provider() {
+	  		 return new Object [][] {{"Nicaragua 1666","Milanesa","sebastianrodriguezpaiva@gmail.com","prueba1234"}};
+	  	}
+	  	
+	  	    
+	  	    @Test(dataProvider="direccion")
+	  	    public void makeOrder(String direccion,String comida,String usuario,String pass)
+
+
+
+                pedidosHomePage.submitDireccion(direccion);
+	    	pedidosHomePage.submitComida(comida);
