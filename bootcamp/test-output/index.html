@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\Cami\AppData\Local\Temp\testng-eclipse--1697069400\testng-customsuite.xml</span>
+                    <span>C:\Users\Cami\AppData\Local\Temp\testng-eclipse-5643927\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -128,13 +128,10 @@
                   <a name="ValidarDatos">
                   </a> <!-- ValidarDatos -->
                   <span class="method-name">ValidarDatos</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //span[@class=&quot;promo&quot; and contains(text(), &quot;Milanesa completa al pan con papas fritas&quot;)]&apos; (tried for 10 second(s) with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:81)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:271)
-	at com.globant.bootcamp.SeleniumUtils.isPresentByPresenceOfElement(SeleniumUtils.java:27)
-	at com.globant.bootcamp.PYSugerenciasPage.&lt;init&gt;(PYSugerenciasPage.java:26)
-	at com.globant.bootcamp.PYHomePageUy.IngresarDatos(PYHomePageUy.java:44)
-	at com.globant.bootcamp.TestValidarDatosPedido.ValidarDatos(TestValidarDatosPedido.java:41)
+                  <div class="stack-trace">java.lang.IllegalStateException: Pop up did not load.
+	at com.globant.bootcamp.PopUpConfirmarUbicacion.&lt;init&gt;(PopUpConfirmarUbicacion.java:37)
+	at com.globant.bootcamp.PYHomePageUy.IngresarDatos(PYHomePageUy.java:45)
+	at com.globant.bootcamp.TestValidarDatosPedido.ValidarDatos(TestValidarDatosPedido.java:44)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -160,41 +157,6 @@
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[@class=&quot;promo&quot; and contains(text(), &quot;Milanesa completa al pan con papas fritas&quot;)]&quot;}
-  (Session info: chrome=64.0.3282.186)
-  (Driver info: chromedriver=2.37.543627 (63642262d9fb93fb4ab52398be4286d844092a5e),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
-System info: host: &apos;CAMILA&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.543627 (63642262d9fb93..., userDataDir: C:\Users\Cami\AppData\Local...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 64.0.3282.186, webStorageEnabled: true}
-Session ID: 742abaa275cb789e2b2a58ecf997c1b5
-*** Element info: {Using=xpath, value=//span[@class=&quot;promo&quot; and contains(text(), &quot;Milanesa completa al pan con papas fritas&quot;)]}
-	at sun.reflect.GeneratedConstructorAccessor18.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy14.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:315)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:44)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:301)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:298)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
-	... 29 more
 
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -204,7 +166,7 @@ Session ID: 742abaa275cb789e2b2a58ecf997c1b5
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Cami\AppData\Local\Temp\testng-eclipse--1697069400\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Cami\AppData\Local\Temp\testng-eclipse-5643927\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -257,7 +219,7 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'ValidarDatos')
 data.setCell(0, 2, 'com.globant.bootcamp.TestValidarDatosPedido')
-data.setCell(0, 3, 25107);
+data.setCell(0, 3, 25157);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -295,17 +257,17 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">prepareTest</span>
-                <span class="method-start">2959 ms</span>
+                <span class="method-start">2158 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">ValidarDatos</span>
-                <span class="method-start">10329 ms</span>
+                <span class="method-start">6107 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">cleanup</span>
-                <span class="method-start">35443 ms</span>
+                <span class="method-start">31271 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

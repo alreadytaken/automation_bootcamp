@@ -35,13 +35,14 @@ public class PYHomePageUy {
 
 	
 	
-	public PYSugerenciasPage IngresarDatos() {
+	public PopUpConfirmarUbicacion IngresarDatos() {
 		
-		txtAdress.sendKeys("Nicaragua 1666");
+		txtAdress.sendKeys("Nicaragua 1600");
 		txtOpcionalComida.sendKeys("Milanesa");
 		BtnSearch.click();
 		
-		return new PYSugerenciasPage(driver);
+		
+		return new PopUpConfirmarUbicacion(driver);
 	}
 	
 	

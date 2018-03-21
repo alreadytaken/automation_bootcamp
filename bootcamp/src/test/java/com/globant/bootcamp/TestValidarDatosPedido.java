@@ -30,49 +30,56 @@ private static final Logger LOG;
 	
 	
 	
-@Test
-public void ValidarDatos() {
-	
-	driver.get("http://www.pedidosya.com");
-	HomePagePedidosYa PYhome = new HomePagePedidosYa(driver);
-	PYhome.ClickearUruguay();
-	
-	PYHomePageUy pyUy = new PYHomePageUy(driver);
-	pyUy.IngresarDatos();
-	
-	PopUpConfirmarUbicacion PopUpUbicacion = new PopUpConfirmarUbicacion(driver);
-	PopUpUbicacion.ConfirmarUbicacionPopUp();
-	
-	PYSugerenciasPage sugerencias_page = new PYSugerenciasPage(driver);
-	sugerencias_page.tomarPrecio();
-	
-	
-	
-}
-	
-	
-	
-@BeforeMethod
-public void prepareTest() {
-	
-	LOG.info("Preparing");
-	driver = new ChromeDriver();
-	
-}
-@AfterMethod
-public void cleanup() {
-	driver.quit();
-}
-	
-@BeforeClass
-private void prepareClass() {
-	LOG.info("-----Prepare class-----");
+	@Test
+	public void ValidarDatos() {
+		
+		driver.get("http://www.pedidosya.com");
+		HomePagePedidosYa PYhome = new HomePagePedidosYa(driver);
+		PYhome.ClickearUruguay();
+		
+		LOG.info("ENTRA a PO PY Uy");
+		
+		PYHomePageUy pyUy = new PYHomePageUy(driver);
+		LOG.info("ENTRA a ingresar datos");
+		pyUy.IngresarDatos();
+		
+		LOG.info("ENTRA a confirmar");
+		
+		PopUpConfirmarUbicacion PopUpUbicacion = new PopUpConfirmarUbicacion(driver);
+		PopUpUbicacion.ConfirmarUbicacionPopUp();
+		
+		LOG.info("salio de confirmar");
+		
+		PYSugerenciasPage sugerencias_page = new PYSugerenciasPage(driver);
+		sugerencias_page.tomarPrecio();
+		
+		
+		
+	}
 	
 	
-	WebDriverManager.chromedriver().setup();
-	
-}		
-	
+		
+		@BeforeMethod
+		public void prepareTest() {
+			
+			LOG.info("Preparing");
+			driver = new ChromeDriver();
+			
+		}
+		@AfterMethod
+		public void cleanup() {
+			driver.quit();
+		}
+			
+		@BeforeClass
+		private void prepareClass() {
+			LOG.info("-----Prepare class-----");
+			
+			
+			WebDriverManager.chromedriver().setup();
+			
+		}		
+			
 	
 	
 	

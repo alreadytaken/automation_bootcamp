@@ -19,8 +19,11 @@ private static final Logger LOG;
 	}
 	
 	
-	@FindBy(how = How.ID, using = "confirm")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"confirm\"]")
 	WebElement btnConfirmarUbicacion;
+	
+	@FindBy(how = How.XPATH, using = "//*[@id=\"mapContainer\"]")
+	WebElement mapContainer;
 	
 	WebDriver driver;
 	
@@ -30,14 +33,14 @@ private static final Logger LOG;
 		
 		PageFactory.initElements(driver, this);	
 		
-		if (SeleniumUtils.isPresentByPresenceOfElement(btnConfirmarUbicacion, driver)!= null){
-			throw new IllegalStateException("Page did not load.");
+		if (SeleniumUtils.waitUntilClickeable(mapContainer, driver)!= null){
+			throw new IllegalStateException("Pop up did not load.");
 		}
 		
 	}
 	
 	public PYSugerenciasPage ConfirmarUbicacionPopUp() {
-		
+		LOG.info("BOTON CONFIRMAR //// "+btnConfirmarUbicacion);
 		btnConfirmarUbicacion.click();
 		LOG.info("CLICKEO BOTON CONFIRMAR UBICACION ////");
 		return new PYSugerenciasPage(driver);
