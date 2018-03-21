@@ -14,8 +14,8 @@ public class PedidosYaConfirmPage {
 		
 	public PedidosYaConfirmPage(WebDriver driver){
 		this.driver = driver;
-		
-		if (!SeleniumUtils.isPresent(By.xpath("//a[@class='button']"), driver)) {
+		//a[@class='button']
+		if (!SeleniumUtils.isPresent(By.xpath("//div[@class='content_img_most_ordered']"), driver)) {
 			throw new IllegalStateException("Page did not load");
 		}
 		PageFactory.initElements(driver, this);
@@ -28,13 +28,17 @@ public class PedidosYaConfirmPage {
 	private WebElement address;
 	
 	@FindBy(xpath="//span[@id='scrollContent']//section[@id=' ']/div[@data-auto]")
-	private WebElement price;
+	private WebElement totalPrice;
 	
 	@FindBy(id="order")
 	private WebElement order;
 	
 	public boolean validate(String data, String data2) {
-		return ((address.getText()==data) && (price.getText()==data2));
+		return ((address.getText()==data) && (totalPrice.getText()==data2));
+	}
+	
+	public void confirmPromo() {
+		this.button.click();
 	}
 	
 	public PedidosYaConfirmPage orderFood() {

@@ -44,21 +44,31 @@ public class PedidosYaTestPage {
     @Test
     public void normalTest() {
     	
-    	String address = "Nicariagua 1666";
-    	String food = "milanesa";
+    	String address = "Camino carrasco 8846";
+    	String food = "ensalada";
+    	String price = null;
     	
     	driver.get("https://staging.pedidosya.com");
     	
     	PedidosYaHomePage testHome = new PedidosYaHomePage(driver);
     	PedidosYaSearchPage testSearch ;
     	PedidosYaSelectPage testSelect;
-    	/*PedidosYaConfirmPage testConfirm = new PedidosYaConfirmPage(driver);
-    	PedidosYaPopUpPage testPopUp = new PedidosYaPopUpPage(driver);*/
+    	PedidosYaConfirmPage testConfirm;
+    	//PedidosYaPopUpPage testPopUp = new PedidosYaPopUpPage(driver);
     	
     	testSearch = testHome.enterPage();
     	testSearch.typeOrder(address, food);
     	testSearch.sendOrder();
     	testSelect = testSearch.confirmOrder();
+    	price = testSelect.savePrice(price);
+    	//LOG.info("ACA DENTRO");
+    	LOG.info(price);
+    	//LOG.info("ACA DENTRO");
+    	testConfirm = testSelect.selectPromo();
+    	testConfirm.confirmPromo();
+    	//LOG.info(testConfirm.validate(address, price));
+    	
+    	
     	
     }
 }

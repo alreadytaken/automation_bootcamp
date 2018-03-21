@@ -23,8 +23,16 @@ public class PedidosYaSelectPage {
 	@FindBy(xpath="//span[@class=\"promo\"]")
 	private WebElement promo;
 	
-	public PedidosYaSelectPage selectPromo() {
+	@FindBy(xpath="//span[@class='after_price']")
+	private WebElement price;
+	
+	public PedidosYaConfirmPage selectPromo() {
 		this.promo.click();
-		return new PedidosYaSelectPage(driver);
+		return new PedidosYaConfirmPage(driver);
+	}
+
+	public String savePrice(String data) {
+		data = price.getText();
+		return data;
 	}
 }
