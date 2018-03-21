@@ -22,4 +22,9 @@ public class SeleniumUtils {
 		return (new WebDriverWait(driver, 10)).until(ExpectedConditions.elementToBeClickable(localizador)) != null;
 	}
 	
+	public static Boolean isPresentByPresenceOfElement(WebElement e, WebDriver driver) {
+		
+		return(new WebDriverWait(driver, 10)).until(ExpectedConditions.visibilityOf(e))!= null;
+	}
+	
 }

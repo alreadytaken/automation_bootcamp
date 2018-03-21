@@ -37,8 +37,14 @@ public void ValidarDatos() {
 	HomePagePedidosYa PYhome = new HomePagePedidosYa(driver);
 	PYhome.ClickearUruguay();
 	
+	PYHomePageUy pyUy = new PYHomePageUy(driver);
+	pyUy.IngresarDatos();
 	
+	PopUpConfirmarUbicacion PopUpUbicacion = new PopUpConfirmarUbicacion(driver);
+	PopUpUbicacion.ConfirmarUbicacionPopUp();
 	
+	PYSugerenciasPage sugerencias_page = new PYSugerenciasPage(driver);
+	sugerencias_page.tomarPrecio();
 	
 	
 	

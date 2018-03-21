@@ -23,11 +23,13 @@ public class PYHomePageUy {
 	public PYHomePageUy(WebDriver driver) {
 		this.driver = driver;
 		
-		if((!SeleniumUtils.isPresent(By.name("adress"), driver)) && (!SeleniumUtils.isPresent(By.name("optional"), driver)) && (!SeleniumUtils.isPresent(By.id("search"), driver))){
+		PageFactory.initElements(driver, this);	
+		
+		if((SeleniumUtils.isPresentByPresenceOfElement(txtAdress, driver)!= null) && (!SeleniumUtils.isPresent(By.name("optional"), driver)) && (!SeleniumUtils.isPresent(By.id("search"), driver))){
 			throw new IllegalStateException("Page did not load.");
 		}
 		
-		PageFactory.initElements(driver, this);	
+		
 	}
 		
 
