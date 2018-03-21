@@ -2,7 +2,6 @@ package com.globant.automation;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -13,6 +12,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pageObjects.PedidosYaAddToOrder;
+import pageObjects.PedidosYaCheckout;
 import pageObjects.PedidosYaConfirmLocation;
 import pageObjects.PedidosYaCountryPage;
 import pageObjects.PedidosYaFoodSuggestions;
@@ -36,7 +36,10 @@ public class PedidosYaOrderTest {
 	@Test
 	public void pedidosYaTest() {
 		String address = "Nicaragua 1666";
-		String foodType = "Mc Woking";
+		String foodType = "milanesas";
+		String email = "s.blancofretes@gmail.com";
+		String password = "testing123";
+		String name  = "Santiago"; //Nombre a validar
 		
 		driver.get("http://www.pedidosya.com/");
 		driver.manage().window().maximize();
@@ -57,8 +60,12 @@ public class PedidosYaOrderTest {
 		Assert.assertEquals(price, orderOverview.getPrice());
 		
 		PedidosYaSignInForm signInForm = orderOverview.navigateToSignInForm();
-		//Assert.assertTrue(signInForm.checkFrame());
-		signInForm.fillLogInForm("s.blancofretes@gmail.com", "testing123");
+		signInForm.fillLogInForm(email , password);
+		PedidosYaCheckout checkout = signInForm.navigateToCheckout(driver);
+		orderOverview = checkout.navigateToOrderOverview(driver);
+		Assert.assertEquals(name,orderOverview.getLoginName());
+		LOG.info(orderOverview.getLoginName());
+		
 
 	
 	}
@@ -74,7 +81,7 @@ public class PedidosYaOrderTest {
 	}
 	@AfterMethod
 	public void cleanUp() {
-		//driver.close();
+		driver.close();
 	}
     
 }

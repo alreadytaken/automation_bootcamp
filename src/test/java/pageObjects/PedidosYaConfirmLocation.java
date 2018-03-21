@@ -13,7 +13,7 @@ public class PedidosYaConfirmLocation {
 	
 	PedidosYaConfirmLocation(WebDriver driver){
 		this.driver = driver;
-		SeleniumUtils.waitUntilVisible(By.cssSelector("#mapContainer"), driver);
+		SeleniumUtils.waitUntilVisible(By.cssSelector(".gmnoprint>img"), driver);
 		PageFactory.initElements(driver, this);
 	}
 	

@@ -52,10 +52,13 @@ public class PedidosYaSignInForm {
 	
 	public void fillLogInForm(String email, String password) {
 		emailField.sendKeys(email);
-		passwordField.sendKeys(password);
+		passwordField.sendKeys(password);	
+	}
+	
+	public PedidosYaCheckout navigateToCheckout(WebDriver driver) {
 		loginButton.click();
 		driver.switchTo().parentFrame();
-		
+		return new PedidosYaCheckout(driver);
 	}
 	
 	public Boolean checkFrame() {

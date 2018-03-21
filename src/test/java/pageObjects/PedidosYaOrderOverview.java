@@ -26,6 +26,9 @@ public class PedidosYaOrderOverview {
 	
 	@FindBy(css = "#order")
 	WebElement orderButton;
+	
+	@FindBy(css = "#lnkUserName div[class='left top-link']")
+	WebElement loginName;
 
 	public String getAddress() {
 		
@@ -36,6 +39,10 @@ public class PedidosYaOrderOverview {
 	
 	public String getPrice() {
 		return priceTotal.getText();
+	}
+	
+	public String getLoginName() {
+		return loginName.getText();
 	}
 	
 	public PedidosYaSignInForm navigateToSignInForm() {
