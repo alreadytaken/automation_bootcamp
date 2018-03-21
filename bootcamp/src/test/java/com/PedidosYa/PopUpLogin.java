@@ -14,19 +14,26 @@ public class PopUpLogin {
 	public PopUpLogin(WebDriver driver) {
 		
 		
-		this.driver=driver;
+	        this.driver=driver;
 		PageFactory.initElements(driver,this);
-		SeleniumUtils.waitUntilPresence(By.xpath("//h1"), driver);
+		SeleniumUtils.waitUntilPresence(By.xpath("//div/iframe"), driver);
+		driver.switchTo().frame(iframe);
 
 	
 		
 	}
 	
+	@FindBy(xpath="//div/iframe")
+        WebElement iframe;
+
 	@FindBy(name="email")
 	WebElement email;
 	
 	@FindBy(name="password")
 	WebElement password;
+	
+	@FindBy(name="login")
+        WebElement logInButton;
 	
 	
 	
@@ -43,5 +50,10 @@ public void logIn2(String text){
 		password.sendKeys(Keys.ENTER);
    
 	}
+	public void clickLogButton() {
+	logInButton.click();
+}
+	
+	
 	
 }
