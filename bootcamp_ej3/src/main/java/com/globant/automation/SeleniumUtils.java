@@ -8,11 +8,19 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SeleniumUtils {
 
-	public static WebElement waitUntilClickable (WebElement e, WebDriver driver) {
+	public static WebElement waitUntilClickable(WebElement e, WebDriver driver) {
 		return (new WebDriverWait(driver, 20)).until(ExpectedConditions.elementToBeClickable(e));
 	}
-	public static WebElement waitUntilClickable (By by, WebDriver driver) {
+
+	public static WebElement waitUntilClickable(By by, WebDriver driver) {
 		return (new WebDriverWait(driver, 20)).until(ExpectedConditions.elementToBeClickable(by));
 	}
 
+	public static WebElement waitUntilVisible(WebElement e, WebDriver driver) {
+		return (new WebDriverWait(driver, 20)).until(ExpectedConditions.visibilityOf(e));
+	}
+
+	public static WebElement waitUntilVisible(By by, WebDriver driver) {
+		return (new WebDriverWait(driver, 20)).until(ExpectedConditions.elementToBeClickable(by));
+	}
 }
