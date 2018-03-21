@@ -13,7 +13,7 @@ public class ConfirmPopUp {
 	WebElement confirmButton;
 	
 	public ConfirmPopUp (WebDriver driver) {
-		SeleniumUtils.WaitUntilPresenceList(By.xpath("//div[@id='mapContainer']//a[@id='confirm']"), driver);
+		SeleniumUtils.WaitUntilVisibilityList(By.xpath("//div[@id='mapContainer']//a[@id='confirm']"), driver);
 		PageFactory.initElements(driver, this);
 	}
 	

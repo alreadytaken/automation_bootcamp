@@ -1,85 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="80283" started-at="2018-03-21T00:02:44Z" finished-at="2018-03-21T00:04:04Z">
+  <suite name="Default suite" duration-ms="55157" started-at="2018-03-21T00:07:59Z" finished-at="2018-03-21T00:08:54Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="80283" started-at="2018-03-21T00:02:44Z" finished-at="2018-03-21T00:04:04Z">
+    <test name="Default test" duration-ms="55157" started-at="2018-03-21T00:07:59Z" finished-at="2018-03-21T00:08:54Z">
       <class name="com.globant.automation.PedidosYaTest">
-        <test-method status="PASS" signature="prepareClass()[pri:0, instance:com.globant.automation.PedidosYaTest@2d7275fc]" name="prepareClass" is-config="true" duration-ms="3700" started-at="2018-03-21T00:02:44Z" finished-at="2018-03-21T00:02:47Z">
+        <test-method status="PASS" signature="prepareClass()[pri:0, instance:com.globant.automation.PedidosYaTest@2d7275fc]" name="prepareClass" is-config="true" duration-ms="3004" started-at="2018-03-21T00:07:59Z" finished-at="2018-03-21T00:08:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareClass -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.PedidosYaTest@2d7275fc]" name="prepareTest" is-config="true" duration-ms="4780" started-at="2018-03-21T00:02:47Z" finished-at="2018-03-21T00:02:52Z">
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.PedidosYaTest@2d7275fc]" name="prepareTest" is-config="true" duration-ms="5247" started-at="2018-03-21T00:08:02Z" finished-at="2018-03-21T00:08:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareTest -->
-        <test-method status="FAIL" signature="testPedidosYa()[pri:0, instance:com.globant.automation.PedidosYaTest@2d7275fc]" name="testPedidosYa" duration-ms="71770" started-at="2018-03-21T00:02:52Z" finished-at="2018-03-21T00:04:04Z">
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
-            <message>
-              <![CDATA[Element <a id="confirm" class="button" href="javascript:void(0);"> could not be scrolled into view
-Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
-System info: host: 'test-Latitude-E5520', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-116-generic', java.version: '1.8.0_151'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 20462, moz:profile: /tmp/rust_mozprofile.H4ACDG..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.4.0-116-generic, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 1822d09c-4636-4837-97f9-26bbd0a9cbcb]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: Element <a id="confirm" class="button" href="javascript:void(0);"> could not be scrolled into view
-Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
-System info: host: 'test-Latitude-E5520', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-116-generic', java.version: '1.8.0_151'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 59.0, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 20462, moz:profile: /tmp/rust_mozprofile.H4ACDG..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.4.0-116-generic, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 1822d09c-4636-4837-97f9-26bbd0a9cbcb
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at com.sun.proxy.$Proxy25.click(Unknown Source)
-at com.globant.automation.ConfirmPopUp.confirmarUbicacion(ConfirmPopUp.java:21)
-at com.globant.automation.PedidosYaTest.testPedidosYa(PedidosYaTest.java:32)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+        <test-method status="PASS" signature="testPedidosYa()[pri:0, instance:com.globant.automation.PedidosYaTest@2d7275fc]" name="testPedidosYa" duration-ms="46878" started-at="2018-03-21T00:08:07Z" finished-at="2018-03-21T00:08:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPedidosYa -->
