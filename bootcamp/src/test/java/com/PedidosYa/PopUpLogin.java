@@ -38,7 +38,7 @@ public class PopUpLogin {
 	
 	
 	public void logIn(String text){
-		
+		SeleniumUtils.waitUntilClickable(email, driver);
 		email.click();
 		email.sendKeys(text);
    

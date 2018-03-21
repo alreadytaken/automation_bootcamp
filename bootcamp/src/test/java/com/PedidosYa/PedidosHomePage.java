@@ -14,6 +14,7 @@ public class PedidosHomePage {
 		
 		this.driver=driver;
 		PageFactory.initElements(driver,this);
+		SeleniumUtils.waitUntilVisibility(BarraComida, driver);
 		
 		
 	}

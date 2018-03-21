@@ -32,9 +32,10 @@ public class PedidosConfirmOrder {
 	@FindBy(xpath="//div[contains(@class,'price total-price')]")
 	WebElement precioConfirm;
 	
+	@FindBy(xpath="//div[contains(@class,'left top-link')]")
+	WebElement nombreLogeado;
 	
-	
-	String DirConf, PrecConf;
+	String DirConf, PrecConf, nomLogeado;
 	
 
 	
@@ -61,6 +62,12 @@ public class PedidosConfirmOrder {
     	SeleniumUtils.waitUntilClickable(continueButton, driver);
 
 		continueButton.click();
+	}
+    
+    public String getNomLogeado() {
+		SeleniumUtils.waitUntilClickable(continueButton, driver);
+        nomLogeado = nombreLogeado.getText();
+		return nomLogeado;
 	}
 
 	

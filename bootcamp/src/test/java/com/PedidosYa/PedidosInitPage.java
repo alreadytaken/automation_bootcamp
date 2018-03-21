@@ -1,5 +1,8 @@
 package com.PedidosYa;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,9 +24,22 @@ public class PedidosInitPage {
 	@FindBy(id="linkUy")
 	WebElement BanderaUruguay;
 	
+	@FindBy(xpath="//li[contains(@class,'flag')]")
+	List <WebElement> listFlags;
+	
 	public void clickBanderaUruguay() {
+		SeleniumUtils.waitUntilClickable(BanderaUruguay, driver);
 		BanderaUruguay.click();
 	}
+	
+	List<WebElement> Banderas;
+	
+	
+	
+	 public List<WebElement> getFlags() {
+		
+	        return listFlags;
+	  }  
 	
 	
 	

@@ -39,29 +39,29 @@ public class TestPedidosYa {
 	    }
 	    @DataProvider(name="direccion")
 		public Object [][] provider() {
-		 return new Object [][] {{"Nicaragua 1666","Milanesa","sebastianrodriguezpaiva@gmail.com","prueba1234"}};
+		 return new Object [][] {{"Nicaragua 1666","Milanesa","sebastianrodriguezpaiva@gmail.com","prueba1234","Sebastian"}};
 	}
 	
 	    
 	    @Test(dataProvider="direccion")
-	    public void makeOrder(String direccion,String comida,String usuario,String pass) throws InterruptedException {
+	    public void makeOrder(String direccion,String comida,String usuario,String pass,String nombre) throws InterruptedException {
 	    	driver.get("http://www.pedidosya.com");
 	    	driver.manage().window().maximize();
+
 	    	PedidosInitPage pedidosInitPage = new PedidosInitPage(driver);
-	    	PedidosHomePage pedidosHomePage =new PedidosHomePage(driver);
-	    	PedidosSuggestionPage pedidosSuggestionPage = new PedidosSuggestionPage(driver);
-	    	PedidosConfirmOrder pedidosConfirmOrder = new PedidosConfirmOrder(driver);
-	    	
 	    	pedidosInitPage.clickBanderaUruguay();
 	    	
+	    	
+	    	PedidosHomePage pedidosHomePage =new PedidosHomePage(driver);
 	    	pedidosHomePage.submitDireccion(direccion);
 	    	pedidosHomePage.submitComida(comida);
 	    	pedidosHomePage.clickConf();
 	    	
-	    	
+	    	PedidosSuggestionPage pedidosSuggestionPage = new PedidosSuggestionPage(driver);
 	    	String precSuggestion = pedidosSuggestionPage.getPrecSuggestion();
 	    	pedidosSuggestionPage.clickSuggestion();
 	    	
+	    	PedidosConfirmOrder pedidosConfirmOrder = new PedidosConfirmOrder(driver);
 	    	pedidosConfirmOrder.clickAddOrder();
 	    	
 	    	String dirFinal = pedidosConfirmOrder.getDirConf();
@@ -92,8 +92,17 @@ public class TestPedidosYa {
 	        popUpLogin.logIn(usuario);
 	        popUpLogin.logIn2(pass);
 	        popUpLogin.clickLogButton();
-
+	        
+		    PedidosCheckOut pedidosCheckOut = new PedidosCheckOut(driver);
+	       pedidosCheckOut.clickModPedido();
 	    	
+	       String nomLogged = pedidosConfirmOrder.getNomLogeado();
+	       
+	       LOG.info("El nombre de usuario es:"+nombre);
+	       LOG.info("El usuario logeado es:"+nomLogged);
+	       
+	       
+	      Assert.assertEquals(nomLogged, nombre);
 	    	
 	    }
 	
