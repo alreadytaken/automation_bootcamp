@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-import com.globant.automation.PageObject;
+
 
 public class PedidosYaHomePage extends PageObject {
 @FindBy(how = How.ID, using = "//a[@id='linkUy']")
@@ -15,7 +15,7 @@ public PedidosYaHomePage (WebDriver driver) {
     super(driver);
 }
 
-public WebElement click() {
+public HomePageUruguay click() {
 	Pais.click();
 	return new HomePageUruguay(driver);
 }
