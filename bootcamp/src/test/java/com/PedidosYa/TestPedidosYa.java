@@ -91,10 +91,9 @@ public class TestPedidosYa {
 	        
 	        popUpLogin.logIn(usuario);
 	        popUpLogin.logIn2(pass);
-	        
-	    	//rest api
-	    	//iframe
-	        //Comprobar Primer Nombre coincida
+	        popUpLogin.clickLogButton();
+
+	    	
 	    	
 	    }
 	
