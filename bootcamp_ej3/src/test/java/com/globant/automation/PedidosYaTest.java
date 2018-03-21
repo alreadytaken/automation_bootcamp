@@ -58,7 +58,7 @@ public class PedidosYaTest {
 		return new Object[][] { { "1" }, { "2" }, { "3" }, { "4" }, { "5" } };
 	}
 
-	// Hasta acá
+	// Hasta acï¿½
 	@Test(dataProvider = "Busqueda") // DataProvider no necesario
 	public void testPedidosYa(String temporal) {
 		LOG.info("Test No: " + temporal);
@@ -78,7 +78,7 @@ public class PedidosYaTest {
 		assertEquals(precioPre, datos[1]);
 		LOG.info("Los precios coinciden");
 		assertEquals(datos[0], "Nicaragua 1666");
-		LOG.info("La dirección coincide");
+		LOG.info("La direcciï¿½n coincide");
 		PedidosYaPopUpLogIn pedidosYaPULI = pedidosYaFSP.clickLogIn();
 		PedidosYaPostLogInPage pedidosYaPLIP = pedidosYaPULI.ingresarDatos("gonzalolombardi@hotmail.com", "g4914861");
 		assertTrue(pedidosYaPLIP.isLogged("Gonzalo"));
