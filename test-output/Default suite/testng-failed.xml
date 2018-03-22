@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestPedidosYa.PedidosYaTest">
+      <class name="TestMail.TestMail">
         <methods>
-          <include name="TestPedidosYa"/>
-          <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="TestPedidosYa"/>
           <include name="cleanUp"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- TestPedidosYa.PedidosYaTest -->
+      </class> <!-- TestMail.TestMail -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

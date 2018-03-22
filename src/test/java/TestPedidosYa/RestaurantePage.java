@@ -13,7 +13,7 @@ public class RestaurantePage extends PageObject {
 	@FindBy(how = How.XPATH, using = "//header[@class='has-picture']//div[@class='price']")
 	private WebElement PrecioMilanga;
 	
-	@FindBy(how = How.XPATH, using = "//*[@id=\"footerOpen\"]/a")
+	@FindBy(how = How.XPATH, using = "//a[@class='button']")
 	private WebElement AgregarPedidoButton;
 	
 	
@@ -23,7 +23,7 @@ public class RestaurantePage extends PageObject {
 	}
 	
 	public WebElement getprecio(String precio) {
-		WebElement AgregarPedidoButton = SeleniumUtils.waitUntilClickable(By.xpath("//*[@id=\\\"footerOpen\\\"]/a"), driver);
+		WebElement AgregarPedidoButton = SeleniumUtils.waitUntilClickable(By.xpath("//a[@class='button']"), driver);
 		return PrecioMilanga;
 	}
 	

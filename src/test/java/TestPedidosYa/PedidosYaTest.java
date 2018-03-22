@@ -13,7 +13,7 @@ public class PedidosYaTest extends FunctionalTest {
     
 
     static {
-        LOG = LogManager.getLogger(MercadolibreTest.class);
+        LOG = LogManager.getLogger(PedidosYaTest.class);
     }
 	
 	
