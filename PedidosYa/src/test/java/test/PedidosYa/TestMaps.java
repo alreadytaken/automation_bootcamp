@@ -1,5 +1,6 @@
 package test.PedidosYa;
 import java.net.MalformedURLException;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -20,8 +21,28 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestMaps {
 
-	@FindBy(how = How.XPATH,using = "//ul[@class= 'flags']/li/a")
-	private List<WebElement> banderas;
+	@FindBy(how = How.ID, using = "linkAr")
+	private WebElement argentina;
+
+	@FindBy(how = How.ID, using = "linkBr")
+	private WebElement brasil;
+	
+	@FindBy(how = How.ID, using = "linkCl")
+	private WebElement chile;
+	
+	@FindBy(how = How.ID, using = "linkCr")
+	private WebElement ticos;
+	
+	@FindBy(how = How.ID, using = "linkPa")
+	private WebElement panama;
+	
+	@FindBy(how = How.ID, using = "linkPy")
+	private WebElement paraguay;
+	
+	@FindBy(how = How.ID, using = "linkUy")
+	private WebElement uruguay;
+	
+	
 	
 	private static final Logger LOG;
 	private WebDriver driver;
@@ -45,15 +66,15 @@ public class TestMaps {
     @Test
     public void guardarBanderasEnMapa() {
     	
-    	Map<String, WebElement> mapaDeBanderas;
-    	int tam = banderas.size();
-       	Bandera argentina = new Bandera(banderas.get(0).getText(), banderas.get(0).getAttribute("host"));
-       	Bandera brasil = new Bandera(banderas.get(1).getText(), banderas.get(0).getAttribute("host"));
-       	Bandera chile = new Bandera(banderas.get(0).getText(), banderas.get(0).getAttribute("host"));
-       	Bandera costaRica = new Bandera(banderas.get(0).getText(), banderas.get(0).getAttribute("host"));
-       	Bandera panama = new Bandera(banderas.get(0).getText(), banderas.get(0).getAttribute("host"));
-       	Bandera paraguay = new Bandera(banderas.get(0).getText(), banderas.get(0).getAttribute("host"));
-       	Bandera uruguay = new Bandera(banderas.get(0).getText(), banderas.get(0).getAttribute("host"));
+    	Map<String, WebElement> mapaDeBanderas =  new HashMap<String, WebElement>();
+    	    	
+       	Bandera argentinaFlag = new Bandera(argentina.getText(), argentina.getAttribute("host"));
+       	Bandera brasilFlag = new Bandera(brasil.getText(), brasil.getAttribute("host"));
+       	Bandera chileFlag = new Bandera(chile.getText(), chile.getAttribute("host"));
+       	Bandera costaRica = new Bandera(ticos.getText(), ticos.getAttribute("host"));
+       	Bandera panamaFlag = new Bandera(panama.getText(), panama.getAttribute("host"));
+       	Bandera paraguayFlag = new Bandera(paraguay.getText(), paraguay.getAttribute("host"));
+       	Bandera uruguayFlag = new Bandera(uruguay.getText(), uruguay.getAttribute("host"));
        	
        	Iterator it = mapaDeBanderas.keySet().iterator();
 
