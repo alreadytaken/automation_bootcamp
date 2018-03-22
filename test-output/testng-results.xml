@@ -2,6 +2,7 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite name="Default suite" duration-ms="84586" started-at="2018-03-21T22:34:31Z" finished-at="2018-03-21T22:35:56Z">
     <groups>
     </groups>
@@ -20,6 +21,30 @@
           </reporter-output>
         </test-method> <!-- testPedidosYa -->
       </class> <!-- com.globant.automation.PedidosYaTest -->
+=======
+  <suite name="Default suite" duration-ms="28945" started-at="2018-03-21T21:11:01Z" finished-at="2018-03-21T21:11:30Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="28945" started-at="2018-03-21T21:11:01Z" finished-at="2018-03-21T21:11:30Z">
+      <class name="test.pedidos.ya.TestRealizarPedido">
+        <test-method status="PASS" signature="prepareClass()[pri:0, instance:test.pedidos.ya.TestRealizarPedido@4466af20]" name="prepareClass" is-config="true" duration-ms="2972" started-at="2018-03-21T21:11:01Z" finished-at="2018-03-21T21:11:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareClass -->
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:test.pedidos.ya.TestRealizarPedido@4466af20]" name="prepareTest" is-config="true" duration-ms="2111" started-at="2018-03-21T21:11:04Z" finished-at="2018-03-21T21:11:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareTest -->
+        <test-method status="PASS" signature="realizarCompra()[pri:0, instance:test.pedidos.ya.TestRealizarPedido@4466af20]" name="realizarCompra" duration-ms="23755" started-at="2018-03-21T21:11:06Z" finished-at="2018-03-21T21:11:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- realizarCompra -->
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:test.pedidos.ya.TestRealizarPedido@4466af20]" name="cleanup" is-config="true" duration-ms="84" started-at="2018-03-21T21:11:30Z" finished-at="2018-03-21T21:11:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+      </class> <!-- test.pedidos.ya.TestRealizarPedido -->
+>>>>>>> ac9fe68d19469de7b0751104b21a635b0a4297d2
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="79423" started-at="2018-03-22T20:01:50Z" finished-at="2018-03-22T20:03:09Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="79423" started-at="2018-03-22T20:01:50Z" finished-at="2018-03-22T20:03:09Z">
+      <class name="test.PedidosYa.TestRealizarPedido">
+        <test-method status="PASS" signature="prepareClass()[pri:0, instance:test.PedidosYa.TestRealizarPedido@4f18837a]" name="prepareClass" is-config="true" duration-ms="4227" started-at="2018-03-22T20:01:50Z" finished-at="2018-03-22T20:01:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareClass -->
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:test.PedidosYa.TestRealizarPedido@4f18837a]" name="prepareTest" is-config="true" duration-ms="5199" started-at="2018-03-22T20:01:54Z" finished-at="2018-03-22T20:01:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareTest -->
+        <test-method status="PASS" signature="realizarCompra()[pri:0, instance:test.PedidosYa.TestRealizarPedido@4f18837a]" name="realizarCompra" duration-ms="69050" started-at="2018-03-22T20:01:59Z" finished-at="2018-03-22T20:03:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- realizarCompra -->
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:test.PedidosYa.TestRealizarPedido@4f18837a]" name="cleanup" is-config="true" duration-ms="880" started-at="2018-03-22T20:03:08Z" finished-at="2018-03-22T20:03:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+      </class> <!-- test.PedidosYa.TestRealizarPedido -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
