@@ -24,7 +24,7 @@ public class SeleniumUtils {
 	
 	public static boolean isPresentByPresenceOfElement(WebElement e, WebDriver driver) {
 		
-		return(new WebDriverWait(driver, 90)).until(ExpectedConditions.visibilityOf(e))!= null;
+		return(new WebDriverWait(driver, 180)).until(ExpectedConditions.visibilityOf(e))!= null;
 	}
 	
 }

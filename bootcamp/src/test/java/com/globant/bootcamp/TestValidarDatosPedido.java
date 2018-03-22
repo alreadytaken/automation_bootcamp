@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -46,9 +47,19 @@ private static final Logger LOG;
 		LOG.info("ENTRA a confirmar");
 		PYSugerenciasPage sugerencias_page = PopUpUbicacion.ConfirmarUbicacionPopUp();
 		LOG.info("ENTRA A TOMAR PRECIO");
-		sugerencias_page.tomarPrecio();
+		String precioEnSugerencias = sugerencias_page.tomarPrecio();
+		
+		LOG.info("ENTRA A CLICKEAR PEDIDO Y CREAE PO");
+		PopUpAgregarPedido addPedido_page = sugerencias_page.ClickearPedido();  //Clickeo el pedido en las sugerencias 
+		LOG.info("SALE de clickear pedido");									//y creo el PO del PopUp de agregar el pedido
+
+		RestaurantPage restaurant_page = addPedido_page.ConfirmarPedido(); //
+		LOG.info("CONFIRMÓ PEDIDO");
 		
 		
+		
+		Assert.assertEquals(restaurant_page.tomarPrecio(), precioEnSugerencias);
+		Assert.assertEquals("Nicaragua 1600", restaurant_page.tomarDireccion());
 		
 	}
 	

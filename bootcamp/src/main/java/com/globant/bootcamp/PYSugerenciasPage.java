@@ -17,6 +17,9 @@ public class PYSugerenciasPage {
 	@FindBy(how= How.XPATH, using = "//span[@class=\"promo\" and contains(text(), \"Milanesa completa al pan con papas fritas\")]/..//span[@class=\"after_price\"]")
 	WebElement WEprecioSugerencia;
 	
+	@FindBy(how= How.XPATH, using = "//a[@class=\"peyaCard js-fp-card\" and contains(@data-id, \"27865\")]")
+	WebElement WEContainer;
+	
 	public PYSugerenciasPage(WebDriver driver) {
 			this.driver = driver;
 		
@@ -29,17 +32,21 @@ public class PYSugerenciasPage {
 			
 	}
 	
-	public void tomarPrecio() {
+	public String tomarPrecio() {
 	String precioSugerencia = driver.findElement(By.xpath("//span[@class=\"promo\" and contains(text(), \"Milanesa completa al pan con papas fritas\")]/..//span[@class=\"after_price\"]")).getAttribute("innerHTML");
 	System.out.println("EL PRECIO DE LA SUGERENCIA ES: " +precioSugerencia);
+	return precioSugerencia;
 	}
+	
+	
 	
 	public PopUpAgregarPedido ClickearPedido() {
 		
+		WEContainer.click();
+		System.out.println("CLICKEO EL PEDIDO");
 		
 		
-		
-		return new PopUpAgregarPedido();
+		return new PopUpAgregarPedido(driver);
 	}
 	
 }//class
