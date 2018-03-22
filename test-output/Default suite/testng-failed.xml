@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.globant.automation.PedidosYaTest">
+      <class name="com.globant.automation.MLTestfirstitem">
         <methods>
-          <include name="testPedidosYa" invocation-numbers="0"/>
-          <include name="prepareTest"/>
           <include name="prepareClass"/>
+          <include name="prepareTest"/>
+          <include name="testML"/>
         </methods>
-      </class> <!-- com.globant.automation.PedidosYaTest -->
+      </class> <!-- com.globant.automation.MLTestfirstitem -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

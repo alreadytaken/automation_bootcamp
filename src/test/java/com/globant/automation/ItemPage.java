@@ -20,7 +20,7 @@ public class ItemPage {
 	WebElement inItemTxt;
 	
 	public ItemPage (WebDriver driver){
-		SeleniumUtils.WaitUntilPresenceList(By.xpath("//div/section[@id='short-desc']//div[@class='price-tag discount-arrow arrow-left']/p"), driver);
+		SeleniumUtils.WaitUntilVisibility(By.xpath("//div/section[@id='short-desc']//div[@class='vip-actions-wrapper  ']"), driver);
 		PageFactory.initElements(driver, this);
 	}
 	

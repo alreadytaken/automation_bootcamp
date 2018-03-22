@@ -2,6 +2,9 @@ package com.globant.automation;
 
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,6 +22,8 @@ public class MercadoLibreMain {
 	WebElement firstItemDto;
 	@FindBy (how = How.XPATH, using = "//div/section[@class='recommendations']//p[@class='ui-item__title'][@itemprop=\"name\"]")
 	WebElement firstItemTxt;
+	@FindBy (how = How.XPATH, using = "//div/section[@class='recommendations']//div[@class='slick-slide slick-active']")
+	List <WebElement> todosLosItems;
 	
 	public MercadoLibreMain(WebDriver driver) {
 		this.driver=driver;
@@ -26,10 +31,33 @@ public class MercadoLibreMain {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public String getPriceInfo() {	
-	String price = firstItemPrice.getText();
+	public List <WebElement> getAllSuggestedItems() {
+		List <WebElement> todasLasSugerencias;
+		todasLasSugerencias = new ArrayList<>();    		
+		for (int j=0;j<5;j++) {
+			todasLasSugerencias.add(todosLosItems.get(j));
+		}
+		return todasLasSugerencias;
+	}
+	
+	public String dameElPrecio(WebElement suggestedItem) {
+		
+		SeleniumUtils.WaitUntilClickable(suggestedItem.findElement(By.xpath("//span[@class='price-tag ui-item__price']/span[@class='price-tag-fraction']")),driver);
+		WebElement PrecioWE = suggestedItem.findElement(By.xpath("//span[@class='price-tag ui-item__price']/span[@class='price-tag-fraction']"));
+		String precioDelItem=PrecioWE.getText();		
+		return precioDelItem;
+	}
+	
+	public String getPriceInfo(WebElement suggestedItem) {	
+	String price = suggestedItem.getText();
 	System.out.println(price);
 	return (price);
+	}
+	
+	public void getTxtItemInfo (WebElement Item) {
+	Actions action = new Actions(driver);
+	action.moveToElement (Item).build().perform();
+	Item.click();
 	}
 	
 	public String getDtoInfo() {
