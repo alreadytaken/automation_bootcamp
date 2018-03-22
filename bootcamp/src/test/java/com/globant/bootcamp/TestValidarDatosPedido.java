@@ -41,16 +41,11 @@ private static final Logger LOG;
 		
 		PYHomePageUy pyUy = new PYHomePageUy(driver);
 		LOG.info("ENTRA a ingresar datos");
-		pyUy.IngresarDatos();
+		PopUpConfirmarUbicacion PopUpUbicacion = pyUy.IngresarDatos();
 		
 		LOG.info("ENTRA a confirmar");
-		
-		PopUpConfirmarUbicacion PopUpUbicacion = new PopUpConfirmarUbicacion(driver);
-		PopUpUbicacion.ConfirmarUbicacionPopUp();
-		
-		LOG.info("salio de confirmar");
-		
-		PYSugerenciasPage sugerencias_page = new PYSugerenciasPage(driver);
+		PYSugerenciasPage sugerencias_page = PopUpUbicacion.ConfirmarUbicacionPopUp();
+		LOG.info("ENTRA A TOMAR PRECIO");
 		sugerencias_page.tomarPrecio();
 		
 		

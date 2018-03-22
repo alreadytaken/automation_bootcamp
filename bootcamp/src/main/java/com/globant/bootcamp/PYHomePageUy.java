@@ -25,7 +25,7 @@ public class PYHomePageUy {
 		
 		PageFactory.initElements(driver, this);	
 		
-		if((SeleniumUtils.isPresentByPresenceOfElement(txtAdress, driver)!= null) && (!SeleniumUtils.isPresent(By.name("optional"), driver)) && (!SeleniumUtils.isPresent(By.id("search"), driver))){
+		if((SeleniumUtils.isPresentByPresenceOfElement(txtAdress, driver)) && (!SeleniumUtils.isPresent(By.name("optional"), driver)) && (!SeleniumUtils.isPresent(By.id("search"), driver))){
 			throw new IllegalStateException("Page did not load.");
 		}
 		

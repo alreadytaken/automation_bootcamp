@@ -15,7 +15,7 @@ public class PopUpConfirmarUbicacion {
 private static final Logger LOG;
 	
 	static {
-		LOG = LogManager.getLogger(TestValidarDatosPedido.class);
+		LOG = LogManager.getLogger(PopUpConfirmarUbicacion.class);
 	}
 	
 	
@@ -31,12 +31,10 @@ private static final Logger LOG;
 	public PopUpConfirmarUbicacion(WebDriver driver) {
 		this.driver = driver;
 		
-		PageFactory.initElements(driver, this);	
-		
-		if (SeleniumUtils.waitUntilClickeable(mapContainer, driver)!= null){
+		if (!SeleniumUtils.isPresent(By.id("confirm"), driver)){
 			throw new IllegalStateException("Pop up did not load.");
 		}
-		
+		PageFactory.initElements(driver, this);	
 	}
 	
 	public PYSugerenciasPage ConfirmarUbicacionPopUp() {

@@ -23,15 +23,23 @@ public class PYSugerenciasPage {
 		
 			PageFactory.initElements(driver, this);	
 			
-			if (SeleniumUtils.isPresentByPresenceOfElement(WEsugerenciaComida, driver)!= null && SeleniumUtils.isPresentByPresenceOfElement(WEprecioSugerencia, driver)!= null){
+			if (!SeleniumUtils.isPresentByPresenceOfElement(WEsugerenciaComida, driver)){
 				throw new IllegalStateException("Page did not load.");
 			}
 			
 	}
 	
 	public void tomarPrecio() {
-	String precioSugerencia = driver.findElement(By.xpath("//span[@class=\\\"promo\\\" and contains(text(), \\\"Milanesa completa al pan con papas fritas\\\")]/..//span[@class=\\\"after_price\\\"]")).getAttribute("innerHTML");
+	String precioSugerencia = driver.findElement(By.xpath("//span[@class=\"promo\" and contains(text(), \"Milanesa completa al pan con papas fritas\")]/..//span[@class=\"after_price\"]")).getAttribute("innerHTML");
 	System.out.println("EL PRECIO DE LA SUGERENCIA ES: " +precioSugerencia);
+	}
+	
+	public PopUpAgregarPedido ClickearPedido() {
+		
+		
+		
+		
+		return new PopUpAgregarPedido();
 	}
 	
 }//class
