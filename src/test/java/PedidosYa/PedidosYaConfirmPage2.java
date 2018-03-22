@@ -10,15 +10,16 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.globant.automation.SeleniumUtils;
 
-public class PedidosYaConfirmPage {
+public class PedidosYaConfirmPage2 {
 
 	private WebDriver driver;
 		
-	public PedidosYaConfirmPage(WebDriver driver){
+	public PedidosYaConfirmPage2(WebDriver driver){
 		this.driver = driver;
 		//a[@class='button']
-		if (!SeleniumUtils.isPresent(By.xpath("//div[@class='content_img_most_ordered']"), driver)) {
-				throw new IllegalStateException("Page did not load");
+		//if (!SeleniumUtils.isPresent(By.xpath("//div[@class='content_img_most_ordered']"), driver)) {
+		if (!SeleniumUtils.isPresent(By.id("order"), driver)) {
+			throw new IllegalStateException("Page did not load");
 		}
 		PageFactory.initElements(driver, this);
 	}

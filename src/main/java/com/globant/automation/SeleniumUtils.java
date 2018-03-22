@@ -20,4 +20,7 @@ public class SeleniumUtils {
 		 return (new WebDriverWait(driver, 90).until(ExpectedConditions.visibilityOfElementLocated(e)) != null);
 	} 
 	
+	public static boolean waitUntilHeWants(By e, WebDriver driver) {
+		return (new WebDriverWait(driver, 90).until(ExpectedConditions.elementToBeClickable(e)) != null);
+	}
 }

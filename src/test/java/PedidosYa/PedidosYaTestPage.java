@@ -48,6 +48,9 @@ public class PedidosYaTestPage {
     	String food = "milanesa";
     	String price = null;
     	
+    	String user = "MiEjemploGlobant@gmail.com";
+    	String pass = "kesmaneskesman";
+    	
     	driver.get("https://pedidosya.com");
     	
     	PedidosYaHomePage testHome = new PedidosYaHomePage(driver);
@@ -55,6 +58,8 @@ public class PedidosYaTestPage {
     	PedidosYaSelectPage testSelect;
     	PedidosYaConfirmPage testConfirm;
     	PedidosYaPopUpPage testPopUp;
+    	PedidosYaCheckoutPage testCheckOut;
+    	PedidosYaConfirmPage2 testConfirm2;
     	
     	testSearch = testHome.enterPage();
     	testSearch.typeOrder(address, food);
@@ -67,8 +72,19 @@ public class PedidosYaTestPage {
     	testConfirm.confirmPromo();
     	
     	testPopUp = testConfirm.orderFood();
+    	testPopUp.typeUser(user, pass);
     	
-    	/* Usuario y contraseña para PedidosYa
+    	testCheckOut = testPopUp.login();
+    	
+    	testConfirm2 = testCheckOut.back();
+    	testConfirm2.comparation(user);
+    	testConfirm2.confirmPromo();
+    	
+    	
+    	
+    	
+    	
+    	/* Usuario y contrasena para PedidosYa
     	 * Usuario:  MiEjemploGlobant@gmail.com
     	 * Contraseña: kesmaneskesman*/
     	

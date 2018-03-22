@@ -32,6 +32,8 @@ public class PedidosYaSearchPage {
 	@FindBy(id="confirm")
 	private WebElement confirm;
 	
+	
+	
 	public void typeOrder(String data1, String data2) {
 		this.address.sendKeys(data1);
 		this.food.sendKeys(data2);
@@ -43,8 +45,8 @@ public class PedidosYaSearchPage {
 	
 	//hago que devuelva una pagina del siguiente tipo (PedidosYaSelectPage)
 	public PedidosYaSelectPage confirmOrder() {
-		if (!SeleniumUtils.isPresent(By.id("confirm"), driver)) {
-			throw new IllegalStateException("Confirm did not load");
+		if (!SeleniumUtils.isPresent(By.xpath("//div[@class='gmnoprint']/img"), driver)) {
+			throw new IllegalStateException("Address did not load");
 		} else {
 			this.confirm.click();
 		}

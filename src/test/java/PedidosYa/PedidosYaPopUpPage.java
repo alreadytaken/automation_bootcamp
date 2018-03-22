@@ -15,7 +15,7 @@ public class PedidosYaPopUpPage {
 	public PedidosYaPopUpPage(WebDriver driver){
 		this.driver = driver;
 		
-		if (!SeleniumUtils.isPresent(By.id("fbLogin"), driver)) {
+		if (!SeleniumUtils.waitUntilHeWants(By.id("modalLogin"), driver)) {
 			throw new IllegalStateException("Page did not load");
 		}
 		PageFactory.initElements(driver, this);
@@ -26,6 +26,32 @@ public class PedidosYaPopUpPage {
 	@FindBy(xpath="//div/iframe")
 	private WebElement iframe;
 	
-	//busco las cosas normalmente, deberìa de funcionar
+	@FindBy(xpath="//input[@name='email']")
+	private WebElement popupEmail;
 	
+	@FindBy(xpath="//input[@name='password']")
+	private WebElement popupPass;
+	
+	@FindBy(xpath="//input[@name='login']")
+	private WebElement popupButton;
+	
+	@FindBy(id="modalLogin")
+	private WebElement clickpls;
+	
+	public void typeUser(String user, String pass) {
+		SeleniumUtils.waitUntilHeWants(By.id("modalLogin"), driver);
+		this.clickpls.click();
+		SeleniumUtils.waitUntilClickable(popupEmail, driver);
+		this.popupEmail.sendKeys(user);
+		this.popupPass.sendKeys(pass);
+	}
+	
+	public PedidosYaCheckoutPage login() {
+		SeleniumUtils.waitUntilHeWants(By.id("modalLogin"), driver);
+		this.clickpls.click();
+		SeleniumUtils.waitUntilClickable(popupEmail, driver);
+		this.popupButton.click();
+		return new PedidosYaCheckoutPage(driver);
+	}
+		
 }
