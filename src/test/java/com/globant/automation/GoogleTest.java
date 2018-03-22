@@ -84,15 +84,23 @@ public class GoogleTest {
     @Test
     public void pedidosYaTest() throws InterruptedException {
         LOG.info("Pedidos Ya Test");
-        List<WebElement> resultados = new ArrayList<>();
-        List<String> google = new ArrayList<>();
-        List <String> bing = new ArrayList<>();
+        //List<WebElement> resultados = new ArrayList<>();
+        //List<String> google = new ArrayList<>();
+        //List <String> bing = new ArrayList<>();
         driver.get("http://www.pedidosya.com");
         WebDriverWait a = new WebDriverWait(driver,10);
         WebElement b = a.until(ExpectedConditions.elementToBeClickable(By.id("linkUy")));
         WebElement btnUruguay = driver.findElement(By.id("linkUy"));
-        btnUruguay.sendKeys(Keys.ENTER);
-    	resultados = driver.findElements(By.xpath("//h3[@class='r']/a"));
+        btnUruguay.submit();
+        WebDriverWait c = new WebDriverWait(driver,10);
+        WebElement WE = c.until(ExpectedConditions.elementToBeClickable(By.id("adress")));
+        WebElement imputDire = driver.findElement(By.id("adress"));
+        imputDire.sendKeys("Nicaragua 1666");
+        WebElement imputComida = driver.findElement(By.id("optional"));
+        imputComida.sendKeys("milanesa");
+        WebElement btnBuscar = driver.findElement(By.id("search"));
+        btnBuscar.submit();
+    	/*resultados = driver.findElements(By.xpath("//h3[@class='r']/a"));
     	for (int i =0;i<5;i++) {
     		google.add(resultados.get(i).getText());
     	}
@@ -110,7 +118,7 @@ public class GoogleTest {
     		Assert.assertEquals(google.get(i), bing.get(i));
     	}
     	
-        LOG.info("Prepare test");
+        LOG.info("Prepare test");*/
     }
     @BeforeMethod
     public void prepareTest() throws MalformedURLException {
