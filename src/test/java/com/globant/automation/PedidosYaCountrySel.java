@@ -1,5 +1,6 @@
 package com.globant.automation;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -15,10 +16,10 @@ public class PedidosYaCountrySel {
 	
 	@FindBy (how = How.XPATH, using = "//div/section/ul[@class='flags']//div[@class='flag-sprite uruguay']")
 	WebElement countryButtonUruguay;
-	/*
-	@FindBy (how = How.XPATH, using = "@//div/section/ul[@class='flags']//li[@class='flag']")
+	
+	@FindBy (how = How.XPATH, using = "//div/section/ul[@class='flags']//li[@class='flag']")
 	List <WebElement> countryButtons;
-	*/
+	
 	
 	
 	public PedidosYaCountrySel (WebDriver driver){
@@ -26,14 +27,17 @@ public class PedidosYaCountrySel {
 		SeleniumUtils.WaitUntilPresenceList(By.xpath("//div/section/ul[@class='flags']//div[@class='flag-sprite uruguay']"), driver);
 		PageFactory.initElements(driver, this);
 	}
-	/*
+	
 	public List <Object> getAllCounties(){
 		List <Object> banderas;
+		banderas = new ArrayList<>();    
 		for (int i=0;i<countryButtons.size();i++) {
-			banderas.add( countryButtons.get(i).getText());
+			String nombredelpais = countryButtons.get(i).getText();
+			banderas.add(nombredelpais);
 		}
+		return banderas;
 	}
-	*/
+	
 	public PedidosYaUruguayMain clickOnUruguay() {
 		countryButtonUruguay.click();
 		return new PedidosYaUruguayMain(driver);

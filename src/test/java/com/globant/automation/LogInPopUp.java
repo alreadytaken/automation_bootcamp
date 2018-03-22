@@ -20,7 +20,7 @@ public class LogInPopUp {
 	
 	public LogInPopUp (WebDriver driver){
 		this.driver=driver;
-		SeleniumUtils.WaitUntilVisibility(By.xpath("//div[@id='loginDiv']//input[@type='submit']"), driver);
+		SeleniumUtils.WaitUntilVisibility(By.id("fbLogin"), driver);
 		PageFactory.initElements(driver, this);
 	}
 	public void ingresarUsuario(String Usuario) {
