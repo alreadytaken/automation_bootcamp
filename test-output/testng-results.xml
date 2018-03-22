@@ -1,110 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="203407" started-at="2018-03-22T04:56:15Z" finished-at="2018-03-22T04:59:38Z">
+  <suite name="Default suite" duration-ms="40911" started-at="2018-03-22T16:19:21Z" finished-at="2018-03-22T16:20:02Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="203407" started-at="2018-03-22T04:56:15Z" finished-at="2018-03-22T04:59:38Z">
+    <test name="Default test" duration-ms="40911" started-at="2018-03-22T16:19:21Z" finished-at="2018-03-22T16:20:02Z">
       <class name="com.globant.automation.PedidosYaTest">
-        <test-method status="PASS" signature="prepareClass()[pri:0, instance:com.globant.automation.PedidosYaTest@4fb61f4a]" name="prepareClass" is-config="true" duration-ms="1728" started-at="2018-03-22T04:56:15Z" finished-at="2018-03-22T04:56:17Z">
+        <test-method status="PASS" signature="prepareClass()[pri:0, instance:com.globant.automation.PedidosYaTest@4fb61f4a]" name="prepareClass" is-config="true" duration-ms="1960" started-at="2018-03-22T16:19:21Z" finished-at="2018-03-22T16:19:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareClass -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.PedidosYaTest@4fb61f4a]" name="prepareTest" is-config="true" duration-ms="3773" started-at="2018-03-22T04:56:17Z" finished-at="2018-03-22T04:56:20Z">
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.PedidosYaTest@4fb61f4a]" name="prepareTest" is-config="true" duration-ms="4308" started-at="2018-03-22T16:19:23Z" finished-at="2018-03-22T16:19:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareTest -->
-        <test-method status="PASS" signature="testPedidosYa(java.lang.String)[pri:0, instance:com.globant.automation.PedidosYaTest@4fb61f4a]" name="testPedidosYa" duration-ms="39920" started-at="2018-03-22T04:56:20Z" data-provider="comidasParaProbar" finished-at="2018-03-22T04:57:00Z">
+        <test-method status="PASS" signature="testPedidosYa(java.lang.String)[pri:0, instance:com.globant.automation.PedidosYaTest@4fb61f4a]" name="testPedidosYa" duration-ms="34618" started-at="2018-03-22T16:19:27Z" data-provider="comidasParaProbar" finished-at="2018-03-22T16:20:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Milanesa en dos panes con papas fritas]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testPedidosYa -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.PedidosYaTest@4fb61f4a]" name="prepareTest" is-config="true" duration-ms="3192" started-at="2018-03-22T04:57:00Z" finished-at="2018-03-22T04:57:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- prepareTest -->
-        <test-method status="FAIL" signature="testPedidosYa(java.lang.String)[pri:0, instance:com.globant.automation.PedidosYaTest@4fb61f4a]" name="testPedidosYa" duration-ms="77426" started-at="2018-03-22T04:57:04Z" data-provider="comidasParaProbar" finished-at="2018-03-22T04:58:21Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Milanesa en un pan con papas fritas]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //div/section[@id='resultListContainer']//a[@class='peyaCard js-fp-card'][contains(@data-info,'Milanesa en un pan con papas fritas')] (tried for 60 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div/section[@id='resultListContainer']//a[@class='peyaCard js-fp-card'][contains(@data-info,'Milanesa en un pan con papas fritas')] (tried for 60 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:81)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:271)
-at com.globant.automation.SeleniumUtils.WaitUntilClickable(SeleniumUtils.java:16)
-at com.globant.automation.PedidosYaAgregarAlPedido.clickearSugerencia(PedidosYaAgregarAlPedido.java:20)
-at com.globant.automation.PedidosYaTest.testPedidosYa(PedidosYaTest.java:39)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:497)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //div/section[@id='resultListContainer']//a[@class='peyaCard js-fp-card'][contains(@data-info,'Milanesa en un pan con papas fritas')]
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
-System info: host: 'ASUS', ip: '192.168.1.42', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_40'
-Driver info: driver.version: unknown
-at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)
-at org.openqa.selenium.support.ui.ExpectedConditions$$Lambda$128/517693873.get(Unknown Source)
-at java.util.Optional.orElseThrow(Optional.java:290)
-at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
-at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:44)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:206)
-at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:202)
-at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:657)
-at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:654)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:248)
-... 28 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testPedidosYa -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.PedidosYaTest@4fb61f4a]" name="prepareTest" is-config="true" duration-ms="3200" started-at="2018-03-22T04:58:21Z" finished-at="2018-03-22T04:58:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- prepareTest -->
-        <test-method status="PASS" signature="testPedidosYa(java.lang.String)[pri:0, instance:com.globant.automation.PedidosYaTest@4fb61f4a]" name="testPedidosYa" duration-ms="74139" started-at="2018-03-22T04:58:24Z" data-provider="comidasParaProbar" finished-at="2018-03-22T04:59:38Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Hamburguesa doble y doble cheddar mas fritas]]>
+                <![CDATA[Milanesa completa al pan con papas fritas]]>
               </value>
             </param>
           </params>

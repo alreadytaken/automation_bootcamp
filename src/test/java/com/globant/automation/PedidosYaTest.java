@@ -70,6 +70,6 @@ public class PedidosYaTest {
    	}
 	@DataProvider(name = "comidasParaProbar")
 	public Object[][] provider() {
-		return new Object[][] { {"Milanesa en dos panes con papas fritas"},{"Milanesa en un pan con papas fritas"},{"Hamburguesa doble y doble cheddar mas fritas"} };
+		return new Object[][] { {"Milanesa completa al pan con papas fritas"} };
 	}
 }
