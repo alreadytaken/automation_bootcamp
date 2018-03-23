@@ -9,19 +9,19 @@ import org.openqa.selenium.support.PageFactory;
 
 public class deliveryCheckoutPage {
 	private WebDriver driver;
-	
-	@FindBy (how = How.XPATH, using = "//section[@id='deliveryAddress']//label[@for='address_0']/b")
+
+	@FindBy(how = How.XPATH, using = "//section[@id='deliveryAddress']//label[@for='address_0']/b")
 	WebElement userLoggedName;
-	
-	
-	public deliveryCheckoutPage (WebDriver driver){
-		this.driver=driver;
-		SeleniumUtils.WaitUntilVisibilityList(By.xpath("//section[@id='deliveryAddress']//label[@for='address_0']/b"), driver);
+
+	public deliveryCheckoutPage(WebDriver driver) {
+		this.driver = driver;
+		SeleniumUtils.WaitUntilVisibilityList(By.xpath("//section[@id='deliveryAddress']//label[@for='address_0']/b"),
+				driver);
 		PageFactory.initElements(driver, this);
 	}
-	
+
 	public String getUserLoggedName() {
-		String NombreDelUsuario=userLoggedName.getText();
+		String NombreDelUsuario = userLoggedName.getText();
 		return NombreDelUsuario;
 	}
 }

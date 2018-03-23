@@ -2,20 +2,27 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="84586" started-at="2018-03-21T22:34:31Z" finished-at="2018-03-21T22:35:56Z">
+  <suite name="Default suite" duration-ms="41038" started-at="2018-03-23T19:05:36Z" finished-at="2018-03-23T19:06:17Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="84586" started-at="2018-03-21T22:34:31Z" finished-at="2018-03-21T22:35:56Z">
+    <test name="Default test" duration-ms="41038" started-at="2018-03-23T19:05:36Z" finished-at="2018-03-23T19:06:17Z">
       <class name="com.globant.automation.PedidosYaTest">
-        <test-method status="PASS" signature="prepareClass()[pri:0, instance:com.globant.automation.PedidosYaTest@2d7275fc]" name="prepareClass" is-config="true" duration-ms="2840" started-at="2018-03-21T22:34:31Z" finished-at="2018-03-21T22:34:34Z">
+        <test-method status="PASS" signature="prepareClass()[pri:0, instance:com.globant.automation.PedidosYaTest@4fb61f4a]" name="prepareClass" is-config="true" duration-ms="1907" started-at="2018-03-23T19:05:36Z" finished-at="2018-03-23T19:05:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareClass -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.PedidosYaTest@2d7275fc]" name="prepareTest" is-config="true" duration-ms="5005" started-at="2018-03-21T22:34:34Z" finished-at="2018-03-21T22:34:39Z">
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.PedidosYaTest@4fb61f4a]" name="prepareTest" is-config="true" duration-ms="3908" started-at="2018-03-23T19:05:38Z" finished-at="2018-03-23T19:05:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareTest -->
-        <test-method status="PASS" signature="testPedidosYa()[pri:0, instance:com.globant.automation.PedidosYaTest@2d7275fc]" name="testPedidosYa" duration-ms="76716" started-at="2018-03-21T22:34:39Z" finished-at="2018-03-21T22:35:56Z">
+        <test-method status="PASS" signature="testPedidosYa(java.lang.String)[pri:0, instance:com.globant.automation.PedidosYaTest@4fb61f4a]" name="testPedidosYa" duration-ms="35185" started-at="2018-03-23T19:05:42Z" data-provider="comidasParaProbar" finished-at="2018-03-23T19:06:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Milanesa completa al pan con papas fritas]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPedidosYa -->

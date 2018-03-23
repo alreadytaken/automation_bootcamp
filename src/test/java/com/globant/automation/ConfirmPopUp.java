@@ -14,7 +14,7 @@ public class ConfirmPopUp {
 	
 	public ConfirmPopUp (WebDriver driver) {
 		this.driver=driver;
-		SeleniumUtils.WaitUntilVisibilityList(By.xpath("//div[@id='searchMap']"), driver);
+		SeleniumUtils.WaitUntilVisibility(By.xpath("//div[@id='searchMap']//div[@class='gmnoprint']"), driver);
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -22,5 +22,5 @@ public class ConfirmPopUp {
 		confirmButton.click();
 		return new PedidosYaAgregarAlPedido(driver);
 	}
-	
+
 }

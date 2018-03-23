@@ -9,31 +9,33 @@ import org.openqa.selenium.support.PageFactory;
 
 public class PedidosYaAgregarPopUp {
 	private WebDriver driver;
-	
-	@FindBy (how = How.XPATH, using = "//div[@id='footerOpen']//a[@class='button']")
+
+	@FindBy(how = How.XPATH, using = "//div[@id='footerOpen']//a[@class='button']")
 	WebElement agregarButton;
-	@FindBy (how = How.XPATH, using = "//div[@id='footerOpen']//a[@class='button']/i")
+	@FindBy(how = How.XPATH, using = "//div[@id='footerOpen']//a[@class='button']/i")
 	WebElement beforeAddingPrice;
-	@FindBy (how = How.XPATH, using = "//div[@class='tcontent']//div[@class='info']/h2")
+	@FindBy(how = How.XPATH, using = "//div[@class='tcontent']//div[@class='info']/h2")
 	WebElement beforeAddingNameTag;
-	
-	public PedidosYaAgregarPopUp(WebDriver driver){
-		this.driver =driver;
+
+	public PedidosYaAgregarPopUp(WebDriver driver) {
+		this.driver = driver;
 		SeleniumUtils.WaitUntilVisibilityList(By.xpath("//div[@id='footerOpen']//a[@class='button']/i"), driver);
 		PageFactory.initElements(driver, this);
 	}
-	
-	public String getPrice(){
-		String baP=beforeAddingPrice.getText();
+
+	public String getPrice() {
+		String baP = beforeAddingPrice.getText();
 		return baP;
 	}
+
 	public String getPlateName() {
-		String plateName=beforeAddingNameTag.getText();
+		String plateName = beforeAddingNameTag.getText();
 		return plateName;
 	}
+
 	public CheckingOutPage clickAgregarAlPedido() {
 		agregarButton.click();
-		return new CheckingOutPage (driver);
+		return new CheckingOutPage(driver);
 	}
-	
+
 }
