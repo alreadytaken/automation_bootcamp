@@ -40,7 +40,7 @@ public class GoogleTest {
     public GoogleTest() {
 
     }
-
+/*
     private static final Logger LOG;
     private WebDriver driver;
 
@@ -51,7 +51,6 @@ public class GoogleTest {
     @Test
     public void searchTest() throws InterruptedException {
         LOG.info("Search test");
-<<<<<<< HEAD
 
     }
 
@@ -98,11 +97,6 @@ public class GoogleTest {
     }
     
 
-=======
-       // driver.get("http://newtours.demoaut.com/");
-    }
-    
->>>>>>> ac9fe68d19469de7b0751104b21a635b0a4297d2
     @BeforeMethod
     public void prepareTest() throws MalformedURLException {
     	
@@ -122,12 +116,12 @@ public class GoogleTest {
         LOG.info("Prepare class");
         WebDriverManager.chromedriver().setup();
     }
-<<<<<<< HEAD
+
     @DataProvider(name = "terminosBusqueda")
 	public Object[][] provider() {
 		return new Object[][] { {"Futbol"},{"Basquetball"},{"Tenis"},{"Golf"},{"Ping Pong"} };
 	}
-=======
+
 
     @DataProvider(name= "Authentication")
 	public Object[][] provider(){
@@ -182,7 +176,7 @@ public class GoogleTest {
 		 }
 	}
 
->>>>>>> ac9fe68d19469de7b0751104b21a635b0a4297d2
+*/
 }
 
 

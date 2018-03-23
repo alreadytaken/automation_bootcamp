@@ -1,0 +1,52 @@
+
+
+************************************* ESTO FUNCA Y SE VE ELEGANTE ***********************************
+																									
+		Actions actions = new Actions(driver);														
+		actions.moveToElement(WebElement).perform();												
+		WebDriverWait wait = new WebDriverWait(driver, 60); 										
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("Expresion XPATH")));		
+	    driver.findElement(By.xpath("Expresion XPATH"));.click();									
+																									
+*************************** ESTO FUNCA Y SE VE POCO MENOS ELEGANTE **********************************
+																									
+		Actions actions = new Actions(driver);														
+		actions.moveToElement(WebElement).perform();												
+		WebDriverWait wait = new WebDriverWait(driver, 60); 										
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("Expresion XPATH")));		
+		JavascriptExecutor executor = (JavascriptExecutor)driver;									
+	   	executor.executeScript("arguments[0].click();", WebElement);								
+  																									
+*****************************************************************************************************  	
+
+
+
+
+
+*************************************** HERENCIA POR LAS DUDAS **************************************
+					public class Persona {
+						
+						private String nombre;
+					    private String apellidos;
+					    private int edad;
+					
+					    public Persona (String nombre, String apellidos, int edad) {
+					
+					        this.nombre = nombre;
+					        this.apellidos = apellidos;
+					        this.edad = edad;                   
+					    }
+					}
+					public class Profesor extends Persona {
+					
+					    private String IdProfesor;
+					    public Profesor (String nombre, String apellidos, int edad, String IdP) {
+					
+					        super(nombre, apellidos, edad);
+					
+					        IdProfesor = IdP;   
+					        
+					    } 
+					}
+*****************************************************************************************************  	
+					

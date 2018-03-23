@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
@@ -34,7 +35,7 @@ public class MercadoLibreHomePage {
 	@FindBy(how = How.XPATH, using = "//h1[text()='Ofertas de la semana']/../..//div[@class='slick-track']//div[@class='ui-item__content']//p[@class='ui-item__title']")
 	private List<WebElement> nombreProductosEnOfertasSemanales;
 
-	@FindBy(how = How.XPATH, using = "//h1[text()='Ofertas de la semana']/../..//div[@class = 'carousel-container']//div[@class='slick-initialized slick-slider']/button[1]")
+	@FindBy(how = How.XPATH, using = "//h1[text()='Ofertas de la semana']/../..//button[@class = 'next-button icon-right-open-big ']")
 	private WebElement nextButton;
 	/*			
 	@FindBy(how = How.XPATH, using ="//h1[text()='Ofertas de la semana']/../..//div[@class='slick-track']/div/div/a/@href")
@@ -81,16 +82,26 @@ public class MercadoLibreHomePage {
 	}
 	public void irAlSiguiente() throws AWTException, InterruptedException {
 		/*
-		Point coordenadas = nextButton.getLocation();
-		Robot mouse = new Robot();
-		mouse.mouseMove(coordenadas.getX(), coordenadas.getY() + 120);
-
-		mouse.mousePress(InputEvent.BUTTON1_MASK);
-		mouse.mouseRelease(InputEvent.BUTTON1_MASK);
-		 */
 		Actions actions = new Actions(driver);
 		actions.moveToElement(preciosDeOfertasSemanales.get(0)).perform();
-		nextButton.click();
+		WebDriverWait wait = new WebDriverWait(driver, 60); 
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[text()='Ofertas de la semana']/../..//button[@class = 'next-button icon-right-open-big ']")));
+		*/
+		Actions actions = new Actions(driver);
+		actions.moveToElement(preciosDeOfertasSemanales.get(0)).perform();
+		WebDriverWait wait = new WebDriverWait(driver, 60);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[text()='Ofertas de la semana']/../..//button[@class = 'next-button icon-right-open-big ']")));
+		driver.findElement(By.xpath("//h1[text()='Ofertas de la semana']/../..//button[@class = 'next-button icon-right-open-big ']")).click();
+		//JavascriptExecutor executor = (JavascriptExecutor)driver;
+    	//executor.executeScript("arguments[0].click();", nextButton);
+		
+    	//driver.findElement(By.xpath("//h1[text()='Ofertas de la semana']/../..//button[@class = 'next-button icon-right-open-big ']")).click();
+		//WebElement next = driver.findElement(By.xpath("//h1[text()='Ofertas de la semana']/../..//button[@class = 'next-button icon-right-open-big ']"));
+		//next.click();
+		
+
+
+		//nextButton.click();
 	}
 	
 	public void actualizar() {

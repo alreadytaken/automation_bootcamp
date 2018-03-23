@@ -1,0 +1,12 @@
+**************************** ÚNICA SOLUCIÓN *********************************************************
+		
+		WebDriverWait wait = new WebDriverWait(driver, 60); 										
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("Tirás un id")));												
+		WebElement iframe = driver.findElement(By.xpath("Expresion"));												
+		driver.switchTo().frame(iframe);															
+
+		Para devolver el switch al lugar de origen, se tiene:
+		
+		driver.switchTo().defaultContent();
+		
+*****************************************************************************************************

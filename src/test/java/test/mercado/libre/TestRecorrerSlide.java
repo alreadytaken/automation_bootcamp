@@ -10,10 +10,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
-
 import java.awt.AWTException;
 import java.net.MalformedURLException;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class TestRecorrerSlide {
 	
@@ -44,6 +44,8 @@ public class TestRecorrerSlide {
     	driver.get("http://mercadolibre.com.uy");
     	MercadoLibreHomePage mercadoLibreHome = new MercadoLibreHomePage(driver);
     	mercadoLibreHome.irAlSiguiente();
+    	MercadoLibreProductoEnOfertaSemanal productPage = mercadoLibreHome.seleccionarProducto(0);
+
     }
     
     @AfterMethod

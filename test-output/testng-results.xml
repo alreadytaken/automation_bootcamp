@@ -1,50 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-<<<<<<< HEAD
-  <suite name="Default suite" duration-ms="84586" started-at="2018-03-21T22:34:31Z" finished-at="2018-03-21T22:35:56Z">
+  <suite name="Default suite" duration-ms="24526" started-at="2018-03-23T17:32:56Z" finished-at="2018-03-23T17:33:21Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="84586" started-at="2018-03-21T22:34:31Z" finished-at="2018-03-21T22:35:56Z">
-      <class name="com.globant.automation.PedidosYaTest">
-        <test-method status="PASS" signature="prepareClass()[pri:0, instance:com.globant.automation.PedidosYaTest@2d7275fc]" name="prepareClass" is-config="true" duration-ms="2840" started-at="2018-03-21T22:34:31Z" finished-at="2018-03-21T22:34:34Z">
+    <test name="Default test" duration-ms="24526" started-at="2018-03-23T17:32:56Z" finished-at="2018-03-23T17:33:21Z">
+      <class name="test.mercado.libre.TestRecorrerSlide">
+        <test-method status="PASS" signature="prepareClass()[pri:0, instance:test.mercado.libre.TestRecorrerSlide@4f18837a]" name="prepareClass" is-config="true" duration-ms="4708" started-at="2018-03-23T17:32:56Z" finished-at="2018-03-23T17:33:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareClass -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.PedidosYaTest@2d7275fc]" name="prepareTest" is-config="true" duration-ms="5005" started-at="2018-03-21T22:34:34Z" finished-at="2018-03-21T22:34:39Z">
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:test.mercado.libre.TestRecorrerSlide@4f18837a]" name="prepareTest" is-config="true" duration-ms="6171" started-at="2018-03-23T17:33:01Z" finished-at="2018-03-23T17:33:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareTest -->
-        <test-method status="PASS" signature="testPedidosYa()[pri:0, instance:com.globant.automation.PedidosYaTest@2d7275fc]" name="testPedidosYa" duration-ms="76716" started-at="2018-03-21T22:34:39Z" finished-at="2018-03-21T22:35:56Z">
+        <test-method status="FAIL" signature="recorrerSlide()[pri:0, instance:test.mercado.libre.TestRecorrerSlide@4f18837a]" name="recorrerSlide" duration-ms="12564" started-at="2018-03-23T17:33:07Z" finished-at="2018-03-23T17:33:20Z">
+          <exception class="java.lang.ClassCastException">
+            <message>
+              <![CDATA[org.openqa.selenium.remote.RemoteWebElement cannot be cast to org.openqa.selenium.By]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.ClassCastException: org.openqa.selenium.remote.RemoteWebElement cannot be cast to org.openqa.selenium.By
+at test.mercado.libre.MercadoLibreHomePage.irAlSiguiente(MercadoLibreHomePage.java:96)
+at test.mercado.libre.TestRecorrerSlide.recorrerSlide(TestRecorrerSlide.java:46)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.ClassCastException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testPedidosYa -->
-      </class> <!-- com.globant.automation.PedidosYaTest -->
-=======
-  <suite name="Default suite" duration-ms="28945" started-at="2018-03-21T21:11:01Z" finished-at="2018-03-21T21:11:30Z">
-    <groups>
-    </groups>
-    <test name="Default test" duration-ms="28945" started-at="2018-03-21T21:11:01Z" finished-at="2018-03-21T21:11:30Z">
-      <class name="test.pedidos.ya.TestRealizarPedido">
-        <test-method status="PASS" signature="prepareClass()[pri:0, instance:test.pedidos.ya.TestRealizarPedido@4466af20]" name="prepareClass" is-config="true" duration-ms="2972" started-at="2018-03-21T21:11:01Z" finished-at="2018-03-21T21:11:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- prepareClass -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:test.pedidos.ya.TestRealizarPedido@4466af20]" name="prepareTest" is-config="true" duration-ms="2111" started-at="2018-03-21T21:11:04Z" finished-at="2018-03-21T21:11:06Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- prepareTest -->
-        <test-method status="PASS" signature="realizarCompra()[pri:0, instance:test.pedidos.ya.TestRealizarPedido@4466af20]" name="realizarCompra" duration-ms="23755" started-at="2018-03-21T21:11:06Z" finished-at="2018-03-21T21:11:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- realizarCompra -->
-        <test-method status="PASS" signature="cleanup()[pri:0, instance:test.pedidos.ya.TestRealizarPedido@4466af20]" name="cleanup" is-config="true" duration-ms="84" started-at="2018-03-21T21:11:30Z" finished-at="2018-03-21T21:11:30Z">
+        </test-method> <!-- recorrerSlide -->
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:test.mercado.libre.TestRecorrerSlide@4f18837a]" name="cleanup" is-config="true" duration-ms="1004" started-at="2018-03-23T17:33:20Z" finished-at="2018-03-23T17:33:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
-      </class> <!-- test.pedidos.ya.TestRealizarPedido -->
->>>>>>> ac9fe68d19469de7b0751104b21a635b0a4297d2
+      </class> <!-- test.mercado.libre.TestRecorrerSlide -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
