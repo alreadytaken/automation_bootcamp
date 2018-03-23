@@ -38,10 +38,12 @@ public class TestPageGmail {
     
     @BeforeMethod
     public void prepareTest() throws MalformedURLException {
+    	/*
     	ChromeOptions options = new ChromeOptions();
     	options.addArguments("--incognito");
-        
     	driver = new ChromeDriver(options);
+        */
+    	driver = new ChromeDriver();
    }
     
 	@Test

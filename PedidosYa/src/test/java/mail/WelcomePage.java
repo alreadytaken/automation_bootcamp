@@ -10,6 +10,7 @@ import com.globant.automation.SeleniumUtils;
 
 public class WelcomePage {
 
+	
 	@FindBy(how = How.ID, using = "//input[@type='password']")
 	private WebElement passwordBox;
 	
