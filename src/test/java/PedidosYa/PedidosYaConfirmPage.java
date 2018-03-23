@@ -47,13 +47,17 @@ private static final Logger LOG;
 	@FindBy(xpath="//div[contains(@class, 'top-link')]")
 	private WebElement newUser;
 	
-	public boolean validate(String data, String data2) {
+	public void validate(String data, String data2) {
 		
 		SeleniumUtils.waitUntilClickables(By.id("order"), driver);
 		String direccion = dirConf();
-		boolean trueDire = direccion.equals(data);
-		boolean truePrice = totalPrice.getText().equals(data2);
-		return (trueDire && truePrice);
+		
+		LOG.info("La direccion que se ingreso al principio fue:          "+data);
+		LOG.info("La direccion a donde se envia es:            "+direccion);
+		LOG.info("El precio que aparece en la publicacion es:        "+data2);
+		LOG.info("El precio que aparece en el carrito es:          "+totalPrice.getText());
+//		boolean trueDire = direccion.equals(data);
+//		boolean truePrice = totalPrice.getText().equals(data2);
 	}
 	
 	public void confirmPromo() {
@@ -61,12 +65,11 @@ private static final Logger LOG;
 		this.button.click();
 	}
 	
-	public PedidosYaPopUpPage orderFood() {
+	public  PedidosYaPopUpPageVIEJA orderFood() {
 		SeleniumUtils.waitUntilClickable(order, driver);
 		this.order.click();
-		SeleniumUtils.waitUntilClickables(By.xpath("//div/iframe"), driver);
-		driver.switchTo().frame(driver.findElement(By.xpath("//div/iframe")));
-		return new PedidosYaPopUpPage(driver);
+		
+		return new PedidosYaPopUpPageVIEJA(driver);
 	}
 	
 	public boolean comparation(String user) {

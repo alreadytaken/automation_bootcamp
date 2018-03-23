@@ -9,11 +9,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class SeleniumUtils {
 
 	public static WebElement waitUntilClickable(WebElement e, WebDriver driver) {
-		return ((new WebDriverWait(driver, 10)).until(ExpectedConditions.elementToBeClickable(e)));
+		return ((new WebDriverWait(driver, 20)).until(ExpectedConditions.elementToBeClickable(e)));
 	}
 	
 	public static WebElement waitUntilClickables(By e, WebDriver driver) {
-		return ((new WebDriverWait(driver, 10)).until(ExpectedConditions.elementToBeClickable(e)));
+		return ((new WebDriverWait(driver, 20)).until(ExpectedConditions.elementToBeClickable(e)));
+	} 
+	
+	public static WebElement isVisible(By e, WebDriver driver) {
+		return ((new WebDriverWait(driver, 20)).until(ExpectedConditions.visibilityOfElementLocated(e)));
 	} 
 	
 	public static boolean isPresent(By e, WebDriver driver) {
