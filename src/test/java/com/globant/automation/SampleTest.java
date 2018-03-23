@@ -14,6 +14,7 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pageObjects.AmazonHome;
 import pageObjects.AmazonProductPage;
+import pageObjects.AmazonReviewPage;
 import pageObjects.AmazonSearchPage;
 
 public class SampleTest {
@@ -38,9 +39,11 @@ public class SampleTest {
     public void testExamen(String search) {
         driver.get("https://amazon.com");
         AmazonHome home = new AmazonHome(driver);
-        AmazonSearchPage searchPage = home.searchFill("Ray Ban aviator Sunglasses");
+        AmazonSearchPage searchPage = home.searchFill(search);
         AmazonProductPage productPage = searchPage.getFirstProduct();
-        LOG.info(productPage.getTopReview());
+        AmazonReviewPage reviewPage = productPage.navigateToReviewsPage();
+        LOG.info(reviewPage.getTopReviews());
+        //LOG.info(productPage.getTopReview());
     }
 
     @BeforeMethod

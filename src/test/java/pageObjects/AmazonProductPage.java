@@ -20,9 +20,16 @@ public class AmazonProductPage {
 	@FindBy(css="#cr-medley-top-reviews-wrapper")
 	WebElement allReviews;
 	
+	@FindBy(css="#dp-summary-see-all-reviews")
+	WebElement seeAllReviewsButton;
+	
 	public String getTopReview() {
 		WebElement aux = allReviews.findElement(By.cssSelector("div[class=\"a-section celwidget\"]"));
 		return aux.getText();
+	}
+	public AmazonReviewPage navigateToReviewsPage() {
+		seeAllReviewsButton.click();
+		return new AmazonReviewPage(driver);
 	}
 
 }
