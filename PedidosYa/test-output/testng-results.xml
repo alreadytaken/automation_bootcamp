@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="79423" started-at="2018-03-22T20:01:50Z" finished-at="2018-03-22T20:03:09Z">
+  <suite name="Default suite" duration-ms="115747" started-at="2018-03-23T04:10:25Z" finished-at="2018-03-23T04:12:21Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="79423" started-at="2018-03-22T20:01:50Z" finished-at="2018-03-22T20:03:09Z">
+    <test name="Default test" duration-ms="115747" started-at="2018-03-23T04:10:25Z" finished-at="2018-03-23T04:12:21Z">
       <class name="test.PedidosYa.TestRealizarPedido">
-        <test-method status="PASS" signature="prepareClass()[pri:0, instance:test.PedidosYa.TestRealizarPedido@4f18837a]" name="prepareClass" is-config="true" duration-ms="4227" started-at="2018-03-22T20:01:50Z" finished-at="2018-03-22T20:01:54Z">
+        <test-method status="PASS" signature="prepareClass()[pri:0, instance:test.PedidosYa.TestRealizarPedido@4f18837a]" name="prepareClass" is-config="true" duration-ms="7657" started-at="2018-03-23T04:10:25Z" finished-at="2018-03-23T04:10:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareClass -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:test.PedidosYa.TestRealizarPedido@4f18837a]" name="prepareTest" is-config="true" duration-ms="5199" started-at="2018-03-22T20:01:54Z" finished-at="2018-03-22T20:01:59Z">
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:test.PedidosYa.TestRealizarPedido@4f18837a]" name="prepareTest" is-config="true" duration-ms="18364" started-at="2018-03-23T04:10:33Z" finished-at="2018-03-23T04:10:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareTest -->
-        <test-method status="PASS" signature="realizarCompra()[pri:0, instance:test.PedidosYa.TestRealizarPedido@4f18837a]" name="realizarCompra" duration-ms="69050" started-at="2018-03-22T20:01:59Z" finished-at="2018-03-22T20:03:08Z">
+        <test-method status="PASS" signature="realizarCompra()[pri:0, instance:test.PedidosYa.TestRealizarPedido@4f18837a]" name="realizarCompra" duration-ms="88450" started-at="2018-03-23T04:10:51Z" finished-at="2018-03-23T04:12:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- realizarCompra -->
-        <test-method status="PASS" signature="cleanup()[pri:0, instance:test.PedidosYa.TestRealizarPedido@4f18837a]" name="cleanup" is-config="true" duration-ms="880" started-at="2018-03-22T20:03:08Z" finished-at="2018-03-22T20:03:09Z">
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:test.PedidosYa.TestRealizarPedido@4f18837a]" name="cleanup" is-config="true" duration-ms="1171" started-at="2018-03-23T04:12:19Z" finished-at="2018-03-23T04:12:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
