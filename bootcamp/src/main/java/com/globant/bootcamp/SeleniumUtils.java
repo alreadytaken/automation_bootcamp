@@ -15,16 +15,16 @@ public class SeleniumUtils {
 
 	public static WebElement waitUntilClickeable(By localizador, WebDriver driver) {
 
-		return (new WebDriverWait(driver, 10)).until(ExpectedConditions.elementToBeClickable(localizador));
+		return (new WebDriverWait(driver, 60)).until(ExpectedConditions.elementToBeClickable(localizador));
 	}
 
 	public static boolean isPresent(By localizador, WebDriver driver) {
-		return (new WebDriverWait(driver, 10)).until(ExpectedConditions.elementToBeClickable(localizador)) != null;
+		return (new WebDriverWait(driver, 60)).until(ExpectedConditions.elementToBeClickable(localizador)) != null;
 	}
 	
 	public static boolean isPresentByPresenceOfElement(WebElement e, WebDriver driver) {
 		
-		return(new WebDriverWait(driver, 180)).until(ExpectedConditions.visibilityOf(e))!= null;
+		return(new WebDriverWait(driver, 90)).until(ExpectedConditions.visibilityOf(e))!= null;
 	}
 	
 }
