@@ -13,12 +13,12 @@ public class restaurantes {
 
 	public restaurantes(WebDriver driver) {
 		this.driver = driver;
-		SeleniumUtils.waitUntilClickable(By.id("search(CAMBIAR)"), driver);
+		SeleniumUtils.waitUntilClickable(By.xpath("//a[@class=\"peyaCard js-fp-card\"][@data-id=\"27865\"]"), driver);
 		{
 			PageFactory.initElements(driver, this);
 		}
 	}
-	@FindBy(how= How.ID,using = "search(CAMBIAR)")
+	@FindBy(how= How.ID,using = "//a[@class=\"peyaCard js-fp-card\"][@data-id=\"27865\"]")
 	private WebElement imgMilanga;
 	
 	public popUpComida selecionarComida() {
