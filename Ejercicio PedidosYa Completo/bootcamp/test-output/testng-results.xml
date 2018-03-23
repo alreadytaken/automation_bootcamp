@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="73936" started-at="2018-03-23T03:52:24Z" finished-at="2018-03-23T03:53:38Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="73936" started-at="2018-03-23T03:52:24Z" finished-at="2018-03-23T03:53:38Z">
+      <class name="com.PedidosYa.TestPedidosYa">
+        <test-method status="PASS" signature="prepareClass()[pri:0, instance:com.PedidosYa.TestPedidosYa@20deea7f]" name="prepareClass" is-config="true" duration-ms="4353" started-at="2018-03-23T00:52:24Z" finished-at="2018-03-23T00:52:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareClass -->
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.PedidosYa.TestPedidosYa@20deea7f]" name="prepareTest" is-config="true" duration-ms="4776" started-at="2018-03-23T00:52:28Z" finished-at="2018-03-23T00:52:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareTest -->
+        <test-method status="PASS" signature="makeOrder(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.PedidosYa.TestPedidosYa@20deea7f]" name="makeOrder" duration-ms="63010" started-at="2018-03-23T00:52:33Z" data-provider="direccion" finished-at="2018-03-23T00:53:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Nicaragua 1666]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Milanesa]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[sebastianrodriguezpaiva@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[prueba1234]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Sebastian]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- makeOrder -->
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.PedidosYa.TestPedidosYa@20deea7f]" name="cleanup" is-config="true" duration-ms="1761" started-at="2018-03-23T00:53:36Z" finished-at="2018-03-23T00:53:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+      </class> <!-- com.PedidosYa.TestPedidosYa -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
