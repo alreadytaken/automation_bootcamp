@@ -19,7 +19,7 @@ public class PopUpAgregarPedido {
 private static final Logger LOG;
 	
 	static {
-		LOG = LogManager.getLogger(TestValidarDatosPedido.class);
+		LOG = LogManager.getLogger(PopUpAgregarPedido.class);
 	}
 	
 	

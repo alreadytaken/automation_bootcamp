@@ -2,29 +2,27 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="27671" started-at="2018-03-22T19:11:30Z" finished-at="2018-03-22T19:11:58Z">
+  <suite name="Default suite" duration-ms="70545" started-at="2018-03-22T21:01:34Z" finished-at="2018-03-22T21:02:45Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="27671" started-at="2018-03-22T19:11:30Z" finished-at="2018-03-22T19:11:58Z">
+    <test name="Default test" duration-ms="70545" started-at="2018-03-22T21:01:34Z" finished-at="2018-03-22T21:02:45Z">
       <class name="com.globant.bootcamp.TestValidarDatosPedido">
-        <test-method status="PASS" signature="prepareClass()[pri:0, instance:com.globant.bootcamp.TestValidarDatosPedido@6b927fb]" name="prepareClass" is-config="true" duration-ms="1978" started-at="2018-03-22T19:11:30Z" finished-at="2018-03-22T19:11:32Z">
+        <test-method status="PASS" signature="prepareClass()[pri:0, instance:com.globant.bootcamp.TestValidarDatosPedido@1aa7ecca]" name="prepareClass" is-config="true" duration-ms="7025" started-at="2018-03-22T21:01:34Z" finished-at="2018-03-22T21:01:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareClass -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.bootcamp.TestValidarDatosPedido@6b927fb]" name="prepareTest" is-config="true" duration-ms="4837" started-at="2018-03-22T19:11:32Z" finished-at="2018-03-22T19:11:37Z">
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.bootcamp.TestValidarDatosPedido@1aa7ecca]" name="prepareTest" is-config="true" duration-ms="1146" started-at="2018-03-22T21:01:41Z" finished-at="2018-03-22T21:01:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareTest -->
-        <test-method status="FAIL" signature="ValidarDatos()[pri:0, instance:com.globant.bootcamp.TestValidarDatosPedido@6b927fb]" name="ValidarDatos" duration-ms="19891" started-at="2018-03-22T19:11:37Z" finished-at="2018-03-22T19:11:57Z">
+        <test-method status="FAIL" signature="ValidarDatos()[pri:0, instance:com.globant.bootcamp.TestValidarDatosPedido@1aa7ecca]" name="ValidarDatos" duration-ms="62264" started-at="2018-03-22T21:01:42Z" finished-at="2018-03-22T21:02:45Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [
-Nicaragua 1600
+              <![CDATA[expected [Nicaragua 1600
 ] but found [Nicaragua 1600]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [
-Nicaragua 1600
+              <![CDATA[java.lang.AssertionError: expected [Nicaragua 1600
 ] but found [Nicaragua 1600]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
@@ -64,7 +62,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidarDatos -->
-        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.globant.bootcamp.TestValidarDatosPedido@6b927fb]" name="cleanup" is-config="true" duration-ms="943" started-at="2018-03-22T19:11:57Z" finished-at="2018-03-22T19:11:58Z">
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:com.globant.bootcamp.TestValidarDatosPedido@1aa7ecca]" name="cleanup" is-config="true" duration-ms="86" started-at="2018-03-22T21:02:45Z" finished-at="2018-03-22T21:02:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->

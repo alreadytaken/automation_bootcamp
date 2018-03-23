@@ -24,7 +24,7 @@ public class RestaurantPage {
 		private static final Logger LOG;
 			
 			static {
-				LOG = LogManager.getLogger(TestValidarDatosPedido.class);
+				LOG = LogManager.getLogger(RestaurantPage.class);
 			}
 			
 			
@@ -53,7 +53,7 @@ public class RestaurantPage {
 	
 	public String tomarDireccion() {
 		String DireccionPedido = driver.findElement(By.xpath("//span[@title=\"Nicaragua 1600\"]")).getAttribute("innerHTML");
-		String direccion=DireccionPedido.replace("\tDelivery para ", "");
+		String direccion=DireccionPedido.replace("\nDelivery para ", "");
 		
 		System.out.println("La direccion es: "+direccion);
 		return direccion;

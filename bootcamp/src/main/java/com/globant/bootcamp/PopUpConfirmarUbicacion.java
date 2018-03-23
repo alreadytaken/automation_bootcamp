@@ -19,7 +19,7 @@ private static final Logger LOG;
 	}
 	
 	
-	@FindBy(how = How.XPATH, using = "//*[@id=\"confirm\"]")
+	@FindBy(how = How.XPATH, using = "//*[@id='confirm']")
 	WebElement btnConfirmarUbicacion;
 	
 	@FindBy(how = How.XPATH, using = "//*[@id=\"mapContainer\"]")
