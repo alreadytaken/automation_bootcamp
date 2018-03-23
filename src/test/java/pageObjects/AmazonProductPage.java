@@ -13,20 +13,20 @@ public class AmazonProductPage {
 	
 	public AmazonProductPage(WebDriver driver) {
 		this.driver = driver;
-		SeleniumUtils.waitUntilClickable(By.cssSelector("#cr-medley-top-reviews-wrapper"), driver);
+		SeleniumUtils.waitUntilClickable(By.cssSelector("#dp-summary-see-all-reviews"), driver);
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(css="#cr-medley-top-reviews-wrapper")
-	WebElement allReviews;
+//	@FindBy(css="#cr-medley-top-reviews-wrapper")
+//	WebElement allReviews;
 	
 	@FindBy(css="#dp-summary-see-all-reviews")
 	WebElement seeAllReviewsButton;
 	
-	public String getTopReview() {
-		WebElement aux = allReviews.findElement(By.cssSelector("div[class=\"a-section celwidget\"]"));
-		return aux.getText();
-	}
+//	public String getTopReview() {
+//		WebElement aux = allReviews.findElement(By.cssSelector("div[class=\"a-section celwidget\"]"));
+//		return aux.getText();
+//	}
 	public AmazonReviewPage navigateToReviewsPage() {
 		seeAllReviewsButton.click();
 		return new AmazonReviewPage(driver);

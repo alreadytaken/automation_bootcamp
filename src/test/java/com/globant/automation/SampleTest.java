@@ -42,7 +42,7 @@ public class SampleTest {
         AmazonSearchPage searchPage = home.searchFill(search);
         AmazonProductPage productPage = searchPage.getFirstProduct();
         AmazonReviewPage reviewPage = productPage.navigateToReviewsPage();
-        LOG.info(reviewPage.getTopReviews());
+        LOG.info(reviewPage.getTopReviews()); //LEER ESTO: Se imprimen las dos reviews, pero quedan una al lado de la otra
         //LOG.info(productPage.getTopReview());
     }
 
