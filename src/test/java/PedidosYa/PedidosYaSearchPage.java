@@ -10,40 +10,38 @@ import com.globant.automation.SeleniumUtils;
 
 public class PedidosYaSearchPage {
 	private WebDriver driver;
-	
-	public PedidosYaSearchPage(WebDriver driver){
+
+	public PedidosYaSearchPage(WebDriver driver) {
 		this.driver = driver;
-		
+
 		if (!SeleniumUtils.isPresent(By.id("search"), driver)) {
 			throw new IllegalStateException("Page did not load");
-		}		
+		}
 		PageFactory.initElements(driver, this);
 	}
-		
-	@FindBy(name="address")
+
+	@FindBy(name = "address")
 	private WebElement address;
-	
-	@FindBy(name="optional")
+
+	@FindBy(name = "optional")
 	private WebElement food;
-	
-	@FindBy(id="search")
+
+	@FindBy(id = "search")
 	private WebElement send;
-	
-	@FindBy(id="confirm")
+
+	@FindBy(id = "confirm")
 	private WebElement confirm;
-	
-	
-	
+
 	public void typeOrder(String data1, String data2) {
 		this.address.sendKeys(data1);
 		this.food.sendKeys(data2);
 	}
-	
+
 	public void sendOrder() {
 		this.send.click();
 	}
-	
-	//hago que devuelva una pagina del siguiente tipo (PedidosYaSelectPage)
+
+	// hago que devuelva una pagina del siguiente tipo (PedidosYaSelectPage)
 	public PedidosYaSelectPage confirmOrder() {
 		if (!SeleniumUtils.isPresent(By.xpath("//div[@class='gmnoprint']/img"), driver)) {
 			throw new IllegalStateException("Address did not load");

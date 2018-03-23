@@ -15,7 +15,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class PedidosYaTestPage {
 
 	private WebDriver driver;
-	// private WebDriver driver2;
 
 	private static final Logger LOG;
 
@@ -79,11 +78,6 @@ public class PedidosYaTestPage {
 
 		testConfirm2 = testCheckOut.back();
 		testConfirm2.comparation(user);
-
-		/*
-		 * Usuario y contrasena para PedidosYa Usuario: MiEjemploGlobant@gmail.com
-		 * Contraseña: kesmaneskesman
-		 */
 
 	}
 }

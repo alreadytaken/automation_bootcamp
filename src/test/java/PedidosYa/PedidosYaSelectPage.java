@@ -10,25 +10,25 @@ import com.globant.automation.SeleniumUtils;
 
 public class PedidosYaSelectPage {
 	private WebDriver driver;
-	
-	public PedidosYaSelectPage(WebDriver driver){
+
+	public PedidosYaSelectPage(WebDriver driver) {
 		this.driver = driver;
-		
+
 		if (!SeleniumUtils.isPresent(By.xpath("//span[@class=\"promo\"]"), driver)) {
 			throw new IllegalStateException("Page did not load");
 		}
 		PageFactory.initElements(driver, this);
 	}
-	
-	@FindBy(xpath="//span[@class='promo']")
+
+	@FindBy(xpath = "//span[@class='promo']")
 	private WebElement promo;
-	
-	@FindBy(xpath="//*[@id='footerOpen']/a")
+
+	@FindBy(xpath = "//*[@id='footerOpen']/a")
 	private WebElement promoE;
-	
-	@FindBy(xpath="//span[@class='after_price']")
+
+	@FindBy(xpath = "//span[@class='after_price']")
 	private WebElement price;
-	
+
 	public PedidosYaConfirmPage selectPromo() {
 		this.promo.click();
 		return new PedidosYaConfirmPage(driver);

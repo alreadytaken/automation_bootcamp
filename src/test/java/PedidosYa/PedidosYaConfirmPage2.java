@@ -45,9 +45,9 @@ public class PedidosYaConfirmPage2 {
 	}
 
 	public boolean comparation(String user) {
-		
-		LOG.info("El email que ingresamos fue:          "+user);
-		LOG.info("El usuario una vez logueado es:         "+newUser.getText());
+
+		LOG.info("El email que ingresamos fue:          " + user);
+		LOG.info("El usuario una vez logueado es:         " + newUser.getText());
 		return (user.equals(newUser.getText()));
 	}
 }

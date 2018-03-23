@@ -18,7 +18,7 @@ public class PedidosYaPopUpPageVIEJA {
 		PageFactory.initElements(driver, this);
 
 		SeleniumUtils.isVisible(By.xpath("//div/iframe"), driver);
-		
+
 		WebElement IFRAME = driver.findElement(By.xpath("//div/iframe"));
 		driver.switchTo().frame(IFRAME);
 

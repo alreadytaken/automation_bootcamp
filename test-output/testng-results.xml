@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="48704" started-at="2018-03-23T04:46:40Z" finished-at="2018-03-23T04:47:28Z">
+  <suite name="Default suite" duration-ms="60317" started-at="2018-03-23T15:00:26Z" finished-at="2018-03-23T15:01:27Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="48704" started-at="2018-03-23T04:46:40Z" finished-at="2018-03-23T04:47:28Z">
+    <test name="Default test" duration-ms="60317" started-at="2018-03-23T15:00:26Z" finished-at="2018-03-23T15:01:27Z">
       <class name="PedidosYa.PedidosYaTestPage">
-        <test-method status="PASS" signature="prepareClass()[pri:0, instance:PedidosYa.PedidosYaTestPage@4fb61f4a]" name="prepareClass" is-config="true" duration-ms="2511" started-at="2018-03-23T04:46:40Z" finished-at="2018-03-23T04:46:42Z">
+        <test-method status="PASS" signature="prepareClass()[pri:0, instance:PedidosYa.PedidosYaTestPage@4fb61f4a]" name="prepareClass" is-config="true" duration-ms="2361" started-at="2018-03-23T15:00:26Z" finished-at="2018-03-23T15:00:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareClass -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:PedidosYa.PedidosYaTestPage@4fb61f4a]" name="prepareTest" is-config="true" duration-ms="3238" started-at="2018-03-23T04:46:42Z" finished-at="2018-03-23T04:46:45Z">
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:PedidosYa.PedidosYaTestPage@4fb61f4a]" name="prepareTest" is-config="true" duration-ms="5647" started-at="2018-03-23T15:00:29Z" finished-at="2018-03-23T15:00:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareTest -->
-        <test-method status="PASS" signature="normalTest()[pri:0, instance:PedidosYa.PedidosYaTestPage@4fb61f4a]" name="normalTest" duration-ms="42112" started-at="2018-03-23T04:46:45Z" finished-at="2018-03-23T04:47:27Z">
+        <test-method status="PASS" signature="normalTest()[pri:0, instance:PedidosYa.PedidosYaTestPage@4fb61f4a]" name="normalTest" duration-ms="51480" started-at="2018-03-23T15:00:34Z" finished-at="2018-03-23T15:01:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- normalTest -->
-        <test-method status="PASS" signature="cleanup()[pri:0, instance:PedidosYa.PedidosYaTestPage@4fb61f4a]" name="cleanup" is-config="true" duration-ms="812" started-at="2018-03-23T04:47:27Z" finished-at="2018-03-23T04:47:28Z">
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:PedidosYa.PedidosYaTestPage@4fb61f4a]" name="cleanup" is-config="true" duration-ms="797" started-at="2018-03-23T15:01:26Z" finished-at="2018-03-23T15:01:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanup -->
