@@ -80,8 +80,7 @@ public class PedidosYaTestPage {
     	testConfirm2.comparation(user);
     	testConfirm2.confirmPromo();
     	
-    	
-    	
+    		
     	
     	
     	/* Usuario y contrasena para PedidosYa

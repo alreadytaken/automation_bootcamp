@@ -64,6 +64,8 @@ private static final Logger LOG;
 	public PedidosYaPopUpPage orderFood() {
 		SeleniumUtils.waitUntilClickable(order, driver);
 		this.order.click();
+		SeleniumUtils.waitUntilClickables(By.xpath("//div/iframe"), driver);
+		driver.switchTo().frame(driver.findElement(By.xpath("//div/iframe")));
 		return new PedidosYaPopUpPage(driver);
 	}
 	
@@ -72,4 +74,7 @@ private static final Logger LOG;
 		LOG.info(user.equals(newUser.getText()));
 		return (user.equals(newUser.getText()));
 	}
+	
+	
+	
 }

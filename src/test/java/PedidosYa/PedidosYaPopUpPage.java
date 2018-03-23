@@ -11,47 +11,57 @@ import com.globant.automation.SeleniumUtils;
 
 public class PedidosYaPopUpPage {
 	private WebDriver driver;
+
 	
-	public PedidosYaPopUpPage(WebDriver driver){
+	public PedidosYaPopUpPage(WebDriver driver) {
 		this.driver = driver;
+
 		
-		if (!SeleniumUtils.waitUntilHeWants(By.id("modalLogin"), driver)) {
+		
+		PageFactory.initElements(driver, this);
+
+		// driver.switchTo().frame(iframe);
+		
+
+		/*if (!SeleniumUtils.waitUntilHeWants(By.xpath("//div[@class='tinner']"), driver)) {
 			throw new IllegalStateException("Page did not load");
 		}
-		PageFactory.initElements(driver, this);
-		
-		driver.switchTo().frame(iframe);
+
+		/*
+		 * if (!SeleniumUtils.waitUntilHeWants(By.name("name"), driver)) { throw new
+		 * IllegalStateException("Page did not load"); } if
+		 * (!SeleniumUtils.waitUntilHeWants(By.name("password"), driver)) { throw new
+		 * IllegalStateException("Page did not load"); }
+		 */
 	}
 
-	@FindBy(xpath="//div/iframe")
-	private WebElement iframe;
 	
-	@FindBy(xpath="//input[@name='email']")
+	@FindBy(xpath = "//input[@name='email']")
 	private WebElement popupEmail;
-	
-	@FindBy(xpath="//input[@name='password']")
+
+	@FindBy(xpath = "//input[@name='password']")
 	private WebElement popupPass;
-	
-	@FindBy(xpath="//input[@name='login']")
+
+	@FindBy(xpath = "//input[@name='login']")
 	private WebElement popupButton;
-	
-	@FindBy(id="modalLogin")
+
+	@FindBy(id = "modalLogin")
 	private WebElement clickpls;
-	
+
 	public void typeUser(String user, String pass) {
-		SeleniumUtils.waitUntilHeWants(By.id("modalLogin"), driver);
+		//SeleniumUtils.waitUntilHeWants(By.id("modalLogin"), driver);
 		this.clickpls.click();
-		SeleniumUtils.waitUntilClickable(popupEmail, driver);
+		//SeleniumUtils.waitUntilClickable(popupEmail, driver);
 		this.popupEmail.sendKeys(user);
 		this.popupPass.sendKeys(pass);
 	}
-	
+
 	public PedidosYaCheckoutPage login() {
-		SeleniumUtils.waitUntilHeWants(By.id("modalLogin"), driver);
+		//SeleniumUtils.waitUntilHeWants(By.id("modalLogin"), driver);
 		this.clickpls.click();
-		SeleniumUtils.waitUntilClickable(popupEmail, driver);
+		//SeleniumUtils.waitUntilClickable(popupEmail, driver);
 		this.popupButton.click();
 		return new PedidosYaCheckoutPage(driver);
 	}
-		
+
 }
