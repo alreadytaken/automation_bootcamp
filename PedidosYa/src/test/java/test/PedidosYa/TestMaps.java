@@ -76,12 +76,18 @@ public class TestMaps {
     	String url =  driver.findElement(By.id("linkAr")).getAttribute("host");
     	LOG.info(arg);
     	LOG.info(url);
-       	Bandera argentinaFlag = new Bandera(driver.findElement(By.xpath("//a[@id='linkAr']/i")).getText(), argentina.getAttribute("host"));
+       	Bandera argentinaFlag = new Bandera(driver.findElement(By.xpath("//a[@id='linkAr']/i")).getText(), driver.findElement(By.id("linkAr")).getAttribute("host"));
+       	LOG.info("Llegueeee");
        	Bandera brasilFlag = new Bandera(driver.findElement(By.xpath("//a[@id='linkBr]/i")).getText(), brasil.getAttribute("host"));
+       	LOG.info("Llegueeee");
        	Bandera chileFlag = new Bandera(driver.findElement(By.xpath("//a[@id='linkCl']/i")).getText(), chile.getAttribute("host"));
+       	LOG.info("Llegueeee");
        	Bandera costaRica = new Bandera(driver.findElement(By.xpath("//a[@id='linkCr']/i")).getText(), ticos.getAttribute("host"));
+       	LOG.info("Llegueeee");
        	Bandera panamaFlag = new Bandera(driver.findElement(By.xpath("//a[@id='linkPa']/i")).getText(), panama.getAttribute("host"));
+       	LOG.info("Llegueeee");
        	Bandera paraguayFlag = new Bandera(driver.findElement(By.xpath("//a[@id='linkPy']/i")).getText(), paraguay.getAttribute("host"));
+       	LOG.info("Llegueeee");
        	Bandera uruguayFlag = new Bandera(driver.findElement(By.xpath("//a[@id='linkUy']/i")).getText(), uruguay.getAttribute("host"));
        	
        	LOG.info("Llegueeee");
@@ -94,10 +100,13 @@ public class TestMaps {
        	mapaDeBanderas.put("Uruguay", uruguayFlag);
        	
        	Iterator it = mapaDeBanderas.keySet().iterator();
-       	
+       	for(String k:mapaDeBanderas.keySet()) {
+       		mapaDeBanderas.get(k);
+       	}
        	while(it.hasNext()) {
        		
        		Map.Entry<String, Bandera> e = (Entry) it.next(); 
+       		
        		LOG.info(e.getKey() + e.getValue().getUrl());
        	}
 
