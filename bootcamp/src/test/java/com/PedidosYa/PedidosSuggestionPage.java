@@ -12,6 +12,8 @@ public class PedidosSuggestionPage {
 		
 		this.driver=driver;
 		PageFactory.initElements(driver,this);
+		SeleniumUtils.waitUntilClickable(foodSuggestion, driver);
+
 		
 	}
 	

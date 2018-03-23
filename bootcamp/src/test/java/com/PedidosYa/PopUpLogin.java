@@ -17,6 +17,8 @@ public class PopUpLogin {
 	        this.driver=driver;
 		PageFactory.initElements(driver,this);
 		SeleniumUtils.waitUntilPresence(By.xpath("//div/iframe"), driver);
+		
+		
 		driver.switchTo().frame(iframe);
 
 	
@@ -44,7 +46,8 @@ public class PopUpLogin {
    
 	}
 public void logIn2(String text){
-		
+	SeleniumUtils.waitUntilClickable(password, driver);
+
 		password.click();
 		password.sendKeys(text);
 		password.sendKeys(Keys.ENTER);

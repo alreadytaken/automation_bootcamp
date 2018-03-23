@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.PedidosYa.TestPedidosYa">
+      <class name="com.EjMail.TestSpam">
         <methods>
-          <include name="prepareTest"/>
-          <include name="prepareClass"/>
           <include name="cleanup"/>
-          <include name="makeOrder" invocation-numbers="0"/>
+          <include name="prepareClass"/>
+          <include name="mailList" invocation-numbers="0"/>
+          <include name="prepareTest"/>
         </methods>
-      </class> <!-- com.PedidosYa.TestPedidosYa -->
+      </class> <!-- com.EjMail.TestSpam -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
