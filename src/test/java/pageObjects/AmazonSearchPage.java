@@ -13,10 +13,24 @@ public class AmazonSearchPage {
 
 	private WebDriver driver;
 
-	@FindBy(css = "div[class='s-item-container']")
+	@FindBy(css = "li[class='s-result-item celwidget']")
 	private WebElement item;
 
-	public void clickFirstItem() {
+	public AmazonItemPage clickFirstItem() {
 		item.click();
+		return new AmazonItemPage(driver);
 	}
+
+	// @FindBy(css = "li[class='s-result-item celwidget']")
+	// private List<WebElement> itemList;
+	//
+	// public void clickFirstItem() {
+	// for (int i = 0; i < itemList.size(); i++) {
+	// String []temp = itemList.get(i).getAttribute("class").split(" ");
+	// if (temp.length < 3) {
+	// itemList.get(i).click();
+	// return;
+	// }
+	// }
+	// }
 }

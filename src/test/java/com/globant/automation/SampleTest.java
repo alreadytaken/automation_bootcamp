@@ -12,6 +12,8 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import pageObjects.AmazonItemCommentsPage;
+import pageObjects.AmazonItemPage;
 import pageObjects.AmazonMainPage;
 import pageObjects.AmazonSearchPage;
 
@@ -33,12 +35,13 @@ public class SampleTest {
 		return new Object[][] { { "Ray Ban aviator sunglasses" } };
 	}
 
-	@Test (dataProvider = "Busqueda")
+	@Test(dataProvider = "Busqueda")
 	public void testExamen(String searchText) {
 		driver.get("https://amazon.com");
 		AmazonMainPage main = new AmazonMainPage(driver);
 		AmazonSearchPage search = main.search(searchText);
-		//search.clickFirstItem();
+		AmazonItemPage item = search.clickFirstItem();
+		AmazonItemCommentsPage comments = item.goToComments();
 	}
 
 	@BeforeMethod

@@ -12,13 +12,13 @@ public class AmazonItemPage {
 	}
 
 	private WebDriver driver;
-	
+
 	@FindBy(id = "dp-summary-see-all-reviews")
 	private WebElement btnComments;
-	
-	public void goToComments() {
+
+	public AmazonItemCommentsPage goToComments() {
 		btnComments.click();
+		return new AmazonItemCommentsPage(driver);
 	}
-	
 
 }
