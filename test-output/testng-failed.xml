@@ -7,7 +7,7 @@
         <methods>
           <include name="prepareClass"/>
           <include name="prepareTest"/>
-          <include name="testML"/>
+          <include name="testML" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- com.globant.automation.CorreoSpamTest -->
     </classes>

@@ -6,8 +6,8 @@ import java.util.List;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -41,17 +41,18 @@ public class CorreoTest {
 				LOG.info(SubjectsToLog.get(i));// valor impar
 			}
 		}
+
 	}
 
 	@BeforeMethod
 	public void prepareTest() {
 		LOG.info("Prepare test");
-		driver = new FirefoxDriver();
+		driver = new ChromeDriver();
 	}
 
 	@BeforeClass
 	private void prepareClass() {
 		LOG.info("Prepare class");
-		WebDriverManager.firefoxdriver().setup();
+		WebDriverManager.chromedriver().setup();
 	}
 }

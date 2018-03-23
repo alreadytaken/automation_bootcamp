@@ -11,29 +11,33 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 public class CorreoMain {
-private WebDriver driver;
-	
-	@FindBy (how = How.XPATH, using = "//div[@class='qHbUsHxyUQWPPgj-Wwl5s']/span")
-	List <WebElement> mailSubjectList;
-	@FindBy (how = How.XPATH, using = "//div[@id='app']//div[contains(text(),'New message')]")
+	private WebDriver driver;
+
+	@FindBy(how = How.XPATH, using = "//div[@class='qHbUsHxyUQWPPgj-Wwl5s']/span")
+	List<WebElement> mailSubjectList;
+	@FindBy(how = How.XPATH, using = "//div[@id='app']//span[contains(text(),'New message')]")
 	WebElement newMailButton;
-	
-	public CorreoMain(WebDriver driver){
-		this.driver =driver;
-		SeleniumUtils.WaitUntilVisibility(By.xpath("//div[@class='mYbuYnVOeA_vHVJJZPEzu']"), driver);
-		SeleniumUtils.WaitUntilVisibility(By.xpath("//div[@id='app']//div[contains(text(),'New message')]"), driver);
-		//SeleniumUtils.WaitUntilClickable(By.id("idSIButton9"), driver);
+
+	public CorreoMain(WebDriver driver) {
+		this.driver = driver;
+		// SeleniumUtils.WaitUntilVisibility(By.xpath("//div[@id='app']//*//iframe"),
+		// driver);
+		SeleniumUtils.WaitUntilVisibility(By.xpath("//div[@id='app']//*[contains(text(),'New message')]"), driver);
+		// SeleniumUtils.WaitUntilClickable(By.id("idSIButton9"), driver);
 		PageFactory.initElements(driver, this);
 	}
-	public List <String> displayAllSubjects(){
-		List <String> Subjects;
-		Subjects = new ArrayList<>(); 
-		for (int i=0;i<mailSubjectList.size();i++) {
-		Subjects.add(mailSubjectList.get(i).getText());
+
+	public List<String> displayAllSubjects() {
+		List<String> Subjects;
+		Subjects = new ArrayList<>();
+		for (int i = 0; i < mailSubjectList.size(); i++) {
+			Subjects.add(mailSubjectList.get(i).getText());
 		}
 		return Subjects;
-	}	
-	public void clickNewMail() {
+	}
+
+	public newMailPage clickNewMail() {
 		newMailButton.click();
+		return new newMailPage(driver);
 	}
 }
