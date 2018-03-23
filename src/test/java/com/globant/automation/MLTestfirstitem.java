@@ -9,7 +9,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+//import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -55,18 +56,18 @@ public class MLTestfirstitem {
     	String textoInItem = InItemPage.getInItemTxtInfo();
     	assertEquals(precioPrimerItem,precioInItem,"Verifico que el precio dentro y fuera sea el mismo");
     	assertEquals(dtoPrimerItem,dtoInItem,"Verifico que el descuento dentro y fuera sea el mismo");
-    	assertEquals(textoPrimerItem,textoInItem,"Verifico que el título dentro y fuera sea el mismo");
+    	assertEquals(textoPrimerItem,textoInItem,"Verifico que el tï¿½tulo dentro y fuera sea el mismo");
     	*/
     }
     
    	@BeforeMethod
    	public void prepareTest() {
    	    LOG.info("Prepare test");
-   	    driver = new ChromeDriver();
+   	    driver = new FirefoxDriver();
    	}
    	@BeforeClass
    	private void prepareClass() {
    	    LOG.info("Prepare class");
-   	    WebDriverManager.chromedriver().setup();
+   	    WebDriverManager.firefoxdriver().setup();
    	}
 }
