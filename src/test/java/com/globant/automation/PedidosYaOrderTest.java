@@ -28,7 +28,7 @@ public class PedidosYaOrderTest {
 	private static final Logger LOG;
 	
 	static {
-		LOG = LogManager.getLogger(MercadoLibreOfertasTest.class);
+		LOG = LogManager.getLogger(PedidosYaOrderTest.class);
 	}
 	
 	protected static WebDriver driver;

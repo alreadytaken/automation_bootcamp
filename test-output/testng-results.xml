@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="26672" started-at="2018-03-22T23:12:31Z" finished-at="2018-03-22T23:12:58Z">
+  <suite name="Default suite" duration-ms="5811" started-at="2018-03-23T02:56:56Z" finished-at="2018-03-23T02:57:02Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="26672" started-at="2018-03-22T23:12:31Z" finished-at="2018-03-22T23:12:58Z">
-      <class name="com.globant.automation.GmailSubjectTest">
-        <test-method status="PASS" signature="prepareClass()[pri:0, instance:com.globant.automation.GmailSubjectTest@5876a9af]" name="prepareClass" is-config="true" duration-ms="3941" started-at="2018-03-22T23:12:31Z" finished-at="2018-03-22T23:12:35Z">
+    <test name="Default test" duration-ms="5811" started-at="2018-03-23T02:56:56Z" finished-at="2018-03-23T02:57:02Z">
+      <class name="com.globant.automation.PedidosYaBanderasTest">
+        <test-method status="PASS" signature="prepareClass()[pri:0, instance:com.globant.automation.PedidosYaBanderasTest@35cabb2a]" name="prepareClass" is-config="true" duration-ms="2013" started-at="2018-03-23T02:56:56Z" finished-at="2018-03-23T02:56:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareClass -->
-        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.GmailSubjectTest@5876a9af]" name="prepareTest" is-config="true" duration-ms="9692" started-at="2018-03-22T23:12:35Z" finished-at="2018-03-22T23:12:45Z">
+        <test-method status="PASS" signature="prepareTest()[pri:0, instance:com.globant.automation.PedidosYaBanderasTest@35cabb2a]" name="prepareTest" is-config="true" duration-ms="1167" started-at="2018-03-23T02:56:58Z" finished-at="2018-03-23T02:56:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareTest -->
-        <test-method status="PASS" signature="gmailSubjectTest()[pri:0, instance:com.globant.automation.GmailSubjectTest@5876a9af]" name="gmailSubjectTest" duration-ms="12874" started-at="2018-03-22T23:12:45Z" finished-at="2018-03-22T23:12:58Z">
+        <test-method status="PASS" signature="banderasTest()[pri:0, instance:com.globant.automation.PedidosYaBanderasTest@35cabb2a]" name="banderasTest" duration-ms="2503" started-at="2018-03-23T02:56:59Z" finished-at="2018-03-23T02:57:02Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- gmailSubjectTest -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.globant.automation.GmailSubjectTest@5876a9af]" name="cleanUp" is-config="true" duration-ms="134" started-at="2018-03-22T23:12:58Z" finished-at="2018-03-22T23:12:58Z">
+        </test-method> <!-- banderasTest -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.globant.automation.PedidosYaBanderasTest@35cabb2a]" name="cleanUp" is-config="true" duration-ms="112" started-at="2018-03-23T02:57:02Z" finished-at="2018-03-23T02:57:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-      </class> <!-- com.globant.automation.GmailSubjectTest -->
+      </class> <!-- com.globant.automation.PedidosYaBanderasTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
