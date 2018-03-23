@@ -1,6 +1,5 @@
 package com.globant.automation;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +8,13 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import pageObjects.AmazonHome;
+import pageObjects.AmazonProductPage;
+import pageObjects.AmazonSearchPage;
 
 public class SampleTest {
 
@@ -23,10 +28,19 @@ public class SampleTest {
     static {
         LOG = LogManager.getLogger(SampleTest.class);
     }
+    
+	@DataProvider(name = "Search")
+	public Object[][] provider() {
+		return new Object[][] { { "Ray Ban aviator sunglasses" },{ "Levi's 501 men original" },{ "Nike Air Force 1" }};
+	}
 
-    @Test
-    public void testExamen() {
+    @Test(dataProvider = "Search")
+    public void testExamen(String search) {
         driver.get("https://amazon.com");
+        AmazonHome home = new AmazonHome(driver);
+        AmazonSearchPage searchPage = home.searchFill("Ray Ban aviator Sunglasses");
+        AmazonProductPage productPage = searchPage.getFirstProduct();
+        LOG.info(productPage.getTopReview());
     }
 
     @BeforeMethod
