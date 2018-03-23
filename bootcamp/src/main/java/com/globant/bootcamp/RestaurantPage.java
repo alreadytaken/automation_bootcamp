@@ -16,18 +16,8 @@ public class RestaurantPage {
 
 	@FindBy(how = How.ID, using = "order")
 	WebElement btnOrder;
-	
-	
-	/**@FindBy(how = How.ID, using = "//li[@id=\"1330082\"]/div[@class=\"price\"]")
-	WebElement lblprice;*/
 
 	WebDriver driver;
-
-	private static final Logger LOG;
-
-	static {
-		LOG = LogManager.getLogger(RestaurantPage.class);
-	}
 
 	public RestaurantPage(WebDriver driver) {
 
@@ -44,7 +34,6 @@ public class RestaurantPage {
 
 		String precioPedidoAgregado = driver.findElement(By.xpath("//div[@class=\"price total-price\"]"))
 				.getAttribute("innerHTML");
-		System.out.println("PRECIO CUANDO EL PEDIDO FUE AGREGADO: " + precioPedidoAgregado);
 
 		return precioPedidoAgregado;
 
@@ -62,6 +51,11 @@ public class RestaurantPage {
 	public PopUpModalLogin confirmarPedido() {
 
 		btnOrder.click();
+
+		WebElement loginIframe = SeleniumUtils.isPresentUsingPresenceWE(By.xpath("//div[@class=\"tcontent\"]/iframe"),
+				driver);
+		driver.switchTo().frame(loginIframe);
+
 		return new PopUpModalLogin(driver);
 	}
 

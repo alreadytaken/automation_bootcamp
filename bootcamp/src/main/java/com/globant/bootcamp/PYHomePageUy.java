@@ -10,42 +10,36 @@ import org.openqa.selenium.support.PageFactory;
 public class PYHomePageUy {
 
 	WebDriver driver;
-	
+
 	@FindBy(how = How.NAME, using = "address")
 	WebElement txtAdress;
 
 	@FindBy(how = How.NAME, using = "optional")
 	WebElement txtOpcionalComida;
-	
+
 	@FindBy(how = How.ID, using = "search")
 	WebElement BtnSearch;
-	
+
 	public PYHomePageUy(WebDriver driver) {
 		this.driver = driver;
-		
-		PageFactory.initElements(driver, this);	
-		
-		if((SeleniumUtils.isPresentByPresenceOfElement(txtAdress, driver)) && (!SeleniumUtils.isPresent(By.name("optional"), driver)) && (!SeleniumUtils.isPresent(By.id("search"), driver))){
+
+		PageFactory.initElements(driver, this);
+
+		if ((SeleniumUtils.isPresentByPresenceOfElement(txtAdress, driver))
+				&& (!SeleniumUtils.isPresent(By.name("optional"), driver))
+				&& (!SeleniumUtils.isPresent(By.id("search"), driver))) {
 			throw new IllegalStateException("Page did not load.");
 		}
-		
-		
-	}
-		
 
-	
-	
+	}
+
 	public PopUpConfirmarUbicacion IngresarDatos() {
-		
+
 		txtAdress.sendKeys("Nicaragua 1600");
 		txtOpcionalComida.sendKeys("Milanesa");
 		BtnSearch.click();
-		
-		
+
 		return new PopUpConfirmarUbicacion(driver);
 	}
-	
-	
-	
-	
+
 }

@@ -1,0 +1,108 @@
+LOG:
+
+
+private static final Logger LOG;
+			
+	static {
+		LOG = LogManager.getLogger(RestaurantPage.class);
+	}
+
+-------------------------------------------------------------------------
+CONSTRUCTOR:
+
+public <NAME> (WebDriver driver){
+				
+				this.driver = driver;
+				
+				
+				PageFactory.initElements(driver, this);	
+				
+				if (!SeleniumUtils.isPresentByPresenceOfElement(<WEBELEMENT>, driver)){
+					throw new IllegalStateException("Page did not load.");
+				}
+			}
+
+------------------------------------------------------------------------------		
+
+@FindBy(how = How.<TYPE>, using = "")
+	WebElement <NAME>;	
+
+-------------------------------------------------------------------------------
+SELENIUM UTILS:
+
+package com.globant.bootcamp;
+
+
+import org.openqa.selenium.By;
+
+import org.openqa.selenium.WebDriver;
+
+import org.openqa.selenium.WebElement;
+
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+
+
+public class SeleniumUtils {
+
+	
+
+	public static WebElement waitUntilClickeable(WebElement e, WebDriver driver) {
+
+	return (new WebDriverWait(driver, 10)).until(ExpectedConditions.elementToBeClickable(e));
+
+	}
+
+	public static WebElement waitUntilClickeable(By localizador, WebDriver driver) {
+
+	return (new WebDriverWait(driver, 10)).until(ExpectedConditions.elementToBeClickable(localizador));
+	}
+
+
+	public static boolean isPresent(By localizador, WebDriver driver) {
+		return (new WebDriverWait(driver, 10)).until(ExpectedConditions.elementToBeClickable(localizador)) != null;
+	}
+
+
+	public static boolean isPresentByPresenceOfElement(WebElement e, WebDriver driver) {
+		
+		return(new WebDriverWait(driver, 180)).until(ExpectedConditions.visibilityOf(e))!= null;
+	}
+	
+}
+
+------------------------------------------------------------------------------------------------------------
+
+<PAGE_OBJECT> Name = new <PAJE_OBJECT>(driver);
+
+-------------------------------------------------------------------------------------------------------
+
+		@BeforeMethod
+		public void prepareTest() {
+			
+			LOG.info("Preparing test");
+			driver = new ChromeDriver();
+			
+		}
+		@AfterMethod
+		public void cleanup() {
+			driver.quit();
+		}
+			
+		@BeforeClass
+		private void prepareClass() {
+			LOG.info("Prepareing class");
+						
+			WebDriverManager.chromedriver().setup();
+			
+		}		
+
+-------------------------------------------------------------------------------------------------------
+CONVERTIR A STRING:
+
+String <name> = driver.findElement(By.xpath("<XPATH>"));
+
+
+---------------------------------------------------------------------------------------------------------

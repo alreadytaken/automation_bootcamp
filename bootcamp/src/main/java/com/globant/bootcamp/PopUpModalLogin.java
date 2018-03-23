@@ -8,8 +8,14 @@ import org.openqa.selenium.support.PageFactory;
 
 public class PopUpModalLogin {
 
-	@FindBy(how = How.XPATH, using = "//a[@href=\"/signup?lite=true&go=%2Fcheckout\"]")
-	WebElement hrefRegistrate;
+	@FindBy(how = How.NAME, using = "password")
+	WebElement txtPass;
+
+	@FindBy(how = How.NAME, using = "email")
+	WebElement txtEmail;
+
+	@FindBy(how = How.NAME, using = "login")
+	WebElement btnIngresar;
 
 	WebDriver driver;
 
@@ -19,15 +25,21 @@ public class PopUpModalLogin {
 
 		PageFactory.initElements(driver, this);
 
-		if (!SeleniumUtils.isPresentByPresenceOfElement(hrefRegistrate, driver)) {
-			throw new IllegalStateException("Page did not load.");
+		if (!((SeleniumUtils.waitUntilClickeable(txtEmail, driver)) != null)) {
+			throw new IllegalStateException("The login page did not load.");
 		}
+
 	}
 
-	public PopUpRegistro clickRegistrar() {
-		hrefRegistrate.click();
+	public ConfirmarPedidoPage sendDataToLogin() {
 
-		return new PopUpRegistro(driver);
+		txtEmail.sendKeys("camilasilvalopez@gmail.com");
+		txtPass.sendKeys("algoalgo123");
+		btnIngresar.click();
+
+		driver.switchTo().defaultContent();
+		return new ConfirmarPedidoPage(driver);
+
 	}
 
 }
