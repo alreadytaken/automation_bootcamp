@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.PedidosYa.TestPedidosYa">
+      <class name="com.TestsPedidosYa.TestPedidosYa">
         <methods>
-          <include name="prepareTest"/>
           <include name="prepareClass"/>
-          <include name="cleanup"/>
+          <include name="prepareTest"/>
           <include name="makeOrder" invocation-numbers="0"/>
+          <include name="cleanup"/>
         </methods>
-      </class> <!-- com.PedidosYa.TestPedidosYa -->
+      </class> <!-- com.TestsPedidosYa.TestPedidosYa -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -9,6 +9,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.TestsPedidosYa.TestPedidosYa;
+
 public class PedidosConfirmOrder {
 
 	protected WebDriver driver;

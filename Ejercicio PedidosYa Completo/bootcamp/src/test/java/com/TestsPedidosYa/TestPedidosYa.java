@@ -1,4 +1,4 @@
-package com.PedidosYa;
+package com.TestsPedidosYa;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -10,6 +10,13 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import com.PedidosYa.PedidosCheckOut;
+import com.PedidosYa.PedidosConfirmOrder;
+import com.PedidosYa.PedidosHomePage;
+import com.PedidosYa.PedidosInitPage;
+import com.PedidosYa.PedidosSuggestionPage;
+import com.PedidosYa.PopUpLogin;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
