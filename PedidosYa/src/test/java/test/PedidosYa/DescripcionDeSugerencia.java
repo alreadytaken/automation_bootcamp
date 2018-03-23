@@ -6,6 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import com.globant.automation.SeleniumUtils;
 
 public class DescripcionDeSugerencia {
@@ -25,10 +28,6 @@ public class DescripcionDeSugerencia {
 	@FindBy(how = How.ID, using = "modalLogin")
 	private WebElement modalLogin;
 	
-	@FindBy(how = How.XPATH, using = "//div[@class='tcontent']/iframe")
-	private WebElement loginPopUp;
-
-
 	private WebDriver driver;
 	
 	public DescripcionDeSugerencia(WebDriver driver){
@@ -58,7 +57,10 @@ public class DescripcionDeSugerencia {
 	public LoginPedidosYa confirmarCompra() {
 		
 		continueButton.click();
-		SeleniumUtils.waitUntilClickable(modalLogin, driver);
+		
+		WebDriverWait wait = new WebDriverWait(driver, 60); 
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("modalLogin")));
+		//SeleniumUtils.waitUntilClickable(modalLogin, driver);
 		WebElement iframe = driver.findElement(By.xpath("//div[@class='tcontent']/iframe"));
 		SeleniumUtils.waitUntilClickable(iframe, driver);
 		driver.switchTo().frame(iframe);

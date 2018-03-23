@@ -12,18 +12,18 @@ public class UsuarioLogueadoFinalizarPedido {
 
 	@FindBy(how = How.LINK_TEXT, using = "Modificar mi pedido")
 	private WebElement modificarPedido;
-	
-	private WebDriver driver;
-	
-	public UsuarioLogueadoFinalizarPedido(WebDriver driver){
 
-		this.driver = driver;				
+	private WebDriver driver;
+
+	public UsuarioLogueadoFinalizarPedido(WebDriver driver) {
+
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 		SeleniumUtils.waitUntilClickable(modificarPedido, driver);
 	}
-	
+
 	public ChequearUserNamePage modificarMiPedido() {
-		
+
 		modificarPedido.click();
 		return new ChequearUserNamePage(driver);
 	}

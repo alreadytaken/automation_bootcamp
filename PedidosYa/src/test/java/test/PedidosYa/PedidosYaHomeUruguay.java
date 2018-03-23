@@ -1,10 +1,14 @@
 package test.PedidosYa;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import com.globant.automation.SeleniumUtils;
 
 public class PedidosYaHomeUruguay {
@@ -20,7 +24,7 @@ public class PedidosYaHomeUruguay {
 	
 	@FindBy(how = How.ID, using ="mapModal")
 	private WebElement popUpMap;
-	
+		
 	@FindBy(how = How.ID, using ="confirm")
 	private WebElement confirmAddressButton;
 
@@ -41,7 +45,9 @@ public class PedidosYaHomeUruguay {
 	
 	public SugerenciasPedidosYa confirmaAddress() {
 		
-		SeleniumUtils.waitUntilClickable(confirmAddressButton, driver);
+		WebDriverWait wait = new WebDriverWait(driver, 60); 
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class ='location-icon-map']")));
+		//SeleniumUtils.waitUntilClickable(confirmAddressButton, driver);
 		this.confirmAddressButton.click();
 		return new SugerenciasPedidosYa(driver);
 	}
