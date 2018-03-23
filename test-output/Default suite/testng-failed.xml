@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="pedidosYA.PedidosYaTest">
+      <class name="gmail.GmailTest">
         <methods>
-          <include name="ofertasTest"/>
           <include name="cleanUp"/>
-          <include name="prepareTest"/>
           <include name="prepareClass"/>
+          <include name="gmailTest"/>
+          <include name="prepareTest"/>
         </methods>
-      </class> <!-- pedidosYA.PedidosYaTest -->
+      </class> <!-- gmail.GmailTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

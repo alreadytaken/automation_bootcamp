@@ -1,4 +1,4 @@
-package pedidosYA;
+package com.globant.automation.pedidosYA;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
