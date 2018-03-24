@@ -29,12 +29,12 @@ public class SampleTest {
         LOG = LogManager.getLogger(SampleTest.class);
     }
 
-    @Test
+    @Test (dataProvider = "Busqueda")
     public void testExamen() {
     	driver.manage().window().maximize();
     	driver.get("https://amazon.com");
         AmazonHomePage homePage = new AmazonHomePage(driver);
-        homePage.enterInfo("Ray Ban aviator sunglasses");
+        homePage.enterInfo("Busqueda");
         AmazonSearchPage searchPage = new AmazonSearchPage(driver);
         searchPage.enter();
         AmazonObjectPage objectPage = new AmazonObjectPage(driver);
