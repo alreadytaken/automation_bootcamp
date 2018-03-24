@@ -15,25 +15,25 @@ public class AmazonSearchPage {
 
 	private WebDriver driver;
 
-//	@FindBy(css = "li[class='s-result-item']")
-//	private WebElement item;
-//
-//	public AmazonItemPage clickFirstItem() {
-//		item.click();
-//		return new AmazonItemPage(driver);
-//	}
-
-	@FindBy(css = "li[class='s-result-item']")
-	private List<WebElement> itemList;
+	@FindBy(id = "result_0")
+	private WebElement item;
 
 	public AmazonItemPage clickFirstItem() {
-		for (int i = 0; i < itemList.size(); i++) {
-			String[] temp = itemList.get(i).getAttribute("class").split(" ");
-			if (temp.length < 3) {
-				itemList.get(i).click();
-				return new AmazonItemPage(driver);
-			}
-		}
+		item.click();
 		return new AmazonItemPage(driver);
 	}
+
+//	@FindBy(css = "li[class='s-result-item']")
+//	private List<WebElement> itemList;
+//
+//	public AmazonItemPage clickFirstItem() {
+//		for (int i = 0; i < itemList.size(); i++) {
+//			String[] temp = itemList.get(i).getAttribute("class").split(" ");
+//			if (temp.length < 3) {
+//				itemList.get(i).click();
+//				return new AmazonItemPage(driver);
+//			}
+//		}
+//		return new AmazonItemPage(driver);
+//	}
 }
