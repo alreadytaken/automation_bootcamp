@@ -1,5 +1,6 @@
 package com.globant.automation.util;
 
+import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -15,5 +16,14 @@ public class topComentarios {
 			//PageFactory.initElements(driver, this);
 		//}
 	}
+	public imprimir Imprimir() {
+		comentarios.click();
+		return new topComentarios(driver);
+	}
+	private static final Logger LOG;
+    private WebDriver driver;
 
+    static {
+        LOG = LogManager.getLogger("");
+}
 }

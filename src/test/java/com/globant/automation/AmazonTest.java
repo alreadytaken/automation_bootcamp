@@ -16,6 +16,7 @@ import org.testng.annotations.Test;
 
 import com.globant.automation.util.amazonHome;
 import com.globant.automation.util.lentes;
+import com.globant.automation.util.topComentarios;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -36,8 +37,8 @@ public class AmazonTest {
 		driver.get("http://www.amazon.com");
 		amazonHome POHome = new amazonHome(driver);
 		lentes POlentes = POHome.buscarProductoLentes();
-		/*popUpDireccion POpopUpDireccion = POdireYComida.irAMapaApretandoElBoton();
-		restaurantes POrestaurantes = POpopUpDireccion.irATodosLosRestaurantesApretandoBoton();
+		topComentarios POTopComentarios = POlentes.bucarComentarios();
+		/*restaurantes POrestaurantes = POpopUpDireccion.irATodosLosRestaurantesApretandoBoton();
 		popUpComida POpopUpComida = POrestaurantes.selecionarComida();
 		restoQueVoyAPedir POrestoQueVoyAPedir = POpopUpComida.agregarAMiPedido();
 		popUpRegistro POpopUpRegistro = POrestoQueVoyAPedir.agregarAMiPedido();*/
