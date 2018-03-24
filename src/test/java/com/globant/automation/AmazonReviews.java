@@ -10,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 public class AmazonReviews {
 	private WebDriver driver;
 	
-	@FindBy (how = How.ID, using = "dp-summary-see-all-review")
+	@FindBy (id = "dp-summary-see-all-review")
 	WebElement productReviews;
 	
 	public AmazonReviews (WebDriver driver){
