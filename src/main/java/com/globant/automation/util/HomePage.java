@@ -21,12 +21,13 @@ public class HomePage {
 		this.driver = driver;
 
 		PageFactory.initElements(driver, this);
-		
+
 		System.out.println("INICIALIZO LAS COSAS");
-		/**
-		 * if (!SeleniumUtils.isPresentByPresenceOfElement(txtSearch, driver)){ throw
-		 * new IllegalStateException("Home page did not load."); }
-		 */
+
+		if (!SeleniumUtils.isPresentByPresenceOfElement(txtSearch, driver)) {
+			throw new IllegalStateException("Home page did not load.");
+		}
+
 	}
 
 	public ResultadosPage ingresarDatosBusqueda(String data) {
