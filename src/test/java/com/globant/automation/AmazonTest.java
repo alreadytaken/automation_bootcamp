@@ -37,11 +37,13 @@ public class AmazonTest {
 		AmazonHome sHome = new AmazonHome(driver);
 		AmazonSearch aSearch;
 		AmazonSelected aSelect;
+		AmazonReviews aReview;
 		
 		sHome.typeSearch(data);
 		
 		aSearch = sHome.click();
 		aSelect = aSearch.selectItem();
+		aReview = aSelect.viewReview();
 		
 	}
 
