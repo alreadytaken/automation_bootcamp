@@ -1,0 +1,26 @@
+@Test(dataProvider = "terminosBusqueda")
+public void metodoEjemplo7(String terminoBusqueda) {
+		LOG.info(terminoBusqueda);
+    driver.get("https://google.com");
+    WebElement e=SeleniumUtils.WaitUntilClickable(By.name("q"), driver);
+		e.sendKeys(terminoBusqueda);
+		e.sendKeys(Keys.ENTER);
+		//WebElement resultado=SeleniumUtils.WaitUntilClickable(By.className("r"), driver);
+		//resultado.click();
+		//List <WebElement> resultados;
+		//resultados =new ArrayList<>();
+		List <WebElement> resultadosgoogle = driver.findElements(By.xpath ("//div[@class='rc']/h3/a"));
+		//resultados.add(SeleniumUtils.WaitUntilClickable(By.xpath("//div[@class='rc']/h3/a"), driver));
+		LOG.info("Google resultado" + resultadosgoogle.get(1).getText());
+		driver.get("https://bing.com");
+		WebElement f=SeleniumUtils.WaitUntilClickable(By.name("q"), driver);
+		f.sendKeys(terminoBusqueda);
+		f.sendKeys(Keys.ENTER);
+		List <WebElement> resultadosbing = driver.findElements(By.xpath ("//li[@class='b_algo']/h2/a"));
+		LOG.info("Bing resultado" + resultadosbing.get(0).getText());
+		Assert.assertEquals(resultadosbing.get(0).getText(), resultadosgoogle.get(1).getText(), "Verifico si son iguales");
+		
+		//WebElement txtSearch = driver.findElement(By.id("lst-ib"));
+		//txtSearch.sendKeys(terminoBusqueda);
+		//txtSearch.sendKeys(Keys.ENTER);
+}
