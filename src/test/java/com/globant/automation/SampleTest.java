@@ -42,6 +42,7 @@ public class SampleTest {
 		AmazonSearchPage search = main.search(searchText);
 		AmazonItemPage item = search.clickFirstItem();
 		AmazonItemCommentsPage comments = item.goToComments();
+		LOG.info(comments.getTopPositiveComment());
 	}
 
 	@BeforeMethod
