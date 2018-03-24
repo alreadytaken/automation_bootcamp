@@ -16,11 +16,11 @@ public class AmazonSearchPage {
 	////s-access-image cfMarker
 	public AmazonSearchPage(WebDriver driver) {
 		this.driver = driver;
-		SeleniumUtils.waitUntilPresent(By.className("s-result-item s-result-card-for-container a-declarative celwidget"),driver);
+		SeleniumUtils.waitUntilPresent(By.className("s-result-item s-result-card-for-container a-declarative celwidget  "),driver);
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(how = How.CLASS_NAME, using = "s-result-item s-result-card-for-container a-declarative celwidget")
+	@FindBy(how = How.CLASS_NAME, using = "s-result-item s-result-card-for-container a-declarative celwidget  ")
 	List <WebElement> results;
 	
 	public void enter() {

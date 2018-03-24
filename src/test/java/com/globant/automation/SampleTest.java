@@ -29,12 +29,12 @@ public class SampleTest {
         LOG = LogManager.getLogger(SampleTest.class);
     }
 
-    @Test(dataProvider ="Busqueda")
+    @Test
     public void testExamen() {
     	driver.manage().window().maximize();
     	driver.get("https://amazon.com");
         AmazonHomePage homePage = new AmazonHomePage(driver);
-        homePage.enterInfo("Busqueda");
+        homePage.enterInfo("Ray Ban aviator sunglasses");
         AmazonSearchPage searchPage = new AmazonSearchPage(driver);
         searchPage.enter();
         AmazonObjectPage objectPage = new AmazonObjectPage(driver);
@@ -44,7 +44,7 @@ public class SampleTest {
     
 	@DataProvider(name = "Busqueda")
 	public Object[][] provider() {
-		return new Object[][] { { "Ray Ban aviator singlasses" }, { "Levi's 501 men original" },{"Nike Air Force 1"} };
+		return new Object[][] { { "Ray Ban aviator sunglasses" }, { "Levi's 501 men original" },{"Nike Air Force 1"} };
 	}
 
     @BeforeMethod
