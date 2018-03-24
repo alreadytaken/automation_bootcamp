@@ -1,5 +1,7 @@
 package pageObjects;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,24 +15,25 @@ public class AmazonSearchPage {
 
 	private WebDriver driver;
 
-	@FindBy(css = "li[class='s-result-item celwidget']")
-	private WebElement item;
+//	@FindBy(css = "li[class='s-result-item']")
+//	private WebElement item;
+//
+//	public AmazonItemPage clickFirstItem() {
+//		item.click();
+//		return new AmazonItemPage(driver);
+//	}
+
+	@FindBy(css = "li[class='s-result-item']")
+	private List<WebElement> itemList;
 
 	public AmazonItemPage clickFirstItem() {
-		item.click();
+		for (int i = 0; i < itemList.size(); i++) {
+			String[] temp = itemList.get(i).getAttribute("class").split(" ");
+			if (temp.length < 3) {
+				itemList.get(i).click();
+				return new AmazonItemPage(driver);
+			}
+		}
 		return new AmazonItemPage(driver);
 	}
-
-	// @FindBy(css = "li[class='s-result-item celwidget']")
-	// private List<WebElement> itemList;
-	//
-	// public void clickFirstItem() {
-	// for (int i = 0; i < itemList.size(); i++) {
-	// String []temp = itemList.get(i).getAttribute("class").split(" ");
-	// if (temp.length < 3) {
-	// itemList.get(i).click();
-	// return;
-	// }
-	// }
-	// }
 }
