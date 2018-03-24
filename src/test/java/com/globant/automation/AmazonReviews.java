@@ -19,4 +19,6 @@ public class AmazonReviews {
 		}
 		PageFactory.initElements(driver, this);
 	}
+	
+	
 }
