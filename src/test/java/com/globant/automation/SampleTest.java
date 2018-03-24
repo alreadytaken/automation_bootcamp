@@ -37,12 +37,6 @@ public class SampleTest {
 			{"Ray Ban aviator sunglasses"}, {"Levi's 501 men original"} , {"Nike Air Force 1"}
 			};
 	}
-
-    
-    
-    
-    
-    
     
 
     @Test(dataProvider="DataSearch")
@@ -58,7 +52,7 @@ public class SampleTest {
         
         
         
-        
+   
         
         
     }

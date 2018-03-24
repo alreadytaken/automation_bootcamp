@@ -10,34 +10,30 @@ public class HomePage {
 
 	WebDriver driver;
 
-	@FindBy(how = How.ID, using = "twotabsearchtextbox")
+	@FindBy(how = How.XPATH, using = "//*[@id=\"twotabsearchtextbox\"]")
 	WebElement txtSearch;
-	
-	@FindBy(how = How.ID, using = "//input[@class=\"nav-input\"]")
+
+	@FindBy(how = How.XPATH, using = "//input[@class=\"nav-input\"]")
 	WebElement btnSearch;
 
-	public HomePage (WebDriver driver){
-		
+	public HomePage(WebDriver driver) {
+
 		this.driver = driver;
+
+		PageFactory.initElements(driver, this);
 		
-		
-		PageFactory.initElements(driver, this);	
-		
-		if (!SeleniumUtils.isPresentByPresenceOfElement(txtSearch, driver)){
-			throw new IllegalStateException("Home page did not load.");
-		}
+		System.out.println("INICIALIZO LAS COSAS");
+		/**
+		 * if (!SeleniumUtils.isPresentByPresenceOfElement(txtSearch, driver)){ throw
+		 * new IllegalStateException("Home page did not load."); }
+		 */
 	}
 
-public ResultadosPage ingresarDatosBusqueda(String data) {
-	
-	txtSearch.sendKeys();
-	btnSearch.click();
+	public ResultadosPage ingresarDatosBusqueda(String data) {
+		System.out.println("ENTRO A INGRESAR DATOS");
+		txtSearch.sendKeys(data);
+		btnSearch.click();
 		return new ResultadosPage(driver);
-}
-	
-	
-	
-	
-	
-	
-}//class
+	}
+
+}// class
