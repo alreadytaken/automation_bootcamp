@@ -23,11 +23,6 @@ public class AmazonSearchPage {
 	@FindBy(how = How.CLASS_NAME, using = "s-result-item s-result-card-for-container a-declarative celwidget")
 	List <WebElement> results;
 	
-	/*public List<WebElement> Resultado() {
-		results.get(1);
-		return (List<WebElement>) results.get(1);
-	}*/
-	
 	public void enter() {
 results.get(1).click();	}
 

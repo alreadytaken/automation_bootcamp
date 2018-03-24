@@ -12,15 +12,15 @@ import com.globant.automation.util.SeleniumUtils;
 public class AmazonObjectPage {
 	private WebDriver driver;
 
-	////*[@id="reviews-medley-footer"]/div[1]/a
+	//
 	public AmazonObjectPage(WebDriver driver) {
 		this.driver = driver;
-		SeleniumUtils.waitUntilPresent(By.className("a-size-base a-link-normal 5star"), driver);
+		SeleniumUtils.waitUntilPresent(By.xpath("//*[@id=\"reviews-medley-footer\"]/div[1]/a"), driver);
 		PageFactory.initElements(driver, this);
 
 	}
 	
-	@FindBy(how = How.CLASS_NAME, using = "a-size-base a-link-normal 5star")
+	@FindBy(how = How.XPATH, using = "//*[@id=\\\"reviews-medley-footer\\\"]/div[1]/a")
 	private WebElement seeMore;
 
 	public void moreComments() {
