@@ -16,7 +16,7 @@ public class AmazonProductPage {
 
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-		SeleniumUtils.waitUntilClickable(Reviews2h, driver);
+		SeleniumUtils.waitUntilClickable(Reviews2, driver);
 
 	}
 
@@ -29,6 +29,7 @@ public class AmazonProductPage {
 	
 
 	public void clickReview() {
+		
 		SeleniumUtils.waitUntilClickable(Reviews2, driver);
 		Reviews2.click();
 		
@@ -36,6 +37,8 @@ public class AmazonProductPage {
 		
 	}
 	public void clickReview2h() {
+		SeleniumUtils.waitUntilClickable(Reviews2, driver);
+
 		SeleniumUtils.waitUntilClickable(Reviews2h, driver);
 		Reviews2h.click();
 		
