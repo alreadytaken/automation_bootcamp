@@ -48,6 +48,7 @@ public class SampleTest {
         amazonProductPages.clickProducto();
         
         AmazonProductPage amazonProductPage = new AmazonProductPage(driver);
+        amazonProductPage.clickReview2h();
         amazonProductPage.clickReview();
         
         AmazonReviewPage amazonReviewPage = new AmazonReviewPage(driver);

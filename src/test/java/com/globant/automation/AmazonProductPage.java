@@ -16,17 +16,28 @@ public class AmazonProductPage {
 
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-		SeleniumUtils.waitUntilClickable(Reviews, driver);
+		SeleniumUtils.waitUntilClickable(Reviews2h, driver);
 
 	}
 
+	@FindBy(xpath="//span[contains(@id,'acrCustomerReviewText')]")
+	WebElement Reviews2h;
+	
 	@FindBy(xpath="//div[contains(@class,'a-row a-spacing-mini')]")
-	WebElement Reviews;
+	WebElement Reviews2;
 
 	
 
 	public void clickReview() {
-		Reviews.click();
+		SeleniumUtils.waitUntilClickable(Reviews2, driver);
+		Reviews2.click();
+		
+		
+		
+	}
+	public void clickReview2h() {
+		SeleniumUtils.waitUntilClickable(Reviews2h, driver);
+		Reviews2h.click();
 		
 		
 		
