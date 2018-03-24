@@ -22,12 +22,13 @@ public class AmazonProductPages {
 	
 	
 
-	@FindBy(xpath = "//li[contains(@class,'s-result-item s-result-card-for-container a-declarative celwidget  ')]/div/div[contains(@class,'a-row a-spacing-none')]")
+	@FindBy(xpath = "//li[@class='s-result-item s-result-card-for-container a-declarative celwidget  ']//span[contains(@class,'sx-price-whole')]")
 	WebElement producto;
 
 	
 	public void clickProducto() {
-		producto.click();
+		SeleniumUtils.waitUntilClickable(producto, driver);
+				producto.click();
 		
 		
 	}
