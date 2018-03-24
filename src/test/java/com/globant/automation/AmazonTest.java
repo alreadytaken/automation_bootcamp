@@ -32,13 +32,15 @@ public class AmazonTest {
 
 	@Test(dataProvider="Search")
 	public void testExamen(String data) {
+		
 		driver.get("https://amazon.com");
 		AmazonHome sHome = new AmazonHome(driver);
 		AmazonSearch aSearch;
 		AmazonSelected aSelect;
+		
 		sHome.typeSearch(data);
 		
-		aSearch.typeSearch(data);
+		aSearch = sHome.click();
 		aSelect = aSearch.selectItem();
 		
 	}

@@ -22,7 +22,7 @@ public class AmazonHome {
 		}
 		
 	
-		@FindBy(xpath="//input[@type='submit'")
+		@FindBy(xpath="//input[@type='submit']")
 		private WebElement button;
 		
 		@FindBy(id="twotabsearchtextbox")
@@ -32,9 +32,9 @@ public class AmazonHome {
 			this.search.sendKeys(data);
 		}
 	
-		public AmazonSelected click() {
+		public AmazonSearch click() {
 			this.button.click();
-			return new AmazonSelected(driver);
+			return new AmazonSearch(driver);
 		}
 	}
 	

@@ -14,7 +14,7 @@ public class AmazonSearch {
 	public AmazonSearch(WebDriver driver){
 		this.driver = driver;
 		
-		if (!SeleniumUtils.isPresent(By.xpath("//input[@type=\"submit\"]"), driver)) {
+		if (!SeleniumUtils.isPresent(By.xpath("//input[@type='submit']"), driver)) {
 			throw new IllegalStateException("Page did not load");
 		}		
 		PageFactory.initElements(driver, this);
@@ -24,12 +24,8 @@ public class AmazonSearch {
 	@FindBy(xpath="//h2[contains(@class,'a-text-normal')]")
 	private WebElement item;
 	
-	@FindBy(id="twotabsearchtextbox")
-	private WebElement search;
 	
-	public void typeSearch(String data) {
-		this.search.sendKeys(data);
-	}
+
 	
 	public AmazonSelected selectItem() {
 		this.item.click();
