@@ -19,7 +19,7 @@ import pages.LinkedInResPage;
 public class ValidationTest extends BaseTest{
 
 	@Test
-	public void test() {
+	public void test1() {
 		LinkedInHomePage home = new LinkedInHomePage(driver);
 		LinkedInHomePage email = home.insertEmail("jime123cedres@gmail.com");
 		LinkedInHomePage password = home.insertPassword("Tests.123");
