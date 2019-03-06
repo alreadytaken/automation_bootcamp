@@ -18,7 +18,7 @@ public class TravelocityTest extends BaseTest{
 	 */
 
 	@Test
-	public void test() {
+	public void test1() {
 		TravelocityHomePage home = new TravelocityHomePage(driver);
 		home.clickOnFlightsButton();
 		TravelocityFlightPage flight = new TravelocityFlightPage(driver);
